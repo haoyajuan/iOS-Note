@@ -1,0 +1,331 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red170\green13\blue145;\red63\green110\blue116;\red196\green26\blue22;\red38\green71\blue75;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17540\viewh19880\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf2 \CocoaLigature0  
+\f1 \'b2\'a5\'b7\'c5\'ca\'d3\'c6\'b5
+\f0 \
+	MPMoviesPlayerViewController 
+\f1 \'b2\'a5\'b7\'c5\'cd\'f8\'c2\'e7\'b5\'e7\'ca\'d3\
+\
+
+\f0 //
+\f1 \'cd\'c6\'b3\'f6\'d2\'bb\'b8\'f6\'b2\'a5\'b7\'c5\'ca\'d3\'c6\'b5\'b5\'c4\'d2\'b3\'c3\'e6\
+
+\f0 \cf0     \cf3 MPMoviePlayerViewController\cf0  *player = [[\cf3 MPMoviePlayerViewController\cf0  \cf4 alloc\cf0 ]\cf4 initWithContentURL\cf0 :url];\
+    [\cf5 self\cf0  \cf4 presentMoviePlayerViewControllerAnimated\cf0 :player];\
+\cf2 \
+//
+\f1 \'d0\'de\'b8\'c4\'bd\'f8\'c8\'eb\'ba\'f3\'cc\'a8\'b5\'c4\'cd\'a8\'d6\'aa
+\f0  
+\f1 \'b3\'cc\'d0\'f2\'bd\'f8\'c8\'eb\'ba\'f3\'cc\'a8\'b5\'c4\'cd\'a8\'d6\'aa\'a3\'ac\'ca\'d3\'c6\'b5\'b2\'bb\'bb\'e1\'cd\'cb\'b3\'f6
+\f0 \cf0 \
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ]\cf4 removeObserver\cf0 :\cf5 self\cf0  \cf4 name\cf0 :\cf3 UIApplicationDidEnterBackgroundNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+\cf2 \
+ 
+\f1 \'c6\'c1\'c4\'bb\'d0\'fd\'d7\'aa\'a3\'ba
+\f0 \
+ 1.portrait			
+\f1 \'ca\'fa\'c6\'c1
+\f0 \
+ 2.Upside Down		
+\f1 \'b5\'b9\'c6\'c1
+\f0 \
+ 3.Landscape Left	
+\f1 \'d3\'d2\'ba\'e1\'c6\'c1
+\f0 \
+ 4.Landscape Right	
+\f1 \'d7\'f3\'ba\'e1\'c6\'c1
+\f0 \
+\cf0     \
+\cf2  
+\f1 \'d4\'da
+\f0 VC
+\f1 \'d6\'d0\'d6\'d8\'d0\'b4\'cf\'c2\'c3\'e6\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'d6\'bb\'b8\'ba\'d4\'f0\'b5\'b1\'c7\'b0\'b5\'c4
+\f0 VC\
+ \cf0 - (\cf3 NSUInteger\cf0 )supportedInterfaceOrientations\{\
+    UIInterfaceOrientationPortrait               		\
+	UIInterfaceOrientationPortraitUpsideDown \
+    UIInterfaceOrientationLandscapeLeft      \
+    UIInterfaceOrientationLandscapeRight\
+ \}\
+\
+\cf2  
+\f1 \'b2\'a5\'b7\'c5\'d2\'f4\'c0\'d6
+\f0 \
+	AVAudioPlayer\
+\
+//
+\f1 \'c8\'e7\'b9\'fb\'b2\'bb\'c9\'e8\'d6\'c3\'b3\'c9\'ca\'f4\'d0\'d4\'a3\'ac\'c4\'c7\'c3\'b4\'d6\'b4\'d0\'d0\'cd\'ea\'d2\'d4\'ba\'f3\'a3\'ac
+\f0 player
+\f1 \'b6\'d4\'cf\'f3\'be\'cd\'b1\'bb\'cf\'fa\'bb\'d9\'c1\'cb
+\f0 \cf0 \
+    \cf5 if\cf0  (!\cf6 _player\cf0 ) \{\
+        \cf3 NSURL\cf0  *url = [\cf3 NSURL\cf0  \cf4 URLWithString\cf0 :\cf7 @"file:///Users/tarena/Desktop/Music/Moonlight_Shadow-Dana_Winner.mp3"\cf0 ];\
+        \cf6 _player\cf0  = [[\cf3 AVAudioPlayer\cf0  \cf4 alloc\cf0 ]\cf4 initWithContentsOfURL\cf0 :url \cf4 error\cf0 :\cf5 nil\cf0 ];\
+    \}\
+	[\cf5 self\cf0 .\cf6 player\cf0  \cf4 play\cf0 ];\cf2 //
+\f1 \'b2\'a5\'b7\'c5
+\f0 \cf0 \
+	[\cf5 self\cf0 .\cf6 player\cf0  \cf4 pause\cf0 ];\cf2 //
+\f1 \'d4\'dd\'cd\'a3\
+
+\f0 \
+ AFNetworking
+\f1 \'a3\'ba
+\f0 \
+	
+\f1 \'bb\'f1\'c8\'a1\'b7\'bd\'ca\'bd\'a3\'ba\'b4\'d3
+\f0 github
+\f1 \'c9\'cf\'bb\'f1\'c8\'a1
+\f0 \
+	
+\f1 \'b4\'b4\'bd\'a8\'cf\'ee\'c4\'bf\'ba\'f3\'a3\'ac\'bd\'ab
+\f0 AFNetWorking
+\f1 \'c4\'bf\'c2\'bc\'cd\'cf\'d7\'a7\'b5\'bd\'cf\'ee\'c4\'bf\'d6\'d0
+\f0 \
+ 
+\f1 \'b7\'a2\'cb\'cd
+\f0 GET/POST
+\f1 \'c7\'eb\'c7\'f3
+\f0 \
+	
+\f1 \'b4\'ab\'b2\'ce\'ca\'fd
+\f0 \
+	
+\f1 \'c9\'cf\'b4\'ab\'ce\'c4\'bc\'fe
+\f0 \
+ 
+\f1 \'b7\'a2\'cb\'cd
+\f0 GET
+\f1 \'c7\'eb\'c7\'f3\'b5\'c4\'b2\'bd\'d6\'e8\'a3\'ba
+\f0 \
+	step1:
+\f1 \'bb\'f1\'c8\'a1\'b9\'dc\'c0\'ed\'d5\'df
+\f0 \
+	step2:
+\f1 \'d7\'bc\'b1\'b8\'b2\'ce\'ca\'fd
+\f0 \
+	step3:
+\f1 \'b7\'a2\'cb\'cdGET\'c7\'eb\'c7\'f3
+\f0 \
+ 
+\f1 \'b7\'a2\'cb\'cd\'ce\'c4\'bc\'fe\'b5\'c4\'b2\'bd\'d6\'e8\'a3\'ba\
+
+\f0 	step1:
+\f1 \'bb\'f1\'c8\'a1\'b9\'dc\'c0\'ed\'d5\'df
+\f0 \
+	step2:
+\f1 \'d7\'bc\'b1\'b8\'b2\'ce\'ca\'fd
+\f0 \
+	step3:
+\f1 \'b7\'a2\'cb\'cdPOST\'c7\'eb\'c7\'f3\
+
+\f0 \cf0  
+\f1 \cf2 \'d7\'a2\'d2\'e2\'c9\'cf\'b4\'ab\'ce\'c4\'bc\'fe\'a3\'ba
+\f0 \
+	1)
+\f1 \'d6\'bb\'c4\'dc\'d3\'c3
+\f0 POST
+\f1 \'c7\'eb\'c7\'f3\'c9\'cf\'b4\'ab\'ce\'c4\'bc\'fe
+\f0 \
+	2)
+\f1 \'b1\'d8\'d0\'eb\'d3\'c3
+\f0 constructingBodyWithBlock
+\f1 ..\'b7\'bd\'b7\'a8
+\f0 \
+	3)
+\f1 \'d2\'aa\'c9\'cf\'b4\'ab\'b5\'c4\'ce\'c4\'bc\'fe\'b1\'d8\'d0\'eb\'d4\'da
+\f0 constructingBody
+\f1 \'b5\'c4
+\f0 block
+\f1 \'d6\'d0\'b4\'a6\'c0\'ed\'d2\'aa\'c9\'cf\'b4\'ab\'b5\'c4\'ce\'c4\'bc\'fe
+\f0 \
+\cf0 \
+
+\f1 \cf2  \'bc\'e0\'b2\'e2\'cd\'f8\'c2\'e7\
+
+\f0 //
+\f1 \'bc\'ec\'b2\'e2\'ca\'c7\'b7\'f1\'d3\'d0\'cd\'f8\'c2\'e7\'a3\'ac\'ca\'b2\'c3\'b4\'cd\'f8\'c2\'e7
+\f0 (4G/WIFI)\cf0 \
+    \cf6 AFNetworkReachabilityManager\cf0  *manager = [\cf6 AFNetworkReachabilityManager\cf0  \cf8 sharedManager\cf0 ];\
+\cf2 //
+\f1 \'c9\'e8\'d6\'c3\'cd\'f8\'c2\'e7\'d7\'b4\'cc\'ac\'b7\'a2\'c9\'fa\'b1\'e4\'bb\'af\'ca\'b1\'b5\'c4\'b4\'fa\'c2\'eb
+\f0 \cf0 \
+    [manager \cf8 setReachabilityStatusChangeBlock\cf0 :^(\cf6 AFNetworkReachabilityStatus\cf0  status) \{\
+        \cf5 switch\cf0  (status) \{\
+            \cf5 case\cf0  \cf8 AFNetworkReachabilityStatusUnknown\cf0 :\
+                \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'ce\'b4\'d6\'aa\'cd\'f8\'c2\'e7
+\f0 "\cf0 );\
+                \cf5 break\cf0 ;\
+            \cf5 case\cf0  \cf8 AFNetworkReachabilityStatusNotReachable\cf0 :\
+                \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'ce\'de\'cd\'f8\'c2\'e7
+\f0 "\cf0 );\
+                \cf5 break\cf0 ;\
+            \cf5 case\cf0  \cf8 AFNetworkReachabilityStatusReachableViaWiFi\cf0 :\
+                \cf4 NSLog\cf0 (\cf7 @"WIFI"\cf0 );\
+                \cf5 break\cf0 ;\
+            \cf5 case\cf0  \cf8 AFNetworkReachabilityStatusReachableViaWWAN\cf0 :\
+                \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'ca\'d6\'bb\'fa\'d7\'d4\'bc\'ba\'b5\'c4\'cd\'f8\'c2\'e7
+\f0 "\cf0 );\
+                \cf5 break\cf0 ;\
+            \cf5 default\cf0 :\
+                \cf5 break\cf0 ;\
+        \}\
+    \}];\
+\cf2 //
+\f1 \'bb\'f1\'c8\'a1\'cd\'f8\'c2\'e7\'d7\'b4\'cc\'ac
+\f0  
+\f1 \'b4\'f2\'bf\'aa\'bc\'e0\'cc\'fd\'c6\'f7
+\f0 \cf0 \
+    [manager \cf8 startMonitoring\cf0 ];\
+    [manager \cf8 stopMonitoring\cf0 ];\
+\cf2 //
+\f1 \'c5\'d0\'b6\'cf\'ca\'c7\'ca\'b2\'c3\'b4\'cd\'f8\'c2\'e7
+\f0 \cf0 \
+    [manager \cf8 isReachableViaWiFi\cf0 ];\cf2 //
+\f1 \'b7\'b5\'bb\'d8\'d6\'b5\'b4\'fa\'b1\'ed
+\f0  
+\f1 \'ca\'c7\'b7\'f1
+\f0 WIFI\cf0 \
+    [manager \cf8 isReachableViaWWAN\cf0 ];\cf2 //
+\f1 \'b7\'b5\'bb\'d8\'d6\'b5\'b4\'fa\'b1\'ed
+\f0  
+\f1 \'ca\'c7\'b7\'f1\'b7\'e4\'ce\'d1\'cd\'f8\'c2\'e7
+\f0 \cf0 \
+    [manager \cf8 isReachable\cf0 ];\cf2 //YES
+\f1 \'b4\'fa\'b1\'ed\'c3\'bb\'d3\'d0\'cd\'f8\'c2\'e7\
+
+\f0 \
+XML\
+ extension Mark Language 
+\f1 \'bf\'c9\'c0\'a9\'d5\'b9\'b5\'c4\'b1\'ea\'bc\'c7\'d3\'ef\'d1\'d4
+\f0 \
+ 
+\f1 \'d2\'bb\'b8\'f6\'b8\'f1\'ca\'bd\'bb\'af\'b5\'c4\'ce\'c4\'b1\'be\'ce\'c4\'bc\'fe\'a3\'ac\'d6\'f7\'d2\'aa\'d3\'c3\'d3\'da\'b1\'a3\'b4\'e6\'ca\'fd\'be\'dd
+\f0 \
+ 
+\f1 \'cc\'d8\'b5\'e3
+\f0 \
+	
+\f1 \'d2\'bb\'b8\'f6\'c1\'bc\'b9\'b9\'b5\'c4
+\f0 XML
+\f1 \'ce\'c4\'bc\'fe\'d2\'aa\'c7\'f3\'c2\'fa\'d7\'e3\'d2\'bb\'cf\'c2\'b9\'e6\'b6\'a8
+\f0 \
+	1) 
+\f1 \'b5\'da\'d2\'bb\'d0\'d0\'c4\'da\'c8\'dd\'ca\'c7\'a3\'ba
+\f0 <?xml version = @\'931.0\'94 encoding = \'93utf-8\'94?>\
+	2) XML
+\f1 \'d6\'d0\'b6\'bc\'ca\'c7\'b1\'ea\'c7\'a9
+\f0  <name>Hao</name>\
+	3) 
+\f1 \'bd\'ab\'b1\'ea\'c7\'a9\'d7\'e9\'b3\'c9\'b5\'c4\'c7\'f8\'d3\'f2\'bd\'d0\'d4\'aa\'cb\'d8
+\f0 (Element)
+\f1 \'a3\'ac\'bf\'c9\'d2\'d4\'c7\'b6\'cc\'d7\'a3\'ac\'b5\'ab\'ca\'c7\'b2\'bb\'c4\'dc\'bd\'bb\'b2\'e6
+\f0 \
+	4) 
+\f1 \'d2\'bb\'b8\'f6
+\f0 xml
+\f1 \'ce\'c4\'bc\'fe\'d6\'d0\'d3\'d0\'c7\'d2\'d6\'bb\'d3\'d0\'d2\'bb\'b8\'f6\'b8\'f9\'d4\'aa\'cb\'d8\'a3\'a8\'d7\'ee\'cd\'e2\'b2\'e3\'b5\'c4\'c4\'c7\'b8\'f6\'a3\'a9
+\f0 \
+	5) 
+\f1 \'d4\'aa\'cb\'d8\'bf\'c9\'d2\'d4\'d3\'d0\'ca\'f4\'d0\'d4\'a3\'ac\'ca\'f4\'d0\'d4\'d6\'b5\'b1\'d8\'d0\'eb\'d3\'c3\'cb\'ab\'d2\'fd\'ba\'c5
+\f0  <person \'93name\'94=\'93Hao\'94,\'94age\'94=30></person>\
+	6) 
+\f1 \'d4\'aa\'cb\'d8\'d6\'d0\'bf\'c9\'d2\'d4\'d3\'d0\'d7\'d3\'d4\'aa\'cb\'d8\'a3\'ac\'d2\'b2\'bf\'c9\'d2\'d4\'ca\'c7\'ce\'c4\'b1\'be
+\f0 \
+		<person>\
+			<name>Hao</name>\
+			<age>30</age>\
+		</person>\
+\
+ 
+\f1 \'bd\'e2\'ce\'f6
+\f0 XML
+\f1 \'ce\'c4\'bc\'fe
+\f0 \
+	iOS
+\f1 \'bd\'e2\'ce\'f6\'b7\'bd\'ca\'bd\'a3\'ba
+\f0 \
+	 1) NSXMLParser
+\f1 \'c0\'e0
+\f0 	
+\f1 \'c6\'bb\'b9\'fb\'b9\'d9\'b7\'bd\'c0\'e0
+\f0 	SAX
+\f1 \'bd\'e2\'ce\'f6
+\f0 \
+		
+\f1 \'b4\'d3\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1\'d2\'bb\'b5\'e3\'a3\'ac\'b4\'a6\'c0\'ed\'d2\'bb\'b5\'e3\'a3\'ac\'bd\'e2\'ce\'f6\'d2\'bb\'b5\'e3\'a3\'ac\'b4\'a6\'c0\'ed\'cd\'ea\'ce\'aa\'d6\'b9
+\f0 \
+	 2) libxml2	C
+\f1 \'d3\'ef\'d1\'d4\'bf\'ce\'bf\'aa\'d4\'b4\'bd\'e2\'ce\'f6\'c6\'f7
+\f0  
+\f1 \'b5\'d7\'b2\'e3\'a3\'ac\'bf\'c9\'d2\'d4\'bd\'f8\'d0\'d0
+\f0 SAX
+\f1 \'bd\'e2\'ce\'f6\'ba\'cd
+\f0 DOM
+\f1 \'bd\'e2\'ce\'f6
+\f0 \
+	 3) 
+\f1 \'b5\'da\'c8\'fd\'b7\'bd\'bf\'f2\'bc\'dc\'bd\'e2\'ce\'f6\'a3\'ba
+\f0 TBXML
+\f1 \'a3\'ac
+\f0 GDATAXML
+\f1 \'a3\'ac
+\f0 KissXml\
+\
+ 
+\f1 \'bd\'e2\'ce\'f6
+\f0 XML
+\f1 \'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ba
+\f0 \
+\cf0 \
+\cf2 //
+\f1 \'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\'bf\'aa\'ca\'bc\'bb\'e1\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8
+\f0  
+\f1 \'b2\'ce\'ca\'fd\'a3\'ba\'d4\'aa\'cb\'d8\'c3\'fb\'b3\'c6\'a3\'ac\'c3\'fc\'c3\'fb\'bf\'d5\'bc\'e4\'a3\'ac
+\f0 qName
+\f1 \'a3\'ac\'d4\'aa\'cb\'d8\'ca\'f4\'d0\'d4
+\f0 \cf0 \
+- (\cf5 void\cf0 )parser:(\cf3 NSXMLParser\cf0  *)parser didStartElement:(\cf3 NSString\cf0  *)elementName namespaceURI:(\cf3 NSString\cf0  *)namespaceURI qualifiedName:(\cf3 NSString\cf0  *)qName attributes:(\cf3 NSDictionary\cf0  *)attributeDict\{\
+    \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'bf\'aa\'ca\'bc\'bd\'e2\'ce\'f6\'d4\'aa\'cb\'d8
+\f0 :%@"\cf0 ,elementName);\
+\}\
+\cf2 //
+\f1 \'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\'bd\'e1\'ca\'f8\'bb\'e1\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 \cf0 \
+- (\cf5 void\cf0 )parser:(\cf3 NSXMLParser\cf0  *)parser didEndElement:(\cf3 NSString\cf0  *)elementName namespaceURI:(\cf3 NSString\cf0  *)namespaceURI qualifiedName:(\cf3 NSString\cf0  *)qName\{\
+    \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'bd\'e2\'ce\'f6\'d4\'aa\'cb\'d8\'cd\'ea\'b3\'c9
+\f0 :%@"\cf0 ,elementName);\
+\}\
+\cf2 //
+\f1 \'b7\'a2\'cf\'d6\'ce\'c4\'b1\'be\'bb\'e1\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 \cf0 \
+- (\cf5 void\cf0 )parser:(\cf3 NSXMLParser\cf0  *)parser foundCharacters:(\cf3 NSString\cf0  *)string\{\
+\}\
+- (\cf5 void\cf0 )parserDidStartDocument:(\cf3 NSXMLParser\cf0  *)parser\{\
+    \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'bf\'aa\'ca\'bc\'bd\'e2\'ce\'f6\'ce\'c4\'bc\'fe
+\f0 "\cf0 );\
+\}\
+- (\cf5 void\cf0 )parserDidEndDocument:(\cf3 NSXMLParser\cf0  *)parser\{\
+    \cf4 NSLog\cf0 (\cf7 @"
+\f1 \'bd\'e2\'ce\'f6\'ce\'c4\'bc\'fe\'cd\'ea\'b3\'c9
+\f0 "\cf0 );\
+\}\cf2 \
+\
+\
+HTML\
+ Hype Text Mark Language 
+\f1 \'d6\'f7\'d2\'aa\'d3\'c3\'d3\'da\'cf\'d4\'ca\'be
+\f0 \
+}

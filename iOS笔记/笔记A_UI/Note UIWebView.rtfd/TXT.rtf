@@ -1,0 +1,265 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 STHeitiSC-Light;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red29\green133\blue25;\red92\green38\blue153;
+\red46\green13\blue110;\red196\green26\blue22;\red63\green110\blue116;\red28\green0\blue207;\red100\green56\blue32;
+\red170\green13\blue145;\red0\green0\blue0;\red46\green13\blue110;\red92\green38\blue153;\red0\green116\blue0;
+\red38\green71\blue75;\red170\green13\blue145;\red196\green26\blue22;\red63\green110\blue116;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c11373\c52157\c9804;\csgenericrgb\c36078\c14902\c60000;
+\csgenericrgb\c18039\c5098\c43137;\csgenericrgb\c76863\c10196\c8627;\csgenericrgb\c24706\c43137\c45490;\csgenericrgb\c10980\c0\c81176;\csgenericrgb\c39216\c21961\c12549;
+\csgenericrgb\c66667\c5098\c56863;\csgenericrgb\c0\c0\c0;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c45600\c0;
+\csgenericrgb\c14902\c27843\c29412;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c24700\c43100\c45600;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16660\viewh19880\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf2 \CocoaLigature0  
+\b \cf0 WebView\
+
+\fs36 \
+
+\f1\b0\fs40 \cf2  
+\f2\b \cf0 \'ca\'b9\'d3\'c3
+\f3 WebView
+\f2 \'bc\'d3\'d4\'d8
+\f3 HTML
+\f2 \'d2\'b3\'c3\'e6
+\f1\b0 \cf3 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs36 \cf3  1.
+\f2 \'bb\'f1\'c8\'a1\'c2\'b7\'be\'b6
+\f1 \
+ 2.
+\f2 \'b6\'d4\'c2\'b7\'be\'b6\'bd\'f8\'d0\'d0\'d7\'aa\'c2\'eb
+\f1 \
+ 3.
+\f2 \'b0\'d1\'c2\'b7\'be\'b6\'d7\'aa\'bb\'bb\'ce\'aa
+\f1 NSURL
+\f2 \'b8\'f1\'ca\'bd
+\f1 \
+ 4.
+\f2 \'ca\'b9\'d3\'c3
+\f1 URL
+\f2 \'c9\'e8\'d6\'c3
+\f1 Request
+\f2 \'b6\'d4\'cf\'f3
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3  5.
+\f2 \'b3\'f5\'ca\'bc\'bb\'af\'b2\'a2\'c9\'e8\'d6\'c3
+\f1 WebView\
+	a.
+\f2 \'c9\'e8\'d6\'c3
+\f1 WebView
+\f2 \'b5\'c4
+\f1 frame\
+	b.
+\f2 \'c9\'e8\'d6\'c3
+\f1 WebView
+\f2 \'b5\'c4
+\f1 delegate\
+	c.
+\f2 \'c9\'e8\'d6\'c3
+\f1 WebView
+\f2 \'b5\'c4\'b9\'f6\'b6\'af\'d1\'f9\'ca\'bd
+\f1 ...\
+ 6.
+\f2 \'cc\'ed\'bc\'d3
+\f1 WebView
+\f2 \'d6\'c1\'b5\'b1\'c7\'b0
+\f1 View\
+ 7.
+\f2 \'bc\'d3\'d4\'d8
+\f1 HTML
+\f2 \'d2\'b3\'c3\'e6
+\f1 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf4 	NSString\cf0 * sPath = [\cf4 NSString\cf0  \cf5 stringWithFormat\cf0 :\cf6 @"%@/movieSeat/online/seatInfo.html?seqNo=%@"\cf0 , sBasePath, \cf7 ticketModel\cf0 .\cf7 seqNo\cf0 ];\
+	sPath = [sPath \cf5 stringByAddingPercentEscapesUsingEncoding\cf0 :\cf5 NSUTF8StringEncoding\cf0 ];\cf3 \
+\cf0     \cf7 seatWebView\cf0  = [[\cf4 UIWebView\cf0  \cf5 alloc\cf0 ]\cf5 initWithFrame\cf0 :\cf5 CGRectMake\cf0 (\cf8 0\cf0 , height, \cf9 IPHONE_WIDTH\cf0 , \cf9 IPHONE_HEIGHT\cf0 -height)];\
+    \cf7 seatWebView\cf0 .\cf4 delegate\cf0  = \cf10 self\cf0 ;\
+    [\cf7 seatWebView\cf0  \cf5 setScalesPageToFit\cf0 :\cf10 YES\cf0 ];\
+    \cf7 seatWebView\cf0 .\cf4 scrollView\cf0 .\cf4 bounces\cf0 =\cf10 NO\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :sPath];\
+    \cf4 NSURLRequest\cf0  *request= [\cf4 NSURLRequest\cf0  \cf5 requestWithURL\cf0 :url];\
+    [\cf7 seatWebView\cf0  \cf5 loadRequest\cf0 :request];\
+    [\cf10 self\cf0 .\cf4 view\cf0  \cf5 addSubview\cf0 :\cf7 seatWebView\cf0 ];\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf11 	url = [url \cf12 stringByAddingPercentEncodingWithAllowedCharacters\cf11 :[\cf13 NSCharacterSet\cf11  \cf12 URLPathAllowedCharacterSet\cf11 ]];
+\fs36 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf14 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs40 \cf2  
+\f2\b \cf0 \'ca\'b9\'d3\'c3
+\f3 WebViewJavaScriptBridge
+\f2 \'ba\'cd
+\f3 JavaScript
+\f2 \'d2\'b3\'c3\'e6\'bd\'f8\'d0\'d0\'bd\'bb\'bb\'a5\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f1\b0\fs36 \cf3  1.
+\f2 \'bb\'f1\'c8\'a1\'c2\'b7\'be\'b6
+\f1 \
+ 2.
+\f2 \'b6\'d4\'c2\'b7\'be\'b6\'bd\'f8\'d0\'d0\'d7\'aa\'c2\'eb
+\f1 \
+ 3.
+\f2 \'b0\'d1\'c2\'b7\'be\'b6\'d7\'aa\'bb\'bb\'ce\'aa
+\f1 NSURL
+\f2 \'b8\'f1\'ca\'bd
+\f1 \
+ 4.
+\f2 \'ca\'b9\'d3\'c3
+\f1 URL
+\f2 \'c9\'e8\'d6\'c3
+\f1 Request
+\f2 \'b6\'d4\'cf\'f3
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3  5.
+\f2 \'b3\'f5\'ca\'bc\'bb\'af\'b2\'a2\'c9\'e8\'d6\'c3
+\f1 WebView\cf0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0     [\cf7 WebViewJavascriptBridge\cf0  \cf15 enableLogging\cf0 ];   \
+    \cf7 WebViewJavascriptBridge\cf0  *_bridge = [\cf7 WebViewJavascriptBridge\cf0  \cf15 bridgeForWebView\cf0 :\cf7 seatWebView\cf0  \cf15 handler\cf0 :^(\cf10 id\cf0  data, \cf7 WVJBResponseCallback\cf0  responseCallback) \{\
+        responseCallback(\cf6 @"Response for message from ObjC"\cf0 );\
+    \}];    \
+    [\cf7 _bridge\cf0  \cf15 registerHandler\cf0 :\cf6 @"ylpwMobileonlineSeatBackJavascriptHandler"\cf0  \cf15 handler\cf0 :^(\cf10 id\cf0  data, \cf7 WVJBResponseCallback\cf0  responseCallback) \{\
+        [\cf10 self\cf0 .\cf4 navigationController\cf0  \cf5 popViewControllerAnimated\cf0 :\cf10 YES\cf0 ];\
+    \}];\
+    [\cf7 _bridge\cf0  \cf15 registerHandler\cf0 :\cf6 @"ylpwMobilealertJavascriptHandler"\cf0  \cf15 handler\cf0 :^(\cf10 id\cf0  data, \cf7 WVJBResponseCallback\cf0  responseCallback) \{\
+        \cf9 _SPAlertView\cf0 (data, \cf6 @""\cf0 );\
+    \}];\
+    [\cf7 _bridge\cf0  \cf15 registerHandler\cf0 :\cf6 @"ylpwMobilemovieSeatOrderInfoJavascriptHandler"\cf0  \cf15 handler\cf0 :^(\cf10 id\cf0  data, \cf7 WVJBResponseCallback\cf0  responseCallback) \{\
+        \cf7 FilmConfirmViewController\cf0  *viewController = [[\cf7 FilmConfirmViewController\cf0  \cf5 alloc\cf0 ]\cf5 init\cf0 ];\
+        viewController.\cf7 aData\cf0  = data;\
+        viewController.\cf7 filmDateIndex\cf0  = \cf10 self\cf0 .\cf7 filmDateIndex\cf0 ;\
+        viewController.\cf7 filmIndex\cf0  = \cf10 self\cf0 .\cf7 filmIndex\cf0 ;\
+        viewController.\cf7 model\cf0  = \cf10 self\cf0 .\cf7 model\cf0 ;\
+        viewController.\cf7 seatIndex\cf0  = \cf10 self\cf0 .\cf7 seatIndex\cf0 ;\
+        [\cf10 self\cf0 .\cf4 navigationController\cf0  \cf5 pushViewController\cf0 :viewController \cf5 animated\cf0 :\cf10 YES\cf0 ];\
+    \}];    \
+    [\cf7 _bridge\cf0  \cf15 setbridgeDelegate\cf0 :\cf10 self\cf0 ];\
+\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs40 \cf2  
+\f2\b \cf0 \'b7\'a2\'cb\'cd
+\f3 http
+\f2 \'c7\'eb\'c7\'f3\'d6\'ae\'c7\'b0\'d0\'e8\'d2\'aa\'c5\'e4\'d6\'c3\'b2\'ce\'ca\'fd
+\f1\b0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2  
+\f3\b\fs22 \cf0 App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+\f1\b0\fs40 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs36 \cf2  
+\f2 \'d4\'ad\'d2\'f2
+\f1 :
+\f2 \'d4\'da
+\f1 iOS9 beta1
+\f2 \'d6\'d0\'a3\'ac\'c6\'bb\'b9\'fb\'bd\'ab\'d4\'ad
+\f1 http
+\f2 \'d0\'ad\'d2\'e9\'b8\'c4\'b3\'c9\'c1\'cb
+\f1 https
+\f2 \'d0\'ad\'d2\'e9\'a3\'ac\'ca\'b9\'d3\'c3
+\f1  TLS1.2 SSL
+\f2 \'bc\'d3\'c3\'dc\'c7\'eb\'c7\'f3\'ca\'fd\'be\'dd\'a1\'a3
+\f1 \
+ 
+\f2 \'bd\'e2\'be\'f6\'b0\'ec\'b7\'a8\'a3\'ba
+\f1 \
+ 
+\f2 \'d4\'da
+\f1 info.plist
+\f2 \'d6\'d0\'cc\'ed\'bc\'d3
+\f1 \
+ <key>NSAppTransportSecurity</key><dict>\
+ <key>NSAllowsArbitraryLoads</key>\
+ <true/></dict>\
+\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs40 \cf2  
+\f3\b \cf0 WebView
+\f2 \'b5\'c4\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8
+\f1\b0 \cf3 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf6 	webView
+\f2 \'d6\'d8\'b6\'a8\'cf\'f2
+\f1 ,
+\f2 \'bf\'c9\'d2\'d4\'c0\'b9\'bd\'d8
+\f1 webView
+\f2 \'d6\'d0\'cb\'f9\'d3\'d0\'cc\'f8\'d7\'aa\'b5\'c4
+\f1 URL
+\fs36 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0 - (\cf10 BOOL\cf0 )webView:(\cf4 UIWebView\cf0  *)_webView shouldStartLoadWithRequest:(\cf4 NSURLRequest\cf0  *)request navigationType:(\cf4 UIWebViewNavigationType\cf0 )navigationType\
+\{\cf2 \
+\cf0 \}\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs40 \cf2  
+\f3\b \cf0 WebView
+\f4 \'d7\'d4\'b6\'af\'b2\'a5\'b7\'c5\'c3\'bd\'cc\'e5\'d7\'ca\'d4\'b4\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b0\fs36 \cf2 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf11  
+\f4 \'bf\'aa\'c6\'f4
+\f1 :   webView.\cf13 mediaPlaybackRequiresUserAction\cf11  = \cf16 NO\cf11 ;\
+\
+ 
+\f4 \'b9\'d8\'b1\'d5
+\f1 :	
+\f4 \cf2 \'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'b2\'bb\'d7\'d4\'b6\'af\'b9\'d8\'b1\'d5\'b5\'c4\'c7\'e9\'bf\'f6\'be\'cd\'c8\'c3
+\f1 WebView
+\f4 \'d7\'d4\'b6\'af\'d6\'b4\'d0\'d0\'d2\'bb\'b6\'ce
+\f1 Js
+\f4 \'b4\'fa\'c2\'eb
+\f1 \cf11 \
+
+\fs36     		\cf13 NSString\cf11  *js = \cf17 @" window.location.href = \\"about:blank\\";"\cf11 ;\
+    		[\cf18 webView\cf11  \cf12 stringByEvaluatingJavaScriptFromString\cf11 :js];\
+
+\fs40 \
+\
+
+\f4 \'cd\'f9
+\f1 webView
+\f4 \'d6\'d0\'d7\'a2\'c8\'eb
+\f1 JS:\
+
+\fs36     \cf13 NSString\cf11  *js = \cf17 @"function imgAutoFit() \{ \\\
+    var imgs = document.getElementsByTagName('img'); \\\
+    for (var i = 0; i < imgs.length; ++i) \{\\\
+    var img = imgs[i];   \\\
+    img.style.maxWidth = %f;   \\\
+    \} \\\
+    \}"\cf11 ;\
+    [\cf18 webView\cf11  \cf12 stringByEvaluatingJavaScriptFromString\cf11 :js];\
+\
+    \cf13 NSString\cf11  *js =  [\cf13 NSString\cf11  \cf12 stringWithFormat\cf11 :\cf17 @"document.getElementsByName(\\"description\\")[0].content"\cf11 ];\
+    \cf13 NSString\cf11  *des = [\cf18 webView\cf11  \cf12 stringByEvaluatingJavaScriptFromString\cf11 :js];\
+\
+        \cf13 NSString\cf11  *js =  [\cf13 NSString\cf11  \cf12 stringWithFormat\cf11 :\cf17 @"document.querySelectorAll(\\"img\\")[0]?document.querySelectorAll(\\"img\\")[0].src:\\"0\\""\cf11 ];\
+        \cf13 NSString\cf11  *imagePath = [\cf18 webView\cf11  \cf12 stringByEvaluatingJavaScriptFromString\cf11 :js];\
+}

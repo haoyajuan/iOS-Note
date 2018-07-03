@@ -1,0 +1,340 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 PingFangSC-Regular;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 Menlo-Bold;\f5\fnil\fcharset134 STSongti-SC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green116\blue0;\red0\green0\blue0;
+\red0\green116\blue0;\red255\green255\blue255;\red0\green116\blue0;\red170\green13\blue145;\red35\green35\blue35;
+\red244\green244\blue244;\red83\green104\blue112;\red92\green38\blue153;\red46\green13\blue110;\red174\green0\blue240;
+\red63\green110\blue116;\red196\green26\blue22;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;\csgray\c0\c0;
+\csgenericrgb\c0\c45490\c0;\cssrgb\c100000\c100000\c100000;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c66500\c5200\c56900;\cssrgb\c18431\c18431\c18431;
+\cssrgb\c96471\c96471\c96471;\cssrgb\c39608\c48235\c51373;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c68235\c0\c94118;
+\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c77000\c10200\c8600;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19800\viewh19620\viewkind0
+\deftab989
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf2 \CocoaLigature0 AssociatedObject
+\f1\b0\fs36 \cf3 \
+ //#import <objc/runtime.h>
+\f2 \'cd\'b7\'ce\'c4\'bc\'fe
+\f1 \
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf3 \cb4 \CocoaLigature1 /** 
+\f3 \cf0 \
+
+\f1 \cf3  * Returns the value associated with a given object for a given key.
+\f3 \cf0 \
+
+\f1 \cf3  * 
+\f3 \cf0 \
+
+\f1 \cf3  * @param object The source object for the association.
+\f3 \cf0 \
+
+\f1 \cf3  * @param key The key for the association.
+\f3 \cf0 \
+
+\f1 \cf3  * 
+\f3 \cf0 \
+
+\f1 \cf3  * @return The value associated with the key \\e key for \\e object.
+\f3 \cf0 \
+
+\f1 \cf3  * 
+\f3 \cf0 \
+
+\f1 \cf3  * @see objc_setAssociatedObject
+\f3 \cf0 \
+
+\f1 \cf3  */
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf2  objc_getAssociatedObject(
+\f2 \cf3 \cb1 \CocoaLigature0 \'d4\'b4\'b6\'d4\'cf\'f3
+\f1 \cf2 , 
+\f2 \cf3 \'b9\'d8\'bc\'fc\'d7\'d6
+\f1 \cf2 \cb4 \CocoaLigature1 )
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf3 \cb1 \CocoaLigature0 \
+ \cf2 objc_setAssociatedObject(
+\f2 \cf3 \'d4\'b4\'b6\'d4\'cf\'f3
+\f1 \cf2 , 
+\f2 \cf3 \'b9\'d8\'bc\'fc\'d7\'d6
+\f1 \cf2 , 
+\f2 \cf3 \'b9\'d8\'c1\'aa\'b5\'c4\'b6\'d4\'cf\'f3
+\f1 \cf2 , 
+\f2 \cf3 \'b9\'d8\'c1\'aa\'b2\'df\'c2\'d4
+\f1 \cf2 );\
+\cf3   objc_setAssociatedObject
+\f2 \'d0\'e8\'d2\'aa\'cb\'c4\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'ba\'d4\'b4\'b6\'d4\'cf\'f3\'a3\'ac\'b9\'d8\'bc\'fc\'d7\'d6\'a3\'ac\'b9\'d8\'c1\'aa\'b5\'c4\'b6\'d4\'cf\'f3\'ba\'cd\'d2\'bb\'b8\'f6\'b9\'d8\'c1\'aa\'b2\'df\'c2\'d4\'a1\'a3
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb6 \expnd0\expndtw0\kerning0
+\CocoaLigature1     \'b9\'d8\'bc\'fc\'d7\'d6\'ca\'c7\'d2\'bb\'b8\'f6
+\f1 void
+\f2 \'c0\'e0\'d0\'cd\'b5\'c4\'d6\'b8\'d5\'eb\'a3\'ac\'c3\'bf\'b8\'f6\'b9\'d8\'c1\'aa\'b5\'c4\'b9\'d8\'bc\'fc\'d7\'d6\'b1\'d8\'d0\'eb\'ca\'c7\'ce\'a8\'d2\'bb\'b5\'c4\'a3\'ac\'cd\'a8\'b3\'a3\'d3\'c3\'be\'b2\'cc\'ac\'b1\'e4\'c1\'bf\'b5\'c4\'d6\'b8\'d5\'eb\'d7\'f7\'ce\'aa\'b9\'d8\'bc\'fc\'d7\'d6\'a1\'a3
+\f1 \cb1 \
+
+\f2 \cb6     \'b9\'d8\'c1\'aa\'b2\'df\'c2\'d4\'b1\'ed\'c3\'f7\'c1\'cb\'cf\'e0\'b9\'d8\'b5\'c4\'b6\'d4\'cf\'f3\'ca\'c7\'cd\'a8\'b9\'fd\'b8\'b3\'d6\'b5\'a3\'ac\'b1\'a3\'c1\'f4\'d2\'fd\'d3\'c3\'bb\'b9\'ca\'c7\'b8\'b4\'d6\'c6\'b5\'c4\'b7\'bd\'ca\'bd\'bd\'f8\'d0\'d0\'b9\'d8\'c1\'aa\'b5\'c4\'a3\'bb\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf3  //1 
+\f2 \'d4\'b4\'b6\'d4\'cf\'f3
+\f1 alert\
+ //2 
+\f2 \'b9\'d8\'bc\'fc\'d7\'d6
+\f1  
+\f2 \'ce\'a8\'d2\'bb\'be\'b2\'cc\'ac\'b1\'e4\'c1\'bf
+\f1 key associatedkey\
+ //3 
+\f2 \'b9\'d8\'c1\'aa\'b5\'c4\'b6\'d4\'cf\'f3
+\f1  sender\
+ //4 
+\f2 \'b9\'d8\'c1\'aa\'b2\'df\'c2\'d4
+\f1   OBJC_ASSOCIATION_ASSIGN\
+//    enum \{\
+//        OBJC_ASSOCIATION_ASSIGN = 0,           
+\f2 \'c8\'f5\'d2\'fd\'d3\'c3
+\f1 /**< Specifies a weak reference to the associated object. */\cf2 \
+\cf3 //        OBJC_ASSOCIATION_RETAIN_NONATOMIC = 1, /**< Specifies a strong reference to the associated object.\cf2 \
+\cf3 //                                                *   The association is not made atomically. */\cf2 \
+\cf3 //        OBJC_ASSOCIATION_COPY_NONATOMIC = 3,   /**< Specifies that the associated object is copied.\cf2 \
+\cf3 //                                                *   The association is not made atomically. */\cf2 \
+\cf3 //        OBJC_ASSOCIATION_RETAIN = 01401,       /**< Specifies a strong reference to the associated object.\cf2 \
+\cf3 //                                                *   The association is made atomically. */\cf2 \
+\cf3 //        OBJC_ASSOCIATION_COPY = 01403          /**< Specifies that the associated object is copied.\cf2 \
+\cf3 //                                                *   The association is made atomically. */\cf2 \
+\cf3 //    \};\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2\b\fs38 \cf2 \'b9\'d8\'d3\'da\'b9\'d8\'c1\'aa\'b2\'df\'c2\'d4\'b5\'c4\'ca\'b9\'d3\'c3
+\f1\b0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic Pasted Graphic.tiff \width12580 \height4580 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f1\fs36 \cf2 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2\b\fs38 \cf2 \'b9\'d8\'d3\'da\'b9\'d8\'bc\'fc\'d7\'d6\'b5\'c4\'ca\'b9\'d3\'c3
+\f4 \
+
+\f2\b0\fs36 \cf7 \'c4\'bf\'b5\'c4: \'b1\'a3\'d6\'a4
+\f1 key
+\f2 \'b5\'c4\'ce\'a8\'d2\'bb\'d0\'d4
+\f1 \
+1.
+\f2 \'ca\'b9\'d3\'c3\'d2\'bb\'b8\'f6\'be\'b2\'cc\'ac\'b1\'e4\'c1\'bf\'b5\'c4\'b5\'d8\'d6\'b7
+\f1 \
+	
+\f2 \cb4 \CocoaLigature1 \'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'be\'b2\'cc\'ac\'d6\'b8\'d5\'eb
+\f1  static void * 
+\f2 \'c0\'e0\'d0\'cd\'b5\'c4\'b2\'ce\'ca\'fd\'c0\'b4\'b4\'fa\'cc\'e6
+\f1 \cb1 \CocoaLigature0 \
+2.
+\f2 \'ca\'b9\'d3\'c3\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'b5\'c4\'b5\'d8\'d6\'b7
+\f1 \
+	
+\f2 \cb4 \CocoaLigature1 \'ca\'b9\'d3\'c3
+\f1  @selector(categoryProperty) 
+\f2 \'d7\'f7\'ce\'aa 
+\f1 key 
+\f2 \'b4\'ab\'c8\'eb\'a1\'a3\'d2\'f2\'ce\'aa\'d5\'e2\'d6\'d6\'b7\'bd\'b7\'a8\'ca\'a1\'c2\'d4\'c1\'cb\'c9\'f9\'c3\'f7\'b2\'ce\'ca\'fd\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b2\'a2\'c7\'d2\'c4\'dc\'ba\'dc\'ba\'c3\'b5\'d8\'b1\'a3\'d6\'a4
+\f1  key 
+\f2 \'b5\'c4\'ce\'a8\'d2\'bb\'d0\'d4\'a1\'a3
+\f1 \cb1 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f5\b\fs48 \cf2 \'ca\'b9\'d3\'c3\'b9\'d8\'c1\'aa\'b6\'d4\'cf\'f3\'b8\'f8\'b7\'d6\'c0\'e0\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4
+\f1\b0\fs40 \cf8 \cb4 \CocoaLigature1 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs36 \cf8 \
+1.
+\f2 \'ce\'aa\'ca\'b2\'c3\'b4\'d2\'aa\'ca\'b9\'d3\'c3\'b9\'d8\'c1\'aa\'b6\'d4\'cf\'f3
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf7 \cb1 \expnd0\expndtw0\kerning0
+\'d4\'da\'b7\'d6\'c0\'e0\'d6\'d0\'a3\'ac\'d2\'f2\'ce\'aa\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd\'b1\'e4\'c1\'bf\'b5\'c4\'b2\'bc\'be\'d6\'d2\'d1\'be\'ad\'b9\'cc\'b6\'a8\'a3\'ac\'ca\'b9\'d3\'c3
+\f1  \cb10 @property\cb1  
+\f2 \'d2\'d1\'be\'ad
+\b \'ce\'de\'b7\'a8\'cf\'f2\'b9\'cc\'b6\'a8\'b5\'c4\'b2\'bc\'be\'d6\'d6\'d0\'cc\'ed\'bc\'d3\'d0\'c2\'b5\'c4\'ca\'b5\'c0\'fd\'b1\'e4\'c1\'bf\'a3\'a8\'d5\'e2\'d1\'f9\'d7\'f6\'bf\'c9\'c4\'dc\'bb\'e1\'b8\'b2\'b8\'c7\'d7\'d3\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd\'b1\'e4\'c1\'bf\'a3\'a9
+\b0 \'a3\'ac\'cb\'f9\'d2\'d4\'ce\'d2\'c3\'c7\'d0\'e8\'d2\'aa
+\b \'ca\'b9\'d3\'c3\'b9\'d8\'c1\'aa\'b6\'d4\'cf\'f3\'d2\'d4\'bc\'b0\'c1\'bd\'b8\'f6\'b7\'bd\'b7\'a8\'c0\'b4\'c4\'a3\'c4\'e2\'b9\'b9\'b3\'c9\'ca\'f4\'d0\'d4\'b5\'c4\'c8\'fd\'b8\'f6\'d2\'aa\'cb\'d8
+\b0 \'a1\'a3
+\f1 \cb4 \kerning1\expnd0\expndtw0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2 \cf3 \cb4 \'cb\'f9\'d2\'d4\'d4\'da\'b7\'d6\'c0\'e0\'d6\'d0
+\f1 \cf3 \cb4  @property 
+\f2 \cf3 \cb4 \'b2\'a2\'b2\'bb\'bb\'e1\'d7\'d4\'b6\'af\'c9\'fa\'b3\'c9\'ca\'b5\'c0\'fd\'b1\'e4\'c1\'bf\'d2\'d4\'bc\'b0\'b4\'e6\'c8\'a1\'b7\'bd\'b7\'a8\'a3\'ac\'d2\'bb\'b0\'e3\'ca\'b9\'d3\'c3\'b9\'d8\'c1\'aa\'b6\'d4\'cf\'f3\'ce\'aa\'d2\'d1\'be\'ad\'b4\'e6\'d4\'da\'b5\'c4\'c0\'e0\'cc\'ed\'bc\'d3\'a1\'ba\'ca\'f4\'d0\'d4\'a1\'bb\'a1\'a3
+\f1 \cf8 \cb4 \
+\
+2.
+\f2 \'ce\'aa\'ca\'b2\'c3\'b4\'b4\'ab\'c8\'eb
+\f1 @selector(params)\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf3  @selector(categoryProperty) 
+\f2 \cf3 \cb4 \'d2\'b2\'be\'cd\'ca\'c7\'b2\'ce\'ca\'fd\'d6\'d0\'b5\'c4
+\f1 \cf3 \cb4  key
+\f2 \cf3 \cb4 \'a3\'ac\'c6\'e4\'ca\'b5\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'be\'b2\'cc\'ac\'d6\'b8\'d5\'eb
+\f1 \cf3 \cb4  static void * 
+\f2 \cf3 \cb4 \'c0\'e0\'d0\'cd\'b5\'c4\'b2\'ce\'ca\'fd\'c0\'b4\'b4\'fa\'cc\'e6\'a3\'ac\'b2\'bb\'b9\'fd\'d4\'da\'d5\'e2\'c0\'ef\'a3\'ac\'b1\'ca\'d5\'df\'c7\'bf\'c1\'d2\'cd\'c6\'bc\'f6\'ca\'b9\'d3\'c3
+\f1 \cf3 \cb4  @selector(categoryProperty) 
+\f2 \cf3 \cb4 \'d7\'f7\'ce\'aa
+\f1 \cf3 \cb4  key 
+\f2 \cf3 \cb4 \'b4\'ab\'c8\'eb\'a1\'a3\'d2\'f2\'ce\'aa\'d5\'e2\'d6\'d6\'b7\'bd\'b7\'a8\'ca\'a1\'c2\'d4\'c1\'cb\'c9\'f9\'c3\'f7\'b2\'ce\'ca\'fd\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b2\'a2\'c7\'d2\'c4\'dc\'ba\'dc\'ba\'c3\'b5\'d8\'b1\'a3\'d6\'a4
+\f1 \cf3 \cb4  key 
+\f2 \cf3 \cb4 \'b5\'c4\'ce\'a8\'d2\'bb\'d0\'d4\'a1\'a3
+\f1 \cf8 \cb4 \
+\
+@interface\cf2  UIViewController (YJRouter)
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf8 @property\cf2  (\cf8 nonatomic\cf2 ,\cf8 strong\cf2 ) \cf12 NSDictionary\cf2  *params;
+\f3 \cf0 \
+
+\f1 \cf8 @end
+\f3 \cf0 \
+\
+
+\f1 \cf8 @implementation\cf2  \cf2 \cb4 \ulth \ulc2 U\cf2 \cb4 \ulnone IViewController (YJRouter)
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf2 - (\cf12 NSDictionary\cf2  *)params\{
+\f3 \cf0 \
+
+\f1 \cf2     \cf8 return\cf2  \cf13 objc_getAssociatedObject\cf2 (\cf8 self\cf2 , \cf8 @selector\cf2 (params));
+\f3 \cf0 \
+
+\f1 \cf2 \}
+\f3 \cf0 \
+
+\f1 \cf2 - (\cf8 void\cf2 )setParams:(\cf12 NSDictionary\cf2  *)params\{
+\f3 \cf0 \
+
+\f1 \cf2     \cf13 objc_setAssociatedObject\cf2 (\cf8 self\cf2 , \cf8 @selector\cf2 (params), params, \cf13 OBJC_ASSOCIATION_RETAIN_NONATOMIC\cf2 );
+\f3 \cf0 \
+
+\f1 \cf2 \}
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf8 @end
+\f3 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f5\b\fs48 \cf2 \cb1 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1\b0\fs36 \cf2 \
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf14 Example:\
+ 
+\f2 \'ca\'b9\'d3\'c3\'b3\'a1\'be\'b0
+\f1 :
+\f2 \'ce\'aa
+\f1 category
+\f2 \'b5\'c4\'ca\'f4\'d0\'d4\'cc\'e1\'b9\'a9\'b6\'c1\'d0\'b4\'b5\'c4\'b7\'bd\'b7\'a8\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1\fs36 \cf2 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf8 static\cf2  \cf8 char\cf2  URLparams;\
+\cf8 @implementation\cf2  UIViewController (URLRouter)\
+- (\cf12 NSDictionary\cf2  *)params\{\
+    \cf8 return\cf2  \cf13 objc_getAssociatedObject\cf2 (\cf8 self\cf2 , &\cf15 URLparams\cf2 );\
+\}\
+- (\cf8 void\cf2 )setParams:(\cf12 NSDictionary\cf2  *)params\{\
+    \cf13 objc_setAssociatedObject\cf2 (\cf8 self\cf2 , &\cf15 URLparams\cf2 , params, \cf13 OBJC_ASSOCIATION_RETAIN_NONATOMIC\cf2 );\
+\}\
+\cf8 @end
+\fs36 \cf2 \
+\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2 \cf2 \'d4\'da\'b7\'d6\'c0\'e0\'d6\'d0\'b8\'f8\'ca\'f4\'d0\'d4\'b8\'b3\'d6\'b5
+\f1 ,\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf14 Example:
+\fs36 \cf2 \
+	NSString *message = \cf16 @"
+\f2 \'c4\'e3\'ca\'c7\'cb\'ad
+\f1 "\cf2 ;\
+\
+	UIAlertView *alert = [[UIAlertView alloc]initWithTitle:\cf16 @"
+\f2 \'cc\'e1\'ca\'be
+\f1 "\cf2  message:\cf16 @"
+\f2 \'ce\'d2\'d2\'aa\'b4\'ab\'d6\'b5
+\f1 \'b7"\cf2  delegate:\cf8 self\cf2  cancelButtonTitle:\cf16 @"
+\f2 \'c8\'b7\'b6\'a8
+\f1 "\cf2  otherButtonTitles:\cf8 nil\cf2 ];\
+	alert.delegate = \cf8 self\cf2 ;\
+	[alert show];\
+	objc_setAssociatedObject(alert, \cf16 @"msgstr"\cf2 , message,OBJC_ASSOCIATION_ASSIGN);\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf3 //
+\f2 \'b0\'d1
+\f1 alert
+\f2 \'ba\'cd
+\f1 message
+\f2 \'d7\'d6\'b7\'fb\'b4\'ae\'b9\'d8\'c1\'aa\'c6\'f0\'c0\'b4\'a3\'ac\'d7\'f7\'ce\'aa
+\f1 alertview
+\f2 \'b5\'c4\'d2\'bb\'b2\'bf\'b7\'d6\'a3\'ac\'b9\'d8\'bc\'fc\'b4\'ca\'be\'cd\'ca\'c7
+\f1 msgstr
+\f2 \'a3\'ac\'d6\'ae\'ba\'f3\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3
+\f1 objc_getAssociatedObject
+\f2 \'b4\'d3
+\f1 alertview
+\f2 \'d6\'d0\'bb\'f1\'c8\'a1\'b5\'bd\'cb\'f9\'b9\'d8\'c1\'aa\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'ac\'b1\'e3\'bf\'c9\'d2\'d4\'b7\'c3\'ce\'ca
+\f1 message
+\f2 \'bb\'f2\'d5\'df
+\f1 btn
+\f2 \'c1\'cb
+\f1 \cf2 \
+\
+\cf3 //    
+\f2 \'bc\'b4\'ca\'b5\'cf\'d6\'c1\'cb\'b9\'d8\'c1\'aa\'b4\'ab\'d6\'b5
+\f1 \cf2 \
+	objc_setAssociatedObject(alert, \cf16 @"btn property"\cf2 ,sender,OBJC_ASSOCIATION_ASSIGN);\
+\
+\
+\cf3 //
+\f2 \'cd\'a8\'b9\'fd
+\f1  objc_getAssociatedObject
+\f2 \'bb\'f1\'c8\'a1\'b9\'d8\'c1\'aa\'b6\'d4\'cf\'f3
+\f1 \cf2 \
+	NSString  *messageString =objc_getAssociatedObject(alertView, \cf16 @"msgstr"\cf2 );\
+\
+\cf3  //
+\f2 \'ca\'b9\'d3\'c3\'ba\'af\'ca\'fd
+\f1 objc_removeAssociatedObjects
+\f2 \'bf\'c9\'d2\'d4\'b6\'cf\'bf\'aa\'cb\'f9\'d3\'d0\'b9\'d8\'c1\'aa\'a1\'a3\'cd\'a8\'b3\'a3\'c7\'e9\'bf\'f6\'cf\'c2\'b2\'bb\'bd\'a8\'d2\'e9\'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'d2\'f2\'ce\'aa\'cb\'fb\'bb\'e1\'b6\'cf\'bf\'aa\'cb\'f9\'d3\'d0\'b9\'d8\'c1\'aa\'a1\'a3\'d6\'bb\'d3\'d0\'d4\'da\'d0\'e8\'d2\'aa\'b0\'d1\'b6\'d4\'cf\'f3\'bb\'d6\'b8\'b4\'b5\'bd
+\f1 \'93
+\f2 \'d4\'ad\'ca\'bc\'d7\'b4\'cc\'ac
+\f1 \'94
+\f2 \'b5\'c4\'ca\'b1\'ba\'f2\'b2\'c5\'bb\'e1\'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'ba\'af\'ca\'fd\'a1\'a3
+\f1 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf2 \
+}

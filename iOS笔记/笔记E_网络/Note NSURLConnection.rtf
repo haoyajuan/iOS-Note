@@ -1,0 +1,588 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red174\green0\blue240;\red92\green38\blue153;
+\red196\green26\blue22;\red46\green13\blue110;\red170\green13\blue145;\red63\green110\blue116;\red100\green56\blue32;
+\red217\green11\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15300\viewh19880\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0  
+\f1 \'cd\'f8\'c2\'e7\'b1\'e0\'b3\'cc
+\f2\b0\fs36 \cf2 \CocoaLigature0 \
+ 
+\f1\b \cf0 \'bb\'f9\'b1\'be\'b5\'c4
+\f0 App
+\f1 \'cd\'f8\'c2\'e7\'bc\'dc\'b9\'b9
+\f2\b0 \cf2 \
+	
+\f1 \'bf\'cd\'bb\'a7\'b6\'cb\'a3\'a8
+\f2 App
+\f1 \'b6\'cb\'a3\'ac\'c7\'b0\'b6\'cb\'a3\'ac\'d2\'c6\'b6\'af\'b6\'cb\'a3\'a9
+\f2 \
+	
+\f1 \'b7\'fe\'ce\'f1\'c6\'f7\'a3\'a8\'ba\'f3\'cc\'a8\'a3\'ac\'b7\'fe\'ce\'f1\'b6\'cb\'a3\'ac\'d4\'c6\'a3\'a9
+\f2 \
+	
+\f1 \'c4\'a3\'ca\'bd\'a3\'ba\'d4\'c6\'a3\'ab\'b6\'cb
+\f2 \
+ 
+\f1\b \cf0 \'cf\'df\'b3\'cc
+\f2\b0 \cf2 \
+ 
+\f1 \'cd\'ac\'b2\'bd\'d6\'b4\'d0\'d0\'a3\'ba\'cf\'df\'b3\'cc\'cb\'b3\'d0\'f2\'d6\'b4\'d0\'d0\'a3\'ac\'d6\'b4\'d0\'d0\'cd\'ea\'d2\'bb\'b8\'f6\'b2\'c5\'bb\'d8\'d6\'b4\'d0\'d0\'cf\'c2\'d2\'bb\'b8\'f6
+\f2 \
+ 
+\f1 \'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0\'a3\'ba\'b6\'e0\'b8\'f6\'cf\'df\'b3\'cc\'cd\'ac\'ca\'b1\'d6\'b4\'d0\'d0\'a3\'ac\'bb\'a5\'b2\'bb\'d3\'b0\'cf\'ec
+\f2 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs40 \cf2  
+\f0\b \cf0 NSData
+\f2\b0\fs36 \cf2 \
+ 
+\f1\b \cf0 \'ca\'c7\'ca\'b2\'c3\'b4
+\f2\b0 \cf2 \
+	
+\f1 \'d3\'c3\'d3\'da\'b7\'e2\'d7\'b0\'ba\'cd\'b9\'dc\'c0\'ed\'d2\'bb\'d0\'a9\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd\'a3\'ac\'cd\'f8\'c2\'e7\'cd\'a8\'d0\'c5\'b9\'fd\'b3\'cc\'d6\'d0\'a3\'ac\'cb\'f9\'d3\'d0\'b5\'c4\'ca\'fd\'be\'dd\'b6\'bc\'bb\'e1\'b1\'bb\'d7\'aa\'bb\'bb\'b3\'c9\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd\'bd\'f8\'d0\'d0\'b4\'ab\'ca\'e4
+\f2 \
+ 
+\f1\b \cf0 \'ca\'b9\'d3\'c3
+\f2\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 Example \cf2 NSStringData:\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf2 //
+\f1 \'bd\'ab
+\f2 NSString
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9
+\f2 NSData(
+\f1 \'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'b3\'c9\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd
+\f2 )\cf0 \
+    \cf4 NSString\cf0  *str = \cf5 @"
+\f1 \'b4\'ef\'c4\'da\'bf\'c6\'bc\'bc
+\f2 "\cf0 ;\
+    \cf4 NSData\cf0  *strData = [str \cf6 dataUsingEncoding\cf0 :\cf6 NSUTF8StringEncoding\cf0 ];\cf2 //
+\f1 \'b1\'e0\'c2\'eb
+\f2 \cf0 \
+    \cf2 //
+\f1 \'bd\'ab
+\f2 NSData
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9
+\f2 NSString(
+\f1 \'bd\'ab\'cd\'f8\'c2\'e7\'c9\'cf\'b4\'ab\'c0\'b4\'b5\'c4\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd\'d7\'aa\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae
+\f2 )\cf0 \
+    \cf4 NSString\cf0  *converted = [[\cf4 NSString\cf0  \cf6 alloc\cf0 ]\cf6 initWithData\cf0 :strData \cf6 encoding\cf0 :\cf6 NSUTF8StringEncoding\cf0 ];\cf2 //
+\f1 \'bd\'e2\'c2\'eb
+\f2 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 Example \cf2 UIImageData:\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf2 //
+\f1 \'bd\'ab\'d2\'bb\'d5\'c5\'cd\'bc\'c6\'ac\'ca\'fd\'be\'dd\'b6\'c1\'b5\'bd
+\f2 NSData
+\f1 \'d6\'d0
+\f2 ,
+\f1 \'c4\'a3\'c4\'e2\'b4\'d3\'cd\'f8\'c9\'cf\'cf\'c2\'d4\'d8\'b5\'bd\'b5\'c4\'ca\'fd\'be\'dd
+\f2 \cf0 \
+    \cf4 NSString\cf0  *imagePath = [[\cf4 NSBundle\cf0  \cf6 mainBundle\cf0 ]\cf6 pathForResource\cf0 :\cf5 @"boy"\cf0  \cf6 ofType\cf0 :\cf5 @"png"\cf0 ];\
+    \cf4 NSData\cf0  *imageData = [\cf4 NSData\cf0  \cf6 dataWithContentsOfFile\cf0 :imagePath];\
+    \cf2 //
+\f1 \'c4\'a3\'c4\'e2\'bd\'ab\'cd\'f8\'c9\'cf\'cf\'c2\'d4\'d8\'c0\'b4\'b5\'c4\'cd\'bc\'c6\'ac\'ca\'fd\'be\'dd
+\f2 imageData
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9
+\f2 UIImage
+\f1 \'b6\'d4\'cf\'f3
+\f2 \cf0 \
+    \cf4 UIImage\cf0  *image = [\cf4 UIImage\cf0  \cf6 imageWithData\cf0 :imageData];\
+    \cf7 self\cf0 .\cf8 imageView\cf0 .\cf4 image\cf0  = image;\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs40 \cf0 NSURLConnection 
+\f1 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3
+\f2\b0\fs36 \cf2 \
+ 
+\f0\b \cf0 URL
+\f1 \'ca\'c7\'ca\'b2\'c3\'b4
+\f0 (Uniform Resource Locator)
+\f1 \'cd\'b3\'d2\'bb\'d7\'ca\'d4\'b4\'b6\'a8\'ce\'bb\'b7\'fb
+\f2\b0 \cf2 \
+	
+\f1 \'ca\'c7\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'bf\'c9\'d2\'d4\'d4\'da\'c8\'ab\'ca\'c0\'bd\'e7\'b7\'b6\'ce\'a7\'c4\'da\'ce\'a8\'d2\'bb\'b5\'c4\'b6\'a8\'ce\'bb\'d2\'bb\'b8\'f6\'d7\'ca\'d4\'b4\'a1\'a3
+\f2 \
+ 
+\f1\b \cf0 \'b8\'f1\'ca\'bd
+\f2\b0 \cf2 \
+	
+\f1 \'d0\'ad\'d2\'e9
+\f2 ://
+\f1 \'d6\'f7\'bb\'fa\'b5\'d8\'d6\'b7
+\f2 /
+\f1 \'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6
+\f2 \
+	
+\f1 \'d0\'ad\'d2\'e9\'a3\'ba\'b4\'fa\'b1\'ed\'b2\'bb\'cd\'ac\'b5\'c4\'d7\'ca\'d4\'b4\'d2\'d4\'bc\'b0\'b2\'bb\'cd\'ac\'d7\'ca\'d4\'b4\'b5\'c4\'b2\'e9\'d5\'d2\'b7\'bd\'ca\'bd
+\f2 \
+	
+\f1 \'d6\'f7\'bb\'fa\'b5\'d8\'d6\'b7\'a3\'ba\'b4\'e6\'b7\'c5\'d7\'c5\'d7\'ca\'d4\'b4\'b5\'c4\'d6\'f7\'bb\'fa\'b5\'c4
+\f2 IP
+\f1 \'d3\'f2\'c3\'fb\'a3\'ac
+\f2 \
+	
+\f1 \'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6\'a3\'ba\'b7\'c3\'ce\'ca\'b5\'c4\'d7\'ca\'d4\'b4\'b1\'a3\'b4\'e6\'d4\'da\'c4\'c4\'b8\'f6\'c4\'bf\'c2\'bc\'cf\'c2
+\f2 \
+ 
+\f1\b \cf0 \'b3\'a3\'bc\'fb\'d0\'ad\'d2\'e9
+\f2\b0 \cf2 \
+	http://	
+\f1 \'b3\'ac\'ce\'c4\'b1\'be\'b4\'bf\'ca\'f4\'d0\'ad\'d2\'e9\'a3\'ac\'d3\'c3\'c0\'b4\'b7\'c3\'ce\'ca\'d4\'b6\'b3\'cc\'cd\'f8\'c2\'e7\'c9\'cf\'b5\'c4\'d7\'ca\'d4\'b4
+\f2 \
+	file://	
+\f1 \'b7\'c3\'ce\'ca\'b1\'be\'b5\'d8\'bc\'c6\'cb\'e3\'bb\'fa\'c9\'cf\'b5\'c4\'d7\'ca\'d4\'b4
+\f2 \
+ 		
+\f1 \'c0\'fd\'a3\'ba
+\f2 file:///Users/tarena/Documents/\'85\
+	ftp://code.tarena.com.cn/Model/day01.zip\
+	mailto://	
+\f1 \'b7\'a2\'d3\'ca\'bc\'fe
+\f2 \
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'b5\'c4\'c8\'fd\'d6\'d6\'b7\'bd\'ca\'bd
+\f2\b0 \cf2 \
+	1.
+\f1 \'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3
+\f2 \
+	2.
+\f1 \'d2\'ec\'b2\'bd\'c7\'eb\'c7\'f3
+\f2 \
+	3.
+\f1 \'d2\'ec\'b2\'bd\'c7\'eb\'c7\'f3\'a3\'ac\'b4\'fa\'c0\'ed\'b7\'bd\'ca\'bd\'a3\'a8\'b6\'d4\'ca\'fd\'be\'dd\'b5\'c4\'b4\'a6\'c0\'ed\'b7\'c5\'d4\'da\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'d6\'d0\'a3\'a9
+\f2 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 Example 
+\f1 \'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3\'a3\'ba
+\f2  \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf4 NSData\cf0  *receivedData = [\cf4 NSURLConnection\cf0  \cf6 sendSynchronousRequest\cf0 :request \cf6 returningResponse\cf0 :\cf7 Nil\cf0  \cf6 error\cf0 :\cf7 Nil\cf0 ];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 Example 
+\f1 \'d2\'ec\'b2\'bd\'c7\'eb\'c7\'f3\'a3\'ba
+\f2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     [\cf4 NSURLConnection\cf0  \cf6 sendAsynchronousRequest\cf0 :request \cf6 queue\cf0 :[\cf4 NSOperationQueue\cf0  \cf6 mainQueue\cf0 ] \cf6 completionHandler\cf0 :^(\cf4 NSURLResponse\cf0  *response, \cf4 NSData\cf0  *data, \cf4 NSError\cf0  *connectionError) \{\
+    \cf2 //
+\f1 \'d5\'e2\'b8\'f6
+\f2 block
+\f1 \'ca\'c7\'d2\'bb\'b6\'ce\'bb\'d8\'b5\'f7\'b4\'fa\'c2\'eb\'a3\'ac\'b7\'fe\'ce\'f1\'c6\'f7\'b7\'b5\'cb\'ae\'ca\'fd\'be\'dd\'ba\'f3\'a3\'ac\'d0\'e8\'d2\'aa\'d6\'b4\'d0\'d0\'b5\'c4\'b4\'fa\'c2\'eb
+\f2 \cf0 \
+        \cf2 //3.
+\f1 \'b4\'a6\'c0\'ed\'b7\'fe\'ce\'f1\'c6\'f7\'b7\'b5\'bb\'d8\'b5\'c4\'ca\'fd\'be\'dd
+\f2 \cf0 \
+        \cf6 NSLog\cf0 (\cf5 @"%@"\cf0 ,[\cf4 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+        \cf6 NSLog\cf0 (\cf5 @"%ld"\cf0 ,data.\cf4 length\cf0 );\
+        \cf6 NSLog\cf0 (\cf5 @"%@"\cf0 ,[[\cf4 NSString\cf0  \cf6 alloc\cf0 ]\cf6 initWithData\cf0 :data \cf6 encoding\cf0 :\cf6 NSUTF8StringEncoding\cf0 ]);\
+    \}];\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 Example 
+\f1 \'d2\'ec\'b2\'bd\'c7\'eb\'c7\'f3
+\f2   
+\f1 \'b4\'fa\'c0\'ed\'c4\'a3\'ca\'bd\'a3\'ba
+\f2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf2 //
+\f1 \'b2\'ce\'ca\'fd\'a3\'ba
+\f2 YES
+\f1 \'a3\'ba\'b6\'d4\'cf\'f3\'b4\'b4\'bd\'a8\'ca\'b1\'b7\'a2\'cb\'cd\'c7\'eb\'c7\'f3\'a3\'ac
+\f2 NO
+\f1 \'a3\'ba\'d6\'bb\'b4\'b4\'bd\'a8\'b6\'d4\'cf\'f3\'a3\'ac\'b2\'bb\'b7\'a2\'cb\'cd\'c7\'eb\'c7\'f3
+\f2 \cf0 \
+    [[\cf4 NSURLConnection\cf0  \cf6 alloc\cf0 ]\cf6 initWithRequest\cf0 :request \cf6 delegate\cf0 :\cf7 self\cf0  \cf6 startImmediately\cf0 :\cf7 YES\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #pragma - NSURLConnectionDataDelegate\cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 //
+\f1 \'bf\'aa\'ca\'bc\'bd\'d3\'ca\'dc\'ca\'fd\'be\'dd\'ca\'b1\'b5\'f7\'d3\'c3
+\f2 \cf0 \
+- (\cf7 void\cf0 )connection:(\cf4 NSURLConnection\cf0  *)connection didReceiveResponse:(\cf4 NSURLResponse\cf0  *)response\{\
+    \cf7 self\cf0 .\cf8 receivedData\cf0  = [[\cf4 NSMutableData\cf0  \cf6 alloc\cf0 ]\cf6 init\cf0 ];\
+\}\
+\cf2 //
+\f1 \'d0\'ad\'d2\'e9\'d6\'d0\'b5\'c4\'b7\'bd\'b7\'a8
+\f2  
+\f1 \'b7\'fe\'ce\'f1\'c6\'f7\'ca\'d5\'b5\'bd\'c7\'eb\'c7\'f3\'ba\'f3\'d3\'a6\'b4\'f0\'b7\'b5\'bb\'d8\'ca\'b1\'b5\'f7\'d3\'c3
+\f2 \cf0 \
+- (\cf7 void\cf0 )connection:(\cf4 NSURLConnection\cf0  *)connection didReceiveData:(\cf4 NSData\cf0  *)data\{\
+    [\cf7 self\cf0 .\cf8 receivedData\cf0  \cf6 appendData\cf0 :data];\
+\}\
+\cf2 //
+\f1 \'bd\'d3\'ca\'dc\'cd\'ea\'ca\'fd\'be\'dd\'ba\'f3\'b5\'f7\'d3\'c3
+\f2 \cf0 \
+- (\cf7 void\cf0 )connectionDidFinishLoading:(\cf4 NSURLConnection\cf0  *)connection\{\
+    \cf4 NSString\cf0  *path = [\cf6 NSHomeDirectory\cf0 () \cf6 stringByAppendingPathComponent\cf0 :\cf5 @"Documents/a.mp4"\cf0 ];\
+    [\cf7 self\cf0 .\cf8 receivedData\cf0  \cf6 writeToFile\cf0 :path \cf6 atomically\cf0 :\cf7 YES\cf0 ];\
+\}\
+\cf2 \
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3\'b2\'bd\'d6\'e8
+\f2\b0 \cf2 \
+	step1:
+\f1 \'d7\'bc\'b1\'b8
+\f2 URL\
+	step2:
+\f1 \'b8\'f9\'be\'dd
+\f2 URL
+\f1 \'ca\'b9\'d3\'c3
+\f2 NSURLRequest
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3
+\f2 \
+	step3:
+\f1 \'ca\'b9\'d3\'c3
+\f2 NSURLConnection 
+\f1 \'b7\'a2\'cb\'cd\'c7\'eb\'c7\'f3
+\f2 \
+	step4:
+\f1 \'bb\'f1\'c8\'a1\'b5\'bd\'ca\'fd\'be\'dd\'b7\'c5\'c8\'eb\'b5\'bd
+\f2 NSData
+\f1 \'d6\'d0
+\f2 	\
+	step5:
+\f1 \'ca\'b9\'d3\'c3
+\f2 WebView
+\f1 \'cf\'d4\'ca\'be\'bb\'f1\'c8\'a1\'b5\'bd\'b5\'c4
+\f2 NSData
+\f1 \'ca\'fd\'be\'dd
+\f2 \
+\
+ 
+\f1 \'d7\'a2\'a3\'ba\'d3\'c3\'d7\'d6\'b7\'fb\'b4\'ae\'b4\'b4\'bd\'a8
+\f2 url
+\f1 \'ca\'b1\'a3\'ac\'b2\'bb\'c4\'dc\'b0\'fc\'ba\'ac\'d6\'d0\'ce\'c4\'a3\'ac\'b7\'f1\'d4\'f2\'bb\'e1\'b4\'b4\'bd\'a8\'ca\'a7\'b0\'dc
+\f2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0  
+\f1 \cf2 \'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8\'a3\'ba\'ca\'b9\'d3\'c3
+\f2 url
+\f1 \'b7\'a2\'cb\'cd\'c7\'eb\'c7\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'bd\'f8\'d0\'d0\'d7\'aa\'c2\'eb
+\f2  \cf0 \
+    urlStr = [urlStr \cf6 stringByAddingPercentEscapesUsingEncoding\cf0 :\cf6 NSUTF8StringEncoding\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 \
+\cf3 Example
+\f1 \'a3\'ba
+\f2  \cf0 \
+    \cf4 NSString\cf0  *urlStr = \cf7 self\cf0 .\cf8 textField\cf0 .\cf4 text\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf6 URLWithString\cf0 :urlStr];\
+    \cf4 NSURLRequest\cf0  *request = [\cf4 NSURLRequest\cf0  \cf6 requestWithURL\cf0 :url];\
+    \cf4 NSError\cf0  *error = \cf7 nil\cf0 ;\
+    \cf2 //sendSynchronousRequest
+\f1 \'bb\'e1\'b7\'a2\'cb\'cd\'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3\'a1\'a3\'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'d6\'d0\'d6\'b4\'d0\'d0
+\f2 ,
+\f1 \'bb\'e1\'d7\'e8\'c8\'fb
+\f2 ,
+\f1 \'d6\'b1\'b5\'bd\'bb\'f1\'b5\'c3\'ca\'fd\'be\'dd\'d6\'ae\'ba\'f3\'b7\'b5\'bb\'d8
+\f2 \cf0 \
+    \cf4 NSData\cf0  *receivedData = [\cf4 NSURLConnection\cf0  \cf6 sendSynchronousRequest\cf0 :request \cf6 returningResponse\cf0 :\cf7 nil\cf0  \cf6 error\cf0 :&error];\
+    \cf7 if\cf0  (!receivedData && error) \{\
+        \cf6 NSLog\cf0 (\cf5 @"
+\f1 \'bb\'f1\'c8\'a1\'cd\'f8\'c2\'e7\'ca\'fd\'be\'dd\'ca\'a7\'b0\'dc
+\f2 :%@"\cf0 , error.\cf4 userInfo\cf0 );\
+        \cf7 return\cf0 ;\
+    \}\
+    [\cf7 self\cf0 .\cf8 webView\cf0  \cf6 loadData\cf0 :receivedData \cf6 MIMEType\cf0 :\cf5 @"text/html"\cf0  \cf6 textEncodingName\cf0 :\cf5 @"utf-8"\cf0  \cf6 baseURL\cf0 :\cf7 nil\cf0 ];\
+\cf2  
+\f1\b \cf0 \'ca\'b9\'d3\'c3
+\f0 WebView
+\f1 \'cf\'d4\'ca\'be\'ca\'fd\'be\'dd
+\f2\b0 \cf2 \
+	step1:
+\f1 \'d7\'bc\'b1\'b8
+\f2 URL\
+	step2:
+\f1 \'b8\'f9\'be\'dd
+\f2 URL
+\f1 \'c0\'b4\'d7\'bc\'b1\'b8\'d2\'bb\'b8\'f6\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3
+\f2 \
+	step3:
+\f1 \'ca\'b9\'d3\'c3
+\f2 webView
+\f1 \'bc\'d3\'d4\'d8\'c7\'eb\'c7\'f3
+\f2 \
+\cf3 Example
+\f1 \'a3\'ba
+\f2 \cf0 \
+    \cf4 NSString\cf0  *urlStr = \cf7 self\cf0 .\cf8 textField\cf0 .\cf4 text\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf6 URLWithString\cf0 :urlStr];\
+    \cf4 NSURLRequest\cf0  *request = [\cf4 NSURLRequest\cf0  \cf6 requestWithURL\cf0 :url];\
+    [\cf7 self\cf0 .\cf8 webView\cf0  \cf6 loadRequest\cf0 :request];\
+\cf2 \
+ 
+\f0\b\fs40 \cf0 NSURLSession 
+\f2\b0\fs36 \cf2 \
+	
+\f1 \'b4\'d3
+\f2 iOS7
+\f1 \'bf\'aa\'ca\'bc\'b3\'f6\'cf\'d6\'a3\'ac\'d3\'c3\'c0\'b4\'cc\'e6\'b4\'fa
+\f2 NSURLConnection
+\f1 \'a3\'ac\'cb\'fc\'b0\'fc\'ba\'ac\'c1\'cb
+\f2 NSURLConnection
+\f1 \'b5\'c4\'cb\'f9\'d3\'d0\'b9\'a6\'c4\'dc\'b5\'c4\'bb\'f9\'b4\'a1\'c9\'cf\'a3\'ac\'d0\'c2\'d4\'f6\'bc\'d3\'c1\'cb\'b9\'a6\'c4\'dc
+\f2 \
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3\'b2\'bd\'d6\'e8
+\f2\b0 \cf2 \
+	
+\f1 \'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd\'ca\'c7\'bd\'ab\'ca\'fd\'be\'dd\'cf\'c2\'d4\'d8\'b5\'bd\'c4\'da\'b4\'e6\'d6\'d0
+\f2 \
+	
+\f1 \'cf\'c2\'d4\'d8\'ce\'c4\'bc\'fe\'ca\'c7\'bd\'ab\'ce\'c4\'bc\'fe\'cf\'c2\'d4\'d8\'b5\'bd\'c9\'b3\'ba\'d0\'d6\'d0
+\f2 \
+\
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3\'b2\'bd\'d6\'e8\'a3\'a8\'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd\'a3\'a9
+\f2\b0 \cf2 \
+	step1:
+\f1 \'d7\'bc\'b1\'b8
+\f2 URL\
+	step2:
+\f1 \'b8\'f9\'be\'dd
+\f2 URL
+\f1 \'ca\'b9\'d3\'c3
+\f2 NSURLRequest
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3
+\f2 \
+	step3:
+\f1 \'d7\'bc\'b1\'b8
+\f2 configuration
+\f1 \'b6\'d4\'cf\'f3
+\f2  
+\f1 \'c5\'e4\'d6\'c3
+\f2 \
+	step4:
+\f1 \'b8\'f9\'be\'dd
+\f2 configuration
+\f1 \'b4\'b4\'bd\'a8
+\f2 session
+\f1 \'b6\'d4\'cf\'f3
+\f2 \
+	step5:
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f2 task 
+\f1 \'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd
+\f2  \
+	step6:
+\f1 \'d4\'da
+\f2 block
+\f1 \'d6\'d0\'b4\'a6\'c0\'ed\'bb\'f1\'c8\'a1\'b5\'bd\'b5\'c4
+\f2 NSData
+\f1 \'ca\'fd\'be\'dd
+\f2 \
+	step7:
+\f1 \'c6\'f4\'b6\'af\'d5\'e2\'b8\'f6\'c8\'ce\'ce\'f1
+\f2 \
+
+\f1 \'d7\'a2\'a3\'ba
+\f2 response
+\f1 \'d6\'d0\'b7\'e2\'d7\'b0\'c1\'cb\'d3\'a6\'b4\'f0\'ca\'fd\'be\'dd\'a3\'ba\'d3\'a6\'b4\'f0\'cd\'b7\'a1\'a2
+\f2 URL
+\f1 \'a1\'a2
+\f2 status
+\f1 \'d0\'c5\'cf\'a2
+\f2 \
+\
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3\'b2\'bd\'d6\'e8\'a3\'a8\'cf\'c2\'d4\'d8\'ca\'fd\'be\'dd\'a3\'a9
+\f2\b0 \cf2 \
+	step1:
+\f1 \'d7\'bc\'b1\'b8
+\f2 URL\
+	step2:
+\f1 \'b8\'f9\'be\'dd
+\f2 URL
+\f1 \'ca\'b9\'d3\'c3
+\f2 NSURLRequest
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3
+\f2 \
+	step3:
+\f1 \'d7\'bc\'b1\'b8
+\f2 configuration
+\f1 \'b6\'d4\'cf\'f3
+\f2  
+\f1 \'c5\'e4\'d6\'c3
+\f2 \
+	step4:
+\f1 \'b8\'f9\'be\'dd
+\f2 configuration
+\f1 \'b4\'b4\'bd\'a8
+\f2 session
+\f1 \'b6\'d4\'cf\'f3
+\f2 \
+	step5:
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\cf10 \'cf\'c2\'d4\'d8
+\f2 task\cf2  
+\f1 \'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd
+\f2  \
+	step6:
+\f1 \'d4\'da
+\f2 block
+\f1 \'d6\'d0\'b4\'a6\'c0\'ed\'bb\'f1\'c8\'a1\'b5\'bd\'b5\'c4
+\f2 NSData
+\f1 \'ca\'fd\'be\'dd
+\f2 \
+	step7:
+\f1 \'c6\'f4\'b6\'af\'d5\'e2\'b8\'f6\'c8\'ce\'ce\'f1
+\f2 \
+ block
+\f1 \'d6\'d0\'b5\'c4\'b4\'a6\'c0\'ed\'b2\'bd\'d6\'e8\'a3\'ba
+\f2 \
+ downloadTask
+\f1 \'b0\'d1\'cf\'c2\'d4\'d8\'c0\'b4\'b5\'c4\'ca\'fd\'be\'dd\'b4\'e6\'b4\'a2\'d4\'da\'c1\'d9\'ca\'b1\'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'b3\'cc\'d0\'f2\'cd\'a3\'d6\'b9\'d4\'cb\'d0\'d0\'ba\'f3\'a3\'ac\'ce\'c4\'bc\'fe\'bb\'e1\'b1\'bb\'c9\'be\'b3\'fd\'a3\'ac\'cb\'f9\'d2\'d4\'d2\'aa\'b0\'d1\'ce\'c4\'bc\'fe\'b1\'a3\'b4\'e6\'b5\'bd\'d6\'b8\'b6\'a8\'c4\'bf\'c2\'bc\'d6\'d0\'a3\'ac\'b2\'c5\'c4\'dc\'d5\'e6\'d5\'fd\'cf\'c2\'d4\'d8\'ce\'c4\'bc\'fe\
+ \'b4\'a6\'c0\'ed\'cf\'c2\'d4\'d8\'c4\'da\'c8\'dd\'a3\'ba
+\f2 \
+	step1:
+\f1 \'b0\'d1
+\f2 response
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9\'c6\'e4\'d7\'d3\'c0\'e0\'b6\'d4\'cf\'f3
+\f2 \
+	step2:
+\f1 \'d3\'c3
+\f2 NSFileManage
+\f1 \'b0\'d1\'c1\'d9\'ca\'b1\'ce\'c4\'bc\'fe\'b1\'a3\'b4\'e6\'b5\'bd\'d6\'b8\'b6\'a8\'c4\'bf\'c2\'bc\'d6\'d0\
+
+\f2 \
+ 
+\f0\b \cf0 session
+\f1 \'b5\'c4\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8
+\f2\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf9 #pragma mark - NSURLSessionDownloadDelegate\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 //
+\f1 \'cf\'c2\'d4\'d8\'cd\'ea\'b1\'cf\'ba\'f3\'a3\'ac\'b5\'f7\'d3\'c3\'b4\'cb\'b7\'bd\'b7\'a8\'a3\'ac
+\f2 location\cf0 \
+- (\cf7 void\cf0 )URLSession:(\cf4 NSURLSession\cf0  *)session downloadTask:(\cf4 NSURLSessionDownloadTask\cf0  *)downloadTask\
+didFinishDownloadingToURL:(\cf4 NSURL\cf0  *)location\{\
+\}\
+\cf2 //
+\f1 \'cf\'c2\'d4\'d8\'cd\'ea\'b1\'cf\'ba\'f3\'a3\'ac\'b5\'f7\'d3\'c3\'b4\'ce\'b7\'bd\'b7\'a8\'a3\'ac
+\f2 location\cf0 \
+- (\cf7 void\cf0 )URLSession:(\cf4 NSURLSession\cf0  *)session downloadTask:(\cf4 NSURLSessionDownloadTask\cf0  *)downloadTask\
+      didWriteData:(\cf4 int64_t\cf0 )bytesWritten\
+ totalBytesWritten:(\cf4 int64_t\cf0 )totalBytesWritten\
+totalBytesExpectedToWrite:(\cf4 int64_t\cf0 )totalBytesExpectedToWrite\{\
+\}\
+\cf2 //
+\f1 \'ce\'c4\'bc\'fe\'c6\'ab\'d2\'c6\'c1\'bf\'b7\'a2\'c9\'fa\'b1\'e4\'bb\'af\'ba\'f3\'b5\'c4\'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8
+\f2 \cf0 \
+- (\cf7 void\cf0 )URLSession:(\cf4 NSURLSession\cf0  *)session downloadTask:(\cf4 NSURLSessionDownloadTask\cf0  *)downloadTask\
+ didResumeAtOffset:(\cf4 int64_t\cf0 )fileOffset\
+expectedTotalBytes:(\cf4 int64_t\cf0 )expectedTotalBytes\{\
+    \
+\}\cf2 \
+\
+ 
+\f1\b \cf0 \'b7\'a2\'cb\'cd\'cd\'f8\'c2\'e7\'c7\'eb\'c7\'f3\'b2\'bd\'d6\'e8\'a3\'a8\'cf\'c2\'d4\'d8\'ca\'fd\'be\'dd\'a3\'a9
+\f2\b0 \cf2 \
+ 
+\f1\b \cf0 \'b5\'c7\'c2\'bc\'b5\'bd\'d4\'b6\'b3\'cc\'b7\'fe\'ce\'f1\'c6\'f7
+\f2\b0 \cf2 \
+	
+\f1 \'ca\'b9\'d3\'c3
+\f2 NSURLRequest
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3
+\f2 \
+\
+ 
+\f1\b\fs40 \cf0 \'d7\'bc\'b1\'b8\'b7\'fe\'ce\'f1\'c6\'f7
+\f2\b0\fs36 \cf2 \
+ 
+\f1 \'b0\'b2\'d7\'b0\'c8\'ed\'bc\'fe
+\f2 \
+	eclipse
+\f1 \'bf\'aa\'b7\'a2\'b9\'a4\'be\'df\'a3\'ac\'d0\'e8\'d2\'aa\'cf\'c8\'b0\'b2\'d7\'b0
+\f2 jdk
+\f1 \'a3\'a8
+\f2 Java
+\f1 \'d4\'cb\'d0\'d0\'bb\'b7\'be\'b3\'a3\'a9
+\f2 \
+	apache tomcat
+\f1 \'a3\'a8
+\f2 Web
+\f1 \'b7\'fe\'ce\'f1\'c6\'f7\'b5\'c4\'c8\'dd\'c6\'f7\'a3\'a9
+\f2 \
+	firefox 
+\f1 \'e4\'af\'c0\'c0\'c6\'f7\'a3\'ac
+\f2 firebug
+\f1 \'b2\'e5\'bc\'fe\'d3\'c3\'d3\'da\'b2\'e9\'bf\'b4\'c7\'eb\'c7\'f3\'ba\'cd\'d3\'a6\'b4\'f0\'ca\'fd\'be\'dd\'a3\'a8\'bf\'c9\'d2\'d4\'d6\'b1\'bd\'d3\'cd\'cf\'d7\'a7\'b5\'bd\'e4\'af\'c0\'c0\'c6\'f7\'c9\'cf\'b0\'b2\'d7\'b0\'a3\'a9
+\f2 \
+ 
+\f1 \'b2\'bf\'ca\'f0\'b7\'fe\'ce\'f1
+\f2 \
+	1)TServer.zip
+\f1 \'bd\'e2\'d1\'b9\'cb\'f5\'a3\'ac\'bd\'ab\'bd\'e2\'d1\'b9\'ba\'f3\'b5\'c4\'c4\'bf\'c2\'bc\'b7\'c5\'c8\'eb
+\f2 eclipse
+\f1 \'b5\'c4
+\f2 workspace
+\f1 \'d6\'d0
+\f2 \
+	2)
+\f1 \'c6\'f4\'b6\'af
+\f2 eclipse\
+	3)
+\f1 \'bd\'ab
+\f2 TServer
+\f1 \'cf\'ee\'c4\'bf\'b5\'bc\'c8\'eb\'b5\'bd
+\f2 eclipse
+\f1 \'d6\'d0
+\f2 \
+	 
+\f1 \'d3\'d2\'bc\'fc
+\f2 ->import -> import -> General -> Existing Project into workspace\
+	 
+\f1 \'b5\'bc\'c8\'eb\'a3\'ba
+\f2 select root directory(Browser) /Users/tarena/Documents/workspace/ TServer\
+	4)
+\f1 \'bd\'ab
+\f2 tomcat
+\f1 \'b7\'fe\'ce\'f1\'c6\'f7\'c5\'e4\'d6\'c3\'b5\'bd
+\f2 eclipse
+\f1 \'d6\'d0
+\f2 \
+	 ->
+\f1 \'b2\'cb\'b5\'a5
+\f2 ->show view->server
+\f1 \'b2\'cb\'b5\'a5
+\f2 \
+	 ->
+\f1 \'d1\'a1\'d4\'f1
+\f2 Apache->Tomcat6.0\
+	 ->
+\f1 \'d1\'a1\'d4\'f1
+\f2 Tomcat
+\f1 \'b7\'fe\'ce\'f1\'c6\'f7\'c4\'bf\'c2\'bc
+\f2 \
+	 ->
+\f1 \'cd\'ea\'b3\'c9
+\f2 \
+		
+\f1 \'c5\'e4\'d6\'c3\'b7\'fe\'ce\'f1\'c6\'f7\'a3\'ba
+\f2 \
+		apache -> Tomcat installation directory :
+\f1 \'d1\'a1\'d4\'f1
+\f2 apache
+\f1 \'b5\'c4\'ce\'c4\'bc\'fe\'c4\'bf\'c2\'bc
+\f2  -> finish\
+ 
+\f1 \'c6\'f4\'b6\'af\'b7\'fe\'ce\'f1\'c6\'f7
+\f2 \
+	Run As\
+\
+\
+\
+\
+}

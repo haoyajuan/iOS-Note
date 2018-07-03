@@ -1,0 +1,352 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\froman\fcharset0 Times-Roman;
+\f3\fnil\fcharset134 STSongti-SC-Regular;\f4\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red255\green39\blue18;\red255\green0\blue0;
+\red63\green110\blue116;\red46\green13\blue110;\red92\green38\blue153;\red28\green0\blue207;\red0\green116\blue0;
+\red0\green0\blue0;\red92\green38\blue153;\red170\green13\blue145;\red28\green0\blue207;\red46\green13\blue110;
+\red196\green26\blue22;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c100000\c15294\c7059;\csgenericrgb\c100000\c0\c0;
+\csgenericrgb\c24706\c43137\c45490;\csgenericrgb\c18039\c5098\c43137;\csgenericrgb\c36078\c14902\c60000;\csgenericrgb\c10980\c0\c81176;\csgenericrgb\c0\c45600\c0;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c18100\c5200\c43100;
+\csgenericrgb\c77000\c10200\c8600;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28740\viewh19880\viewkind0
+\deftab963
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf2 \CocoaLigature0  \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs48 \cf0  1.NSData 
+\f1 \'d3\'eb
+\f0  NSString:\
+
+\fs40 \cf3     NSData
+\f1 \'a3\'ad
+\f0 > NSString\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2     NSString *aString = [[NSString alloc] initWithData:adataencoding:NSUTF8StringEncoding];\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf3     NSString
+\f1 \'a3\'ad
+\f0 >NSData\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2     NSString *aString = @"1234abcd";\
+    NSData *aData = [aString dataUsingEncoding: NSUTF8StringEncoding]; \
+    //
+\f1 \'bd\'ab
+\f0 data
+\f1 \'c0\'e0\'d0\'cd\'b5\'c4\'ca\'fd\'be\'dd
+\f0 ,
+\f1 \'d7\'aa\'b3\'c9
+\f0 UTF8
+\f1 \'b5\'c4\'ca\'fd\'be\'dd
+\f0 \
+    +(NSString *)dataToUTF8String:(NSData *)data\
+    \{\
+     NSString *buf = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];\
+     return [buf autorelease];\
+    \}\
+     //
+\f1 \'bd\'ab
+\f0 string
+\f1 \'d7\'aa\'bb\'bb\'ce\'aa\'d6\'b8\'b6\'a8\'b1\'e0\'c2\'eb
+\f0  \
+    +(NSString *)changeDataToEncodinString:(NSData *)data encodin:(NSStringEncoding )encodin\{\
+        NSString *buf = [[[NSString alloc] initWithData:data encoding:encodin] autorelease];\
+        return buf;\
+    \}\
+ \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs48 \cf0  2. NSData 
+\f1 \'d3\'eb
+\f0  UIImage\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf4 	NSData
+\f1 \'a3\'ad
+\f0 >UIImage\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2     UIImage *aimage = [UIImage imageWithData: imageData];\
+\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf4 	UIImage
+\f1 \'a3\'ad
+\f0 > NSData\cf2 \
+    //
+\f1 \'c0\'fd\'a3\'ba\'b4\'d3\'b1\'be\'b5\'d8\'ce\'c4\'bc\'fe\'c9\'b3\'ba\'d0\'d6\'d0\'c8\'a1\'cd\'bc\'c6\'ac\'b2\'a2\'d7\'aa\'bb\'bb\'ce\'aa
+\f0 NSData\
+    NSString *path = [[NSBundle mainBundle] bundlePath];\
+    NSString *name = [NSString stringWithFormat:@"ceshi.png"];\
+    NSString *finalPath = [path stringByAppendingPathComponent:name];\
+    NSData *imageData = [NSData dataWithContentsOfFile: finalPath];\
+    UIImage *aimage = [UIImage imageWithData: imageData];\
+\
+\cf4 	UIImage
+\f1 \'a3\'ad
+\f0 > NSData\cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0     image.\cf5 imageData\cf0  = \cf6 UIImageJPEGRepresentation\cf0 (\cf5 imageView\cf0 .\cf7 image\cf0 , \cf8 1\cf0 );\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \CocoaLigature1 UIImage
+\f3 \'b5\'c4\'d1\'b9\'cb\'f5
+\f0\b0\fs36 \cf2 \CocoaLigature0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf2  
+\f1 \'b7\'bd\'ca\'bd\'d2\'bb(\'d3\'c5\'cf\'c8\'ca\'b9\'d3\'c3)
+\f0 :\
+ UIImageJPEGRepresentation(
+\f1 \'cd\'bc\'c6\'ac
+\f0 ,
+\f1 \'d1\'b9\'cb\'f5\'cf\'b5\'ca\'fd
+\f0 )\
+    
+\f1 \'b2\'ce\'ca\'fd
+\f0 :
+\f1 \'cd\'bc\'c6\'ac\'b5\'c4\'d2\'fd\'d3\'c3\'ba\'cd\'d1\'b9\'cb\'f5\'cf\'b5\'ca\'fd
+\f0 \
+        
+\f1 \'d1\'b9\'cb\'f5\'cf\'b5\'ca\'fd
+\f0 :1.0~0(
+\f1 \'d6\'ca\'c1\'bf\'d3\'c9\'b8\'df\'b5\'bd\'b5\'cd
+\f0 )\
+    
+\f1 \'d4\'da\'ba\'c4\'ca\'b1\'c9\'cf\'b1\'c8\'bd\'cf\'c9\'d9
+\f0 \
+    
+\f1 \'b7\'b5\'bb\'d8\'b5\'c4\'cd\'bc\'c6\'ac\'ca\'fd\'be\'dd\'c1\'bf\'d0\'a1
+\f0  \
+ \
+ 
+\f1 \'b7\'bd\'ca\'bd\'b6\'fe
+\f0 :\
+ UIImagePNGRepresentation(
+\f1 \'cd\'bc\'c6\'ac
+\f0 )\
+    
+\f1 \'b2\'ce\'ca\'fd
+\f0 :
+\f1 \'cd\'bc\'c6\'ac\'b5\'c4\'d2\'fd\'d3\'c3
+\f0 \
+    
+\f1 \'ba\'c4\'ca\'b1\'b2\'d9\'d7\'f7\'ca\'b1\'bc\'e4\'b1\'c8\'bd\'cf\'b3\'a4
+\f0 ,
+\f1 \'c8\'a1\'b5\'c3\'d5\'d5\'c6\'ac\'ca\'b1\'ba\'f2\'bf\'c9\'c4\'dc\'bb\'e1\'d4\'ec\'b3\'c9\'bf\'a8\'b6\'d9\'b5\'c4\'cf\'d6\'cf\'f3
+\f0 \
+    
+\f1 \'b7\'b5\'bb\'d8\'b5\'c4\'cd\'bc\'c6\'ac\'ca\'fd\'be\'dd\'c1\'bf\'b4\'f3
+\f0 \cf0 \
+\
+\cf2 \
+\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs48 \cf0  3.NSData
+\f1 \'d3\'eb
+\f0 NSArray  NSDictionary\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf2 	+(NSString *)getLocalFilePath:(NSString *) fileName\
+    \{\
+		return [NSString stringWithFormat:@"%@/%@%@", NSHomeDirectory(),@\'93Documents\'94,fileName];\
+    \}\
+    
+\f1 \'b0\'fc\'c0\'a8\'bd\'ab
+\f0 NSData
+\f1 \'d0\'b4\'bd\'f8
+\f0 Documents
+\f1 \'c4\'bf\'c2\'bc
+\f0 \
+    
+\f1 \'b4\'d3
+\f0 Documents
+\f1 \'c4\'bf\'c2\'bc\'b6\'c1\'c8\'a1\'ca\'fd\'be\'dd
+\f0 \
+    
+\f1 \'d4\'da\'bd\'f8\'d0\'d0\'cd\'f8\'c2\'e7\'ca\'fd\'be\'dd\'cd\'a8\'d0\'c5\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'be\'ad\'b3\'a3\'bb\'e1\'d3\'f6\'b5\'bd
+\f0 NSData
+\f1 \'c0\'e0\'d0\'cd\'b5\'c4\'ca\'fd\'be\'dd\'a1\'a3\'d4\'da\'b8\'c3\'ca\'fd\'be\'dd\'ca\'c7
+\f0 dictionary
+\f1 \'bd\'e1\'b9\'b9\'b5\'c4\'c7\'e9\'bf\'f6\'cf\'c2\'a3\'ac\'cf\'b5\'cd\'b3\'c3\'bb\'d3\'d0\'cc\'e1\'b9\'a9\'cf\'d6\'b3\'c9\'b5\'c4\'d7\'aa\'bb\'bb\'b3\'c9
+\f0 NSDictionary
+\f1 \'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'ce\'aa\'b4\'cb\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd
+\f0 Category
+\f1 \'b6\'d4
+\f0 NSDictionary
+\f1 \'bd\'f8\'d0\'d0\'c0\'a9\'d5\'b9\'a3\'ac\'d2\'d4\'d6\'a7\'b3\'d6\'b4\'d3
+\f0 NSData
+\f1 \'b5\'bd
+\f0 NSDictionary
+\f1 \'b5\'c4\'d7\'aa\'bb\'bb\'a1\'a3\'c9\'f9\'c3\'f7\'ba\'cd\'ca\'b5\'cf\'d6\'c8\'e7\'cf\'c2\'a3\'ba
+\f0 \
+     \
+    +(NSDictionary *)dictionaryWithContentsOfData:(NSData *)data \{     \
+        CFPropertyListRef list = CFPropertyListCreateFromXMLData(kCFAllocatorDefault, (CFDataRef)data, kCFPropertyListImmutable, NULL);\
+        if(list == nil) return nil; \
+        if ([(id)list isKindOfClass:[NSDictionary class]]) \{ \
+             return [(NSDictionary *)list autorelease]; \
+            \} \
+        else \{ \
+             CFRelease(list); \
+             return nil; \
+            \} \
+    \}\
+\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0     NSData
+\f1 \'c9\'fa\'b3\'c9
+\f0 :\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2     NSDictionary *dic =[NSDictionary dictionaryWithObject:@"hello" forKey:@"KEY"];\
+    NSData *d = [NSKeyedArchiver archivedDataWithRootObject:dic];\
+    
+\f1 \'b4\'d3\'ce\'c4\'bc\'fe\'c9\'fa\'b3\'c9
+\f0 NSData:\
+    NSBundle *bundle = [NSBundle mainBundle];\
+    NSString *path = [bundle pathForResource:@"hello"  ofType:@"png"];\
+    NSData *d = [[NSData alloc] initWithContentsOfFile:  path];\
+     
+\f1 \'c8\'a1\'b5\'c3\'d4\'aa\'cb\'d8\'b3\'a4\'b6\'c8
+\f0 :\
+    int i = [d length];\
+    NSData
+\f1 \'d0\'cd\'d7\'aa\'b3\'c9
+\f0 NSDictionary
+\f1 \'d0\'cd
+\f0 :\
+    NSDictionary *reverse = [NSKeyedUnarchiver unarchiveObjectWithData: d];\
+\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs48 \cf0  4.NSData
+\f1 \'d3\'eb
+\f0 NSDate\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf2 //
+\f1 \'ba\'af\'ca\'fd\'d7\'f7\'d3\'c3
+\f0  :date
+\f1 \'b8\'f9\'be\'dd
+\f0 formatter
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9
+\f0 string\
++(NSString*)dateToString:(NSString *)formatter date:(NSDate *)date\
+\{\
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];\
+    [dateFormatter setDateFormat:formatter];\
+    return[dateFormatter stringFromDate:date];\
+\}\
+//
+\f1 \'ba\'af\'ca\'fd\'d7\'f7\'d3\'c3
+\f0  :string
+\f1 \'c0\'e0\'d0\'cd\'b5\'c4\'ca\'b1\'bc\'e4\'b4\'c1\'d7\'aa\'bb\'bb\'b3\'c9\'ca\'b1\'bc\'e4
+\f0 \
++(NSString*)dateStringToString:(NSString *)dateStr\
+\{\
+    if ([dateStr isKindOfClass:[NSNull class]]) \{\
+        return nil;\
+    \}\
+    else\{\
+        NSInteger time = [dateStr intValue];\
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];\
+        NSString *timestr = [NSString stringWithFormat:@"%@",date];\
+        NSRange rang;\
+        rang.location = 0;\
+        rang.length = 10;\
+        NSString *needtime = [timestr substringWithRange:rang];\
+        return needtime;\
+    \}\
+\}\
+\
+//
+\f1 \'ba\'af\'ca\'fd\'d7\'f7\'d3\'c3
+\f0  :
+\f1 \'bd\'ab\'c8\'d5\'c6\'da\'b4\'d3\'d4\'ad\'b8\'f1\'ca\'bd\'d7\'aa\'bb\'bb\'b3\'c9\'d0\'e8\'d2\'aa\'b5\'c4\'b8\'f1\'ca\'bd
+\f0 \
++(NSString*)convertDateFormatter:(NSString*)sourceFormatter \
+                  targetFormatter:(NSString*)targetFormatter  \
+                       dateString:(NSString*)dateString\
+\{   \
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];\
+    [dateFormatter setDateFormat:sourceFormatter];\
+    NSDate *date = [dateFormatter dateFromString:dateString];\
+    [dateFormatter setDateFormat:targetFormatter];\
+    return[dateFormatter stringFromDate:date];\
+\}\
+//
+\f1 \'ba\'af\'ca\'fd\'d7\'f7\'d3\'c3
+\f0  :
+\f1 \'bd\'ab\'c8\'d5\'c6\'da\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'bb\'b3\'c9
+\f0 date\
++(NSDate *)stringToDate:(NSString *)formatter dateString:(NSString *)dateString\{\
+ NSDateFormatter *dateFormatter= [[[NSDateFormatter alloc] init] autorelease];\
+ [dateFormatter setDateFormat:formatter];\
+ return [dateFormatter dateFromString:dateString];\
+\}\
+\
+//
+\f1 \'ca\'b1\'bc\'e4\'b4\'c1\'d7\'aa\'bb\'bb\'b3\'c9\'ca\'b1\'bc\'e4
+\f0 \
+                NSInteger time = [[dic objectForKey:@"press_date"] intValue];\
+                NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];\
+                NSString *timestr = [NSString stringWithFormat:@"%@",date];\
+                NSRange rang;\
+                rang.location = 0;\
+                rang.length = 10;\
+                NSString *needtime = [timestr substringWithRange:rang];\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 /*
+\f4 \'b0\'d1
+\f0  
+\f4 \'c3\'eb
+\f0  
+\f4 \'d7\'aa\'bb\'bb\'ce\'aa
+\f0 x
+\f4 \'cc\'ec
+\f0 x
+\f4 \'ca\'b1
+\f0 x
+\f4 \'b7\'d6
+\f0 x
+\f4 \'c3\'eb
+\f0  */\cf10 \
+- (\cf11 NSString\cf10 *)getTimeIntervalStringWithSecond:(\cf12 long\cf10 )time\{\
+\
+    \cf12 if\cf10  (time<=\cf13 0\cf10 ) \{\
+        \cf12 return\cf10  [\cf11 NSString\cf10  \cf14 stringWithFormat\cf10 :\cf15 @"
+\f4 \cf15 \'ca\'fd\'be\'dd\'b4\'ed\'ce\'f3
+\f0 \cf15 :%ld"\cf10 ,time];\
+    \}\
+    \
+    \cf12 long\cf10  \cf12 int\cf10  s = time%\cf13 60\cf10 ;\
+    \cf12 long\cf10  \cf12 int\cf10  m = (time/\cf13 60\cf10 )%\cf13 60\cf10 ;\
+    \cf12 long\cf10  \cf12 int\cf10  h = (time/(\cf13 60\cf10 *\cf13 60\cf10 ))%\cf13 24\cf10 ;\
+    \cf12 long\cf10  \cf12 int\cf10  d = time/(\cf13 24\cf10 *\cf13 60\cf10 *\cf13 60\cf10 );\
+    \
+    \cf11 NSMutableString\cf10  *interval = [\cf11 NSMutableString\cf10  \cf14 string\cf10 ];\
+    \cf12 if\cf10  (time>=\cf13 24\cf10 *\cf13 60\cf10 *\cf13 60\cf10 ) \{\
+        [interval \cf14 appendString\cf10 :[\cf11 NSString\cf10  \cf14 stringWithFormat\cf10 :\cf15 @"%ld
+\f4 \cf15 \'cc\'ec
+\f0 \cf15 "\cf10 ,d]];\
+    \}\
+    \cf12 if\cf10  (time>=\cf13 60\cf10 *\cf13 60\cf10 )\{\
+        [interval \cf14 appendString\cf10 :[\cf11 NSString\cf10  \cf14 stringWithFormat\cf10 :\cf15 @"%ld
+\f4 \cf15 \'ca\'b1
+\f0 \cf15 "\cf10 ,h]];\
+    \}\
+    \cf12 if\cf10  (time>=\cf13 60\cf10 )\{\
+        [interval \cf14 appendString\cf10 :[\cf11 NSString\cf10  \cf14 stringWithFormat\cf10 :\cf15 @"%ld
+\f4 \cf15 \'b7\'d6
+\f0 \cf15 "\cf10 ,m]];\
+    \}\
+    \cf12 if\cf10  (time>\cf13 0\cf10 ) \{\
+        [interval \cf14 appendString\cf10 :[\cf11 NSString\cf10  \cf14 stringWithFormat\cf10 :\cf15 @"%ld
+\f4 \cf15 \'c3\'eb
+\f0 \cf15 "\cf10 ,s]];\
+    \}\
+    \cf12 return\cf10  [interval \cf14 copy\cf10 ] ;\
+\}}

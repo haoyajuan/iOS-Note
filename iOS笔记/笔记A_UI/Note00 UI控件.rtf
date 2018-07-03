@@ -1,0 +1,504 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset134 STHeitiSC-Light;\f4\fnil\fcharset134 HannotateSC-W5;\f5\fnil\fcharset0 Menlo-Bold;
+\f6\fnil\fcharset134 STYuanti-SC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red170\green13\blue145;\red46\green13\blue110;
+\red63\green110\blue116;\red217\green11\blue0;\red196\green26\blue22;\red92\green38\blue153;\red28\green0\blue207;
+\red133\green0\blue175;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17340\viewh19880\viewkind0
+\deftab866
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 IOS 
+\f1 \'b9\'a4\'b3\'cc\'b5\'c4\'c6\'f4\'b6\'af\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0\fs36 \cf2 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 int\cf0  main(\cf3 int\cf0  argc, \cf3 char\cf0  * argv[])\
+\{\
+    \cf3 @autoreleasepool\cf0  \{\
+        \cf3 return\cf0  \cf4 UIApplicationMain\cf0 (argc, argv, \cf3 nil\cf0 , \cf4 NSStringFromClass\cf0 ([\cf5 AppDelegate\cf0  \cf4 class\cf0 ]));\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 		/*UIApplicationMain
+\f3 \'b7\'bd\'b7\'a8\'d7\'f6\'b5\'c4\'c8\'fd\'bc\'fe\'ca\'c2
+\f2        \
+        
+\f3 \'b5\'da\'d2\'bb\'a3\'ba\'b8\'f9\'be\'dd\'b5\'da\'c8\'fd\'b8\'f6\'b2\'ce\'ca\'fd\'b4\'b4\'bd\'a8\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b6\'d4\'cf\'f3
+\f2 (Application Object)\
+            
+\f3 \'c4\'ac\'c8\'cf\'b4\'b4\'bd\'a8\'b5\'c4\'ca\'c7\'d2\'bb\'b8\'f6
+\f2 UIApplication
+\f3 \'c0\'e0\'d0\'cd\'b6\'d4\'cf\'f3\'a3\'ac\'bc\'ec\'b2\'e2\'ca\'c2\'bc\'fe\'d1\'ad\'bb\'b7
+\f2 \
+        
+\f3 \'b5\'da\'b6\'fe\'a3\'ba\'b8\'f9\'be\'dd\'b5\'da\'cb\'c4\'b8\'f6\'b2\'ce\'ca\'fd\'b4\'b4\'bd\'a8\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b4\'fa\'c0\'ed\'c0\'e0\'b6\'d4\'cf\'f3
+\f2 \
+        
+\f3 \'b5\'da\'c8\'fd\'a3\'ba\'c6\'f4\'b6\'af\'ca\'c2\'bc\'fe\'d1\'ad\'bb\'b7
+\f2 \
+        NSStringFromClass([AppDelegate class])
+\f3 \'d5\'d2\'b5\'bd
+\f2 AppDelegate.h
+\f3 \'ce\'c4\'bc\'fe
+\f2 \
+		*/\cf0 \
+    \}\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 \CocoaLigature1 window 
+\f1 \'b6\'d4\'cf\'f3\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0\fs36 \cf0 \CocoaLigature0 	
+\f3 \'d5\'fb\'b8\'f6\'bd\'e7\'c3\'e6\'b5\'c4\'cf\'d4\'ca\'be\'bb\'f9\'b4\'a1\'a3\'ac\'d2\'bb\'b6\'a8\'d2\'aa\'bc\'d3\'d4\'d8
+\f2 APP
+\f3 \'ca\'b1\'b4\'b4\'bd\'a8\'a3\'ac\'bd\'e7\'c3\'e6\'d6\'d0\'b5\'c4\'c6\'e4\'cb\'fb\'d4\'aa\'cb\'d8\'b6\'bc\'d0\'e8\'d2\'aa\'b7\'c5\'d4\'da\'d5\'e2\'b8\'f6window\'b6\'d4\'cf\'f3\'d6\'d0\'a3\'acwindow\'d6\'bb\'d3\'d0\'d2\'bb\'b8\'f6\'a3\'ac\'d7\'f7\'ce\'aa\'b8\'f9\'ca\'d3\'cd\'bc\'b4\'e6\'d4\'da\'a1\'a3
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 \CocoaLigature1 frame 
+\f1 \'ca\'f4\'d0\'d4\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0\fs36 \cf2 \CocoaLigature0     1.
+\f3 \'ca\'c7\'ca\'b2\'c3\'b4\'a3\'ba\'ca\'d3\'cd\'bc\'b5\'c4\'b1\'df\'bf\'f2\'a3\'ac\'ca\'c7
+\f2 CGRect
+\f3 \'c0\'e0\'d0\'cd\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5\'a3\'ac\'c3\'e8\'ca\'f6\'b5\'c4\'ca\'c7\'b5\'b1\'c7\'b0\'ca\'d3\'cd\'bc\'d7\'f3\'b6\'a5\'b5\'e3\'d4\'da\'b8\'b8\'ca\'d3\'cd\'bc\'d6\'d0\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'bc\'b0\'d4\'da\'b8\'b8\'ca\'d3\'cd\'bc\'d6\'d0\'d5\'bc\'be\'dd\'b5\'c4\'c7\'f8\'d3\'f2\'b4\'f3\'d0\'a1
+\f2 \
+    2.
+\f3 \'c8\'e7\'ba\'ce\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f2 CGRect
+\f3 \'bd\'e1\'b9\'b9\'cc\'e5\'b1\'e4\'c1\'bf
+\f2 \
+        
+\f3 \'c8\'ab\'be\'d6\'ba\'af\'ca\'fd\'a3\'ba
+\f2 CGRectMake(x,y,width,height);\
+    3.CGRect
+\f3 \'b0\'fc\'ba\'ac\'b5\'c4\'c1\'bd\'b2\'bf\'b7\'d6
+\f2 \
+        CGPoint
+\f3 \'a3\'ba
+\f2 origin 
+\f3 \'b4\'b4\'bd\'a8\'ba\'af\'ca\'fd\'a3\'ba
+\f2 CGPoint(x,y);\
+        CGSize
+\f3 \'a3\'ba
+\f2 size    
+\f3 \'b4\'b4\'bd\'a8\'ba\'af\'ca\'fd\'a3\'ba
+\f2 CGPoint(width,height);\cf0 	\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 \CocoaLigature1 IOS APP
+\f1 \'c9\'e8\'bc\'c6\'c0\'ed\'c4\'ee
+\f4\b0\fs40 \
+
+\f5\b\fs36 \CocoaLigature0 	
+\f1 \'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f2\b0 \cf2 \
+	
+\f3 \'c0\'e0\'d0\'cd\'a3\'ba
+\f2 UIViewController
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2 \cf2 	
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'bd\'e7\'c3\'e6\'b5\'c4\'b9\'b9\'bd\'a8\'a1\'a2\'ca\'c2\'bc\'fe\'b5\'c4\'cf\'ec\'d3\'a6\'a1\'a2\'bb\'e6\'d6\'c6\'bd\'e7\'c3\'e6\'a1\'ad\'a1\'ad\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\b \cf0 \
+	
+\f1 \'ca\'d3\'cd\'bc
+\f5 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3\b0 \cf2 	\'c0\'e0\'d0\'cd\'a3\'ba
+\f2 UIView\
+	
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'c3\'e8\'ca\'f6\'c1\'cb\'bf\'c9\'cf\'d4\'ca\'be\'cd\'e2\'b9\'db\'b5\'c4\'d2\'bb\'b8\'f6\'be\'d8\'d0\'ce\'c7\'f8\'d3\'f2\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\b \cf0 \
+	
+\f1 VC\'ba\'cdView\'b5\'c4\'b9\'d8\'cf\'b5
+\f5 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0 \cf2 	ViewController
+\f3 \'d7\'d4\'b4\'f8\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'a3\'ac\'cd\'a8\'b9\'fd
+\f2 self.View
+\f3 \'ca\'f4\'d0\'d4\'bf\'c9\'d2\'d4\'b7\'c3\'ce\'ca\'b5\'bd\'a1\'a3\'b4\'b4\'bd\'a8\'cd\'ea
+\f2 vc
+\f3 \'b5\'c4\'ca\'b5\'c0\'fd\'d6\'ae\'ba\'f3\'be\'cd\'d3\'d0\'c1\'cb\'d2\'bb\'b8\'f6\'bf\'c9\'cf\'d4\'ca\'be\'b5\'c4\'bd\'e7\'c3\'e6\'a3\'ac\'c9\'e8\'bc\'c6
+\f2 self.view
+\f3 \'b5\'c4\'c4\'da\'c8\'dd\'a3\'ac\'be\'cd\'b5\'c8\'cd\'ac\'d3\'da\'c9\'e8\'bc\'c6\'c1\'cb\'bd\'e7\'c3\'e6\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\b \cf0 \
+	
+\f1 \'c9\'e8\'bc\'c6\'d2\'bb\'b8\'f6\'d2\'b3\'c3\'e6
+\f5 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0 \cf2 	step1:
+\f3 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f2 VC
+\f3 \'c0\'e0\'a3\'bb\
+	
+\f2 step2:
+\f3 \'d4\'da
+\f2 viewDidLoad
+\f3 \'b7\'bd\'b7\'a8\'d6\'d0\'b4\'b4\'bd\'a8
+\f2 view
+\f3 \'b5\'c4\'c4\'da\'c8\'dd\'a3\'bb
+\f2 \
+	step3:
+\f3 \'d4\'da
+\f2 didFinishLaunchingWithOptions
+\f3 \'b7\'bd\'b7\'a8\'d6\'d0\'b4\'b4\'bd\'a8
+\f2 vc
+\f3 \'ca\'b5\'c0\'fd\'a3\'ac\'b2\'a2\'c9\'e8\'d6\'c3\'ce\'aa
+\f2 window
+\f3 \'b5\'c4\'b8\'f9
+\f2 VC
+\f3 (\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7)\'a3\'ac\'cf\'d4\'ca\'be
+\f2 window
+\f3 \'a1\'a3
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\fs36 \cf0 \CocoaLigature0 \
+	
+\f1 \'c9\'e8\'bc\'c6\'d2\'bb\'b8\'f6\'d2\'b3\'c3\'e6\'be\'df\'cc\'e5\'b2\'d9\'d7\'f7\'b2\'bd\'d6\'e8\
+
+\f5 	Step1
+\f3 \'a3\'ba\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f5 MyViewContraller
+\f3 \'c0\'e0\'a3\'a8
+\f2\b0 \cf6 command
+\f3\b \'a3\'ab
+\f2\b0 n
+\f3\b \cf0 \'a3\'a9
+\f1\fs44 \CocoaLigature1 \
+
+\f5\fs36 \CocoaLigature0 	step2
+\f3 \'a3\'ba\'d4\'da
+\f2\b0 \cf7 AppDelegate.m
+\f3\b \cf0 \'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4
+\f2\b0 didFinishLaunchingWithOptions
+\f3\b \'b7\'bd\'b7\'a8\'d6\'d0\'c9\'e8\'d6\'c3
+\f2\b0 window
+\f3\b \'b5\'c4\'b8\'f9
+\f2\b0 ViewController
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf2 //
+\f3 \'b3\'f5\'ca\'bc\'bb\'af\'d2\'bb\'b8\'f6\'ba\'cd\'c6\'c1\'c4\'bb\'b3\'df\'b4\'e7\'d2\'bb\'d1\'f9\'b4\'f3\'d0\'a1\'b5\'c4
+\f2 window\cf0 \
+    \cf3 self\cf0 .\cf5 window\cf0  = [[\cf8 UIWindow\cf0  \cf4 alloc\cf0 ]\cf4 initWithFrame\cf0 :[[\cf8 UIScreen\cf0  \cf4 mainScreen\cf0 ]\cf4 bounds\cf0 ]];\
+    \cf2 //
+\f3 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b0\'d7\'c9\'ab\'a3\'ac\'c9\'e8\'d6\'c3
+\f2 window
+\f3 \'b5\'c4\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab\'ce\'aa\'b0\'d7\'c9\'ab
+\f2 \cf0 \
+    \cf3 self\cf0 .\cf5 window\cf0 .\cf8 backgroundColor\cf0  = [\cf8 UIColor\cf0  \cf4 whiteColor\cf0 ];\
+    \cf2 //
+\f3 \'b4\'b4\'bd\'a8\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4\'ca\'b5\'c0\'fd
+\f2 \cf0 \
+    \cf5 MyViewController\cf0  *vc = [[\cf5 MyViewController\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 window
+\f3 \'b5\'c4\'b8\'f9\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f2 \cf0 \
+    \cf3 self\cf0 .\cf5 window\cf0 .\cf8 rootViewController\cf0  = vc;\
+    \cf2 //
+\f3 \'cf\'d4\'ca\'be
+\f2 window\cf0 \
+    \cf2 //
+\f3 \'b5\'bd\'d5\'e2\'c0\'ef\'ca\'b1
+\f2  
+\f3 \'cf\'b5\'cd\'b3\'bb\'e1\'c8\'a5\'b5\'f7\'d3\'c3
+\f2 vc
+\f3 \'a3\'ac
+\f2 vc
+\f3 \'d7\'d4\'b6\'af\'c8\'a5\'b4\'b4\'bd\'a8\'d7\'d4\'b4\'f8\'b5\'c4\'ca\'d3\'cd\'bc\'a3\'ac\'b4\'d3\'b6\'f8\'b5\'f7\'d3\'c3
+\f2 viewDidLoad
+\f3 \'b7\'bd\'b7\'a8
+\f2 \cf0 \
+    [\cf3 self\cf0 .\cf5 window\cf0  \cf4 makeKeyAndVisible\cf0 ];\
+    \cf2 //makeKey
+\f3 \'b0\'d1\'b5\'b1\'c7\'b0\'b4\'b0\'bf\'da\'c9\'e8\'d6\'c3\'ce\'aa\'d6\'f7\'b4\'b0\'bf\'da\'a3\'ac
+\f2 visible
+\f3 \'ca\'b9\'b4\'b0\'bf\'da\'bf\'c9\'bc\'fb
+\f2 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+
+\f5\fs36 \CocoaLigature0 	step3
+\f3 \'a3\'ba\'d4\'da
+\f2\b0 \cf7 MyViewController.m
+\f3\b \cf0  \'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4
+\f2\b0 viewDidLoad
+\f3\b \'b7\'bd\'b7\'a8\'d6\'d0\'c9\'e8\'d6\'c3\'d2\'b3\'c3\'e6\'c9\'cf\'b5\'c4\'be\'df\'cc\'e5\'c4\'da\'c8\'dd
+\f2\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+    \cf8 UILabel\cf0  *label = [[\cf8 UILabel\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+    label.\cf8 frame\cf0  = \cf4 CGRectMake\cf0 (\cf9 100\cf0 , \cf9 100\cf0 , \cf9 200\cf0 , \cf9 100\cf0 );\
+    label.\cf8 text\cf0  = \cf7 @"Hello World"\cf0 ;\
+    \cf2 //
+\f3 \'cc\'ed\'bc\'d3\'b1\'ea\'c7\'a9\'b5\'bd
+\f2  
+\f3 \'bf\'d8\'d6\'c6\'c6\'f7\'d7\'d4\'bc\'ba\'d0\'af\'b4\'f8\'b5\'c4\'c4\'c7\'b8\'f6\'ca\'d3\'cd\'bc\'c9\'cf
+\f2 \cf0 \
+    [\cf3 self\cf0 .\cf8 view\cf0  \cf4 addSubview\cf0 :label];\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 \CocoaLigature1 viewDidLoad
+\f1 \'b7\'bd\'b7\'a8
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2 \cf2 	1.
+\f3 \'ca\'c7\'ca\'b2\'c3\'b4\'a3\'ba\'ca\'c7\'bf\'d8\'d6\'c6\'c6\'f7\'b9\'dc\'c0\'ed\'b5\'c4\'c4\'c7\'b8\'f6\'ca\'d3\'cd\'bc\'b5\'c4\'c9\'fa\'c3\'fc\'d6\'dc\'c6\'da\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'bd\'d7\'b6\'ce\'a1\'a3\
+
+\f2 	2.
+\f3 \'ca\'b2\'c3\'b4\'ca\'b1\'ba\'f2\'b5\'f7\'d3\'c3\'a3\'ba\'b4\'b4\'bd\'a8\'ca\'d3\'cd\'bc\'ca\'b1\'d3\'c9\'cf\'b5\'cd\'b3\'d7\'d4\'b6\'af\'b5\'f7\'d3\'c3\'a3\'ac\'b4\'b4\'bd\'a8\'bd\'e7\'c3\'e6\'b5\'c4\'b4\'fa\'c2\'eb\'be\'cd\'d0\'b4\'d4\'da\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d6\'d0\'a1\'a3\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 \CocoaLigature1 didFinishLaunchingWithOptions
+\f1 \'b7\'bd\'b7\'a8
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+	\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'c6\'f4\'b6\'af\'cd\'ea\'b3\'c9\'ba\'f3\'a3\'ac\'be\'cd\'bb\'e1\'c0\'b4\'d6\'b4\'d0\'d0\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+\
+\'ca\'d3\'cd\'bc\'ba\'cd\'bf\'d8\'bc\'fe
+\f4\b0\fs40 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\fs36 \cf2 \CocoaLigature0 	
+\f3 \'ca\'d3\'cd\'bc\'a3\'ba\'c0\'e0\'d0\'cd
+\f2 UIView\
+		
+\f3 \'ca\'c7\'cb\'f9\'d3\'d0\'bf\'c9\'cf\'d4\'ca\'be\'bd\'e7\'c3\'e6\'d4\'aa\'cb\'d8\'b5\'c4\'b8\'b8\'c0\'e0\'a3\'ac\'ca\'c7\'cf\'d4\'ca\'be\'d4\'aa\'cb\'d8\'b5\'c4\'c8\'dd\'c6\'f7\'a3\'ac\'b2\'a2\'c7\'d2\'bf\'c9\'d2\'d4\'ca\'b5\'cf\'d6\'b6\'e0\'b2\'e3\'bc\'b6\'b5\'c4\'c7\'b6\'cc\'d7
+\f2 \
+     \
+	
+\f3 \'bf\'d8\'bc\'fe\'a3\'ba\'c0\'e0\'d0\'cd
+\f2 UIControl\
+        
+\f3 \'bf\'d5\'bc\'e4\'ca\'b1\'b4\'d3
+\f2 UIView
+\f3 \'d6\'da\'c5\'c9\'c9\'fa\'b3\'f6\'c0\'b4\'b5\'c4\'d2\'bb\'b8\'f6\'cc\'d8\'ca\'e2\'b7\'d6\'d6\'a7\'a3\'ac\'c4\'dc\'b9\'bb\'cf\'ec\'d3\'a6\'d3\'c3\'bb\'a7\'b5\'c4\'b8\'df\'bc\'b6\'bf\'d8\'bc\'fe\'a3\'ac\'c8\'e7
+\f2 UIBotton
+\f3 \'a1\'a2
+\f2 UIText    
+\f3\b \cf0 \
+\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1\fs44 \cf0 \CocoaLigature1 \'bf\'d8\'bc\'fe
+\f3\fs36 \CocoaLigature0 \
+
+\f5 	
+\f1 \'b1\'ea\'c7\'a9
+\f2\b0 \cf2 \
+     
+\f3 \'c0\'e0\'d0\'cd\'a3\'ba
+\f2 UILabel\
+     
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'cf\'d4\'ca\'be\'d2\'bb\'b6\'ce\'ce\'c4\'b1\'be\'d0\'c5\'cf\'a2
+\f2 \
+     
+\f3 \'ca\'f4\'d0\'d4\'a3\'ba
+\f2 \
+     .text\
+     .frame\
+     .numberOfLines\
+     .lineBreakMode\
+     .font\
+     .color\
+     .backgroundColor\
+\pard\tx866\pardeftab866\pardirnatural
+\cf10 Example:\cf0 \
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'cf\'d4\'ca\'be\'c4\'da\'c8\'dd
+\f2 \cf0 \
+    label.\cf8 text\cf0  = \cf7 @"Hello World hello hello"\cf0 ;\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'b5\'c4\'cf\'d4\'ca\'be\'ce\'bb\'d6\'c3\'ba\'cd
+\f2 label
+\f3 \'b5\'c4\'b4\'f3\'d0\'a1
+\f2 \cf0 \
+    label.frame = CGRectMake(<CGFloat x>,<CGFloat y>,<CGFloat width>,<CGFloat height>);\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3\'ce\'c4\'b1\'be\'b5\'c4\'d7\'ee\'b4\'f3\'d0\'d0\'ca\'fd\'a3\'ac\'c4\'ac\'c8\'cf\'ca\'c7
+\f2 1
+\f3 \'a3\'ac\'c8\'e7\'b9\'fb\'c9\'e8\'d6\'c3\'ce\'aa
+\f2 0
+\f3 \'a3\'ac\'d4\'f2\'b4\'fa\'b1\'ed\'ce\'de\'c9\'cf\'cf\'de
+\f2 \cf0 \
+    label.\cf8 numberOfLines\cf0  = \cf9 2\cf0 ;\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'c4\'da\'c8\'dd\'cf\'d4\'ca\'be\'b2\'bb\'cd\'ea\'ca\'b1\'a3\'ac\'ca\'a1\'c2\'d4\'ba\'c5\'b5\'c4\'cf\'d4\'ca\'be\'b7\'bd\'ca\'bd
+\f2 \cf0 \
+    label.\cf8 lineBreakMode\cf0  = \cf4 NSLineBreakByTruncatingHead\cf0 ;\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'b5\'c4\'b1\'b3\'be\'b0\'c9\'ab\'ce\'aa\'c1\'c1\'bb\'d2\'c9\'ab
+\f2 \cf0 \
+    label.\cf8 backgroundColor\cf0  = [\cf8 UIColor\cf0  \cf4 lightGrayColor\cf0 ];\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'d7\'d6\'cc\'e5\'b4\'f3\'d0\'a1 \'d1\'f9\'ca\'bd
+\f2 \cf0 \
+    label.font = [UIFont fontWithName:<#(NSString *)#> size:<#(CGFloat)#>];\
+    \cf2 //
+\f3 \'c9\'e8\'d6\'c3
+\f2 label
+\f3 \'d7\'d6\'cc\'e5\'d1\'d5\'c9\'ab
+\f2 \cf0 \
+    label.\cf8 textColor\cf0  = [\cf8 UIColor\cf0  \cf4 redColor\cf0 ];
+\f3\b \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0 \cf0     \cf2 //
+\f3 \'b0\'d1
+\f2 lable
+\f3 \'d2\'d4\'d7\'d3\'ca\'d3\'cd\'bc\'b5\'c4\'d0\'ce\'ca\'bd\'cc\'ed\'bc\'d3\'b5\'bd
+\f2 window
+\f3 \'b5\'b1\'d6\'d0
+\f2 \cf0 \
+    [\cf3 self\cf0 .\cf5 window\cf0  \cf4 addSubview\cf0 :lable];
+\f3\b \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5 \cf0 \
+	
+\f1 \'b0\'b4\'c5\'a5
+\f2\b0 \cf2 \
+     
+\f3 \'c0\'e0\'d0\'cd\'a3\'ba
+\f2 UIBotton\
+     
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'cf\'ec\'d3\'a6\'d3\'c3\'bb\'a7\'b5\'c4\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe\'a3\'ac\'bf\'c9\'d2\'d4\'d3\'eb\'d3\'c3\'bb\'a7\'bd\'f8\'d0\'d0\'bd\'bb\'bb\'a5
+\f2 \
+     
+\f3 \'ca\'f4\'d0\'d4\'a3\'ba\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2 \cf2      .title\
+     
+\f3 \'ca\'c2\'bc\'fe\'a3\'ba\
+
+\f2      touchUpInSide\
+     
+\f3 \'ce\'aa\'b0\'b4\'c5\'a5\'cc\'ed\'bc\'d3\'ca\'c2\'bc\'fe\'a3\'ba\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2 \cf0     \cf2 //
+\f3 \'bc\'ec\'b2\'e2\'b5\'bd
+\f2  
+\f3 \'b2\'ce\'ca\'fd
+\f2 3
+\f3 \'ca\'c2\'bc\'fe\'a3\'ac\'b2\'ce\'ca\'fd
+\f2 1
+\f3 \'c0\'e0\'d0\'cd
+\f2  
+\f3 \'b5\'c4
+\f2  
+\f3 \'b2\'ce\'ca\'fd
+\f2 2
+\f3 \'b6\'d4\'cf\'f3
+\f2  
+\f3 \'c0\'b4\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+    [button1 \cf4 addTarget\cf0 :\cf3 self\cf0  \cf4 action\cf0 :\cf3 @selector\cf0 (aaa) \cf4 forControlEvents\cf0 :\cf4 UIControlEventTouchUpInside\cf0 ];\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\b \cf0 	
+\f1 \'b0\'b4\'c5\'a5
+\f3\b0 \cf2 \'b2\'d9\'d7\'f7\'b2\'bd\'d6\'e8\'a3\'ba
+\f2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0     \cf2 //1.
+\f3 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b0\'b4\'c5\'a5\'b6\'d4\'cf\'f3
+\f2 \cf0 \
+    \cf8 UIButton\cf0  *button1 = [\cf8 UIButton\cf0  \cf4 buttonWithType\cf0 :\cf4 UIButtonTypeSystem\cf0 ];\
+    \cf2 //2.
+\f3 \'c9\'e8\'d6\'c3\'b4\'f3\'d0\'a1\'ce\'bb\'d6\'c3
+\f2 frame\cf0 \
+    button1.\cf8 frame\cf0  = \cf4 CGRectMake\cf0 (\cf9 50\cf0 , \cf9 350\cf0 , \cf9 80\cf0 , \cf9 40\cf0 );\
+    \cf2 //3.
+\f3 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'c9\'cf\'b5\'c4\'ce\'c4\'d7\'d6
+\f2 \cf0 \
+    [button1 \cf4 setTitle\cf0 :\cf7 @"O K"\cf0  \cf4 forState\cf0 :\cf4 UIControlStateNormal\cf0 ];\
+    [button1 \cf4 setTitle\cf0 :\cf7 @"K O"\cf0  \cf4 forState\cf0 :\cf4 UIControlStateHighlighted\cf0 ];\
+    button1.\cf8 backgroundColor\cf0  = [\cf8 UIColor\cf0  \cf4 lightGrayColor\cf0 ];\
+    \cf2 //
+\f3 \'b8\'f8\'b0\'b4\'c5\'a5\'cc\'ed\'bc\'d3\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+    \cf2 //
+\f3 \'bc\'ec\'b2\'e2\'b5\'bd
+\f2  
+\f3 \'b2\'ce\'ca\'fd
+\f2 3
+\f3 \'ca\'c2\'bc\'fe\'a3\'ac\'b2\'ce\'ca\'fd
+\f2 1
+\f3 \'c0\'e0\'d0\'cd
+\f2  
+\f3 \'b5\'c4
+\f2  
+\f3 \'b2\'ce\'ca\'fd
+\f2 2
+\f3 \'b6\'d4\'cf\'f3
+\f2  
+\f3 \'c0\'b4\'cf\'ec\'d3\'a6
+\f2 \cf0 \
+    [button1 \cf4 addTarget\cf0 :\cf3 self\cf0  \cf4 action\cf0 :\cf3 @selector\cf0 (aaa) \cf4 forControlEvents\cf0 :\cf4 UIControlEventTouchUpInside\cf0 ];\
+    \cf2 //4.
+\f3 \'cc\'ed\'bc\'d3\'b0\'b4\'c5\'a5\'b5\'bd\'ca\'d3\'cd\'bc\'d6\'d0
+\f2 \cf0 \
+    [\cf3 self\cf0 .\cf8 view\cf0  \cf4 addSubview\cf0 :button1];\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3\b \cf0 \
+
+\f5 	
+\f1 \'b0\'b4\'c5\'a5\'b1\'ea\'cc\'e2\'be\'d3\'d7\'f3\'b7\'bd\'ca\'bd
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\b0 \cf0     \cf8 UIButton\cf0  *button1 = [\cf8 UIButton\cf0  \cf4 buttonWithType\cf0 :\cf4 UIButtonTypeSystem\cf0 ];\
+\pard\tx963\pardeftab963\pardirnatural
+\cf0     button1.\cf8 contentHorizontalAlignment\cf0  = \cf4 UIControlContentHorizontalAlignmentLeft\cf0 ;\
+    button1.\cf8 titleEdgeInsets\cf0  = \cf4 UIEdgeInsetsMake\cf0 (\cf9 0\cf0 , \cf9 8\cf0 , \cf9 0\cf0 , \cf9 0\cf0 );\
+\pard\tx720\pardeftab720\pardirnatural
+
+\f6 \cf0 \
+\
+}

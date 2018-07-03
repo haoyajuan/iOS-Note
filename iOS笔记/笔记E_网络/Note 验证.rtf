@@ -1,0 +1,333 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red29\green133\blue25;\red77\green0\blue158;
+\red46\green13\blue110;\red186\green0\blue17;\red110\green32\blue13;\red180\green0\blue98;\red68\green137\blue147;
+\red92\green38\blue153;\red48\green111\blue121;\red32\green60\blue63;\red0\green128\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16660\viewh17100\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\fs36 \cf2 \CocoaLigature0  
+\f1\b \cf0 \'b7\'a2\'b6\'cc\'d0\'c5
+\f2  
+\f0\b0 \cf2 \
+ 
+\f1 \'b7\'bd\'ca\'bd\'d2\'bb
+\f0 :
+\f1 \cf3 \'d7\'ee\'bc\'f2\'b5\'a5\'b5\'c4\'b7\'a2\'cb\'cd\'b6\'cc\'d0\'c5\'b7\'bd\'b7\'a8
+\f0  
+\f1 \'d6\'bb\'c4\'dc\'b5\'f7\'b3\'f6\'b7\'a2\'cb\'cd\'b6\'cc\'d0\'c5\'b5\'c4\'d2\'b3\'c3\'e6
+\f0  
+\f1 \'b2\'bb\'c4\'dc\'bb\'d8\'b5\'bd\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2
+\f0 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0     \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :\cf6 @"sma://15811005943"\cf0 ];\
+    [[\cf4 UIApplication\cf0  \cf5 sharedApplication\cf0 ]\cf5 openURL\cf0 :url];\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 \
+ 
+\f1 \'b7\'bd\'ca\'bd\'b6\'fe
+\f0 :
+\f1 \'ca\'b9\'d3\'c3\'cf\'b5\'cd\'b3\'d7\'d4\'b4\'f8\'bf\'f2\'bc\'dc
+\f0 \cf6 <MessageUI/MessageUI.h>\cf2 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf3   
+\f1 \'b7\'a2\'cb\'cd\'b6\'cc\'d0\'c5\'b2\'bd\'d6\'e8
+\f0 :\
+ 1.
+\f1 \'d7\'f1\'ca\'d8\'d0\'ad\'d2\'e9
+\f0 MFMessageComposeViewControllerDelegate\
+ 2.
+\f1 \'c9\'e8\'d6\'c3
+\f0 MFMessageComposeViewController
+\f1 \'b5\'c4
+\f0 messageComposeDelegate
+\f1 \'b4\'fa\'c0\'ed
+\f0 \
+ 3.
+\f1 \'ca\'b5\'cf\'d6\'b4\'a6\'c0\'ed\'b6\'cc\'d0\'c5\'b7\'a2\'cb\'cd\'b3\'c9\'b9\'a6\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 :\
+    messageComposeViewController:didFinishWithResult:\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 \
+ 
+\f1\b \cf0 \'b4\'f2\'b5\'e7\'bb\'b0
+\f0\b0 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf7 #pragma mark - 
+\f1 \'bc\'f2\'b5\'a5\'b7\'bd\'ca\'bd\'b4\'f2\'b5\'e7\'bb\'b0
+\f0 \cf0 \
+- (\cf8 void\cf0 ) telephone1\{\
+    \cf4 NSString\cf0  *telephoneNum = \cf6 @"15811005943"\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :[\cf4 NSString\cf0  \cf5 stringWithFormat\cf0 :\cf6 @"tel://%@"\cf0 ,telephoneNum]];\
+    [[\cf4 UIApplication\cf0  \cf5 sharedApplication\cf0 ]\cf5 openURL\cf0 :url];\
+\}\
+\cf7 #pragma mark - 
+\f1 \'c6\'bb\'b9\'fb\'b5\'c4\'cb\'bd\'d3\'d0\'d0\'ad\'d2\'e9
+\f0 (
+\f1 \'c3\'bb\'b6\'d4\'cd\'e2\'b9\'ab\'bf\'aa\'b5\'c4\'d0\'ad\'d2\'e9
+\f0 ,
+\f1 \'c9\'cf\'cf\'df\'cf\'ee\'c4\'bf\'bf\'c9\'c4\'dc\'b1\'bb\'be\'dc\'be\'f8
+\f0 )\cf0 \
+- (\cf8 void\cf0 ) telephone2\{\
+    \cf4 NSString\cf0  *telephoneNum = \cf6 @"15811005943"\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :[\cf4 NSString\cf0  \cf5 stringWithFormat\cf0 :\cf6 @"telprompt://%@"\cf0 ,telephoneNum]];\
+    [[\cf4 UIApplication\cf0  \cf5 sharedApplication\cf0 ]\cf5 openURL\cf0 :url];\
+\}\
+\cf7 #pragma mark - 
+\f1 \'cd\'a8\'d3\'c3\'b7\'bd\'ca\'bd
+\f0 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf3 /**\
+ *  
+\f1 \'bf\'c9\'d2\'d4\'b1\'dc\'c3\'e2\'cc\'f8\'b2\'bb\'bb\'e1\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'ce\'ca\'cc\'e2
+\f0 \
+ */\cf0 \
+- (\cf8 void\cf0 )telephone3\{\
+    \cf4 NSString\cf0  *telephoneNum = \cf6 @"15811005943"\cf0 ;\
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :[\cf4 NSString\cf0  \cf5 stringWithFormat\cf0 :\cf6 @"tel://%@"\cf0 ,telephoneNum]];\
+    \cf8 if\cf0  (\cf9 _webView\cf0  == \cf8 nil\cf0 ) \{\
+        \cf9 _webView\cf0  = [[\cf4 UIWebView\cf0  \cf5 alloc\cf0 ]\cf5 initWithFrame\cf0 :\cf10 CGRectZero\cf0 ];\
+    \}\
+    \cf4 NSURLRequest\cf0  *request = [\cf4 NSURLRequest\cf0  \cf5 requestWithURL\cf0 :url];\
+    [\cf9 _webView\cf0  \cf5 loadRequest\cf0 :request];\
+\}\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2  
+\f1\b \cf0 \'b6\'cc\'d0\'c5\'d1\'e9\'d6\'a4
+\f2 \
+
+\f1\b0 \cf2 \'ca\'b9\'d3\'c3\'b5\'da\'c8\'fd\'b7\'bd\'cc\'e1\'b9\'a9\'b5\'c4\'bf\'f2\'bc\'dc\'ba\'cd\'b7\'fe\'ce\'f1
+\f0 ,
+\f1 \'ca\'b9\'d3\'c3\'d6\'ae\'c7\'b0\'d0\'e8\'d2\'aa\'d4\'da
+\f0 mob.com
+\f1 \'d7\'a2\'b2\'e1\'d5\'cb\'ba\'c5
+\f0 ,
+\f1 \'bb\'f1\'c8\'a1\'b6\'cc\'d0\'c5\'d1\'e9\'d6\'a4\'b5\'c4
+\f0 appkey
+\f1 \'ba\'cd
+\f0 appSecret\
+\pard\tx963\pardeftab963\pardirnatural
+\cf7  appKey @\cf6 "eb60adaf2816"\cf2 \
+\cf7  appSecret @\cf6 "f063e611940222432d9d9cb27e670649"\
+\pard\tx963\pardeftab963\pardirnatural
+
+\f1 \cf2 \'b2\'bd\'d6\'e8
+\f0 :\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 1.
+\f1 \'d4\'da
+\f0 delegate
+\f1 \'d6\'d0\'b5\'bc\'c8\'eb
+\f0 SDK
+\f1 \'ce\'c4\'bc\'fe\'ba\'f3\'d4\'da
+\f0 didFinishLaunchingOptions:
+\f1 \'b7\'bd\'b7\'a8\'d6\'d0\'d7\'a2\'b2\'e1
+\f0 \
+2.
+\f1 \'b5\'f7\'d3\'c3\'b7\'a2\'b3\'f6\'d1\'e9\'d6\'a4\'c2\'eb\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 (
+\f1 \'b7\'a2\'cb\'cd\'d1\'e9\'d6\'a4\'c2\'eb\'d3\'d0\'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd
+\f0 )\
+	a.
+\f1 \'b7\'a2\'b6\'cc\'d0\'c5\'b8\'e6\'d6\'aa
+\f0 :\cf3 SMSGetCodeMethodSMS\cf2 \
+	b.
+\f1 \'b4\'f2\'b5\'e7\'bb\'b0\'d3\'ef\'d2\'f4\'b2\'a5\'b1\'a8
+\f0 : \cf3 SMSGetCodeMethodVoice\cf2 \
+3.
+\f1 \'b5\'f7\'d3\'c3\'d1\'e9\'d6\'a4\'d1\'e9\'d6\'a4\'c2\'eb\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 \
+\
+1.
+\f1 \'d7\'a2\'b2\'e1
+\f0 \cf7 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 [SMSSDK registerApp:appKey withSecret:appSecret];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 2.
+\f1 \'b7\'a2\'cb\'cd\'d1\'e9\'d6\'a4\'c2\'eb
+\f0 \cf0 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 [\cf11 SMSSDK\cf0  \cf12 getVerificationCodeByMethod\cf0 :\cf8 <
+\f1 \'d1\'e9\'d6\'a4\'b7\'bd\'ca\'bd
+\f0 >\cf0  \cf12 phoneNumber\cf0 :\cf6 @"18001065855"\cf0  \cf12 zone\cf0 :\cf6 @"86"\cf0  \cf12 customIdentifier\cf0 :\cf8 nil\cf0  \cf12 result\cf0 :^(\cf4 NSError\cf0  *error) \{
+\f1 \cf6 \'d1\'e9\'d6\'a4\'c2\'eb\'b7\'a2\'b3\'f6\'b5\'c4
+\f0 Block\cf0 \}];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 3.
+\f1 \'d1\'e9\'d6\'a4\'d1\'e9\'d6\'a4\'c2\'eb
+\f0 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 [\cf11 SMSSDK\cf0  \cf12 commitVerificationCode\cf0 :\cf8 <
+\f1 \'d1\'e9\'d6\'a4\'c2\'eb
+\f0 >\cf0  \cf12 phoneNumber\cf0 :\cf6 @"18001065855"\cf0  \cf12 zone\cf0 :\cf6 @"86"\cf0  \cf12 result\cf0 :^(\cf4 NSError\cf0  *error) \{
+\f1 \'b4\'a6\'c0\'ed\'b2\'bf\'b7\'d6
+\f0 \}];\
+\
+\pard\tx963\pardeftab963\pardirnatural
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2  
+\f1\b \cf0 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'bc\'e4\'b5\'c4\'cc\'f8\'d7\'aa
+\f2 \
+
+\f0\b0 \cf2 \
+ 
+\f1 \'b2\'ce\'ca\'fd
+\f0 1:	
+\f1 \'ce\'aa\'d7\'d4\'bc\'ba\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b1\'ea\'ca\'b6
+\f0 (
+\f1 \'c8\'c3\'b1\'f0\'b5\'c4\'d3\'a6\'d3\'c3\'d5\'d2\'b5\'bd\'d7\'d4\'bc\'ba
+\f0 )\
+	info.plist -> URL Types -> URL Schemes:$
+\f1 \'b1\'be\'d3\'a6\'d3\'c3\'b5\'c4\'c3\'fb\'b3\'c6
+\f0 \
+ 
+\f1 \'b2\'ce\'ca\'fd
+\f0 2:	
+\f1 \'cc\'ed\'bc\'d3\'b0\'d7\'c3\'fb\'b5\'a5
+\f0 (
+\f1 \'d4\'ca\'d0\'ed\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b7\'c3\'ce\'ca\'b1\'f0\'b5\'c4\'d3\'a6\'d3\'c3
+\f0 )\
+	
+\f1 \'d4\'da
+\f0 info.plist
+\f1 \'d6\'d0\'d4\'f6\'bc\'d3
+\f0 LSApplicationQueriesSchemes
+\f1 \'b2\'ce\'ca\'fd
+\f0 ,
+\f1 \'c9\'e8\'d6\'c3\'ce\'aa\'ca\'fd\'d7\'e9\'c0\'e0\'d0\'cd
+\f0 ,
+\f1 \'d4\'f6\'bc\'d3
+\f0 item
+\f1 \'d6\'b5\'c9\'e8\'d6\'c3\'ce\'aa\'d0\'e8\'d2\'aa\'b7\'c3\'ce\'ca\'b5\'c4\'d3\'a6\'d3\'c3\'b5\'c4\'c3\'fb\'b3\'c6
+\f0 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1\b \cf2 \'cc\'f8\'d7\'aa\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6
+\f2 App
+\f1 \'b5\'c4\'b2\'bd\'d6\'e8
+\f2 :\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b0 \cf2  1.
+\f1 \'c9\'e8\'d6\'c3\'b2\'ce\'ca\'fd
+\f0 \
+ 2.
+\f1 \'b4\'b4\'bd\'a8
+\f0 URL(
+\f1 \'cc\'f8\'d7\'aa\'b5\'bd\'c1\'ed\'cd\'e2\'d2\'bb\'b8\'f6
+\f0 App
+\f1 \'b5\'c4\'d0\'ad\'d2\'e9
+\f0 )\
+ 3.
+\f1 \'ca\'b9\'d3\'c3
+\f0 application
+\f1 \'b4\'f2\'bf\'aa
+\f0 URL\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1\b \cf2 \'cc\'f8\'d7\'aa\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6
+\f2 App
+\f1 \'d6\'b8\'b6\'a8\'b5\'c4
+\f2 ViewController
+\f1 \'b2\'bd\'d6\'e8
+\f2 :\
+
+\f1 \'c9\'cf\'d2\'bb
+\f2 App:
+\f0\b0 \
+ 1.
+\f1 \'c9\'e8\'d6\'c3\'b2\'ce\'ca\'fd
+\f0 \
+ 2.
+\f1 \'b4\'b4\'bd\'a8
+\f0 URL(
+\f1 \'cc\'f8\'d7\'aa\'b5\'bd\'c1\'ed\'cd\'e2\'d2\'bb\'b8\'f6
+\f0 App
+\f1 \'b5\'c4\'d0\'ad\'d2\'e9
+\f0 )\
+ 3.
+\f1 \'ca\'b9\'d3\'c3
+\f0 application
+\f1 \'b4\'f2\'bf\'aa
+\f0 URL\
+
+\f1\b \'cf\'c2\'d2\'bb\'b8\'f6
+\f2 App:
+\f0\b0 \
+ 1.
+\f1 \'d4\'da
+\f0 delegate
+\f1 \'d6\'d0\'d6\'d8\'d0\'b4\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c0\'b9\'bd\'d8\'cc\'f8\'d7\'aa\'c7\'eb\'c7\'f3
+\f0 \
+	\cf13 application:openURL:sourceApplication:annotation:\cf2 \
+ 2.
+\f1 \'b4\'a6\'c0\'ed
+\f0 URL,
+\f1 \'bf\'c9\'d2\'d4\'bb\'f1\'c8\'a1\'c9\'cf\'d2\'bb\'b8\'f6
+\f0 App
+\f1 \'b5\'c4\'b1\'ea\'ca\'b6
+\f0 \
+ 3.
+\f1 \'c5\'d0\'b6\'cf\'c9\'cf\'d2\'bb\'b8\'f6
+\f0 App
+\f1 \'b5\'c4\'c9\'ed\'b7\'dd\'ba\'f3
+\f0 ,
+\f1 \'d6\'b4\'d0\'d0\'d2\'b3\'c3\'e6\'cc\'f8\'d7\'aa
+\f0 \
+ 4.
+\f1 \'ca\'b9\'d3\'c3\'b5\'bc\'ba\'bd\'bf\'d8\'d6\'c6\'c6\'f7\'cd\'c6\'b3\'f6\'d0\'e8\'d2\'aa\'d5\'b9\'ca\'be\'b5\'c4\'d2\'b3\'c3\'e6
+\f0 \
+\
+\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1 \cf2 \'b4\'d3\'b5\'b1\'c7\'b0
+\f0 App
+\f1 \'cc\'f8\'d7\'aa\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6
+\f0 App\
+\pard\tx963\pardeftab963\pardirnatural
+\cf0     \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :\cf6 @"TestApp://aaa?backScheme=NextApp"\cf0 ];\
+    \cf4 UIApplication\cf0  *app = [\cf4 UIApplication\cf0  \cf5 sharedApplication\cf0 ];\
+    \cf8 if\cf0  ([app \cf5 canOpenURL\cf0 :url]) \{\
+        [app \cf5 openURL\cf0 :url];\
+    \}\
+\pard\tx963\pardeftab963\pardirnatural
+
+\f1 \cf3 \'d3\'c3\'b5\'bc\'ba\'bd\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4\'d5\'bb\'b6\'a5\'bf\'d8\'d6\'c6\'c6\'f7
+\f0  
+\f1 \'cd\'c6\'b3\'f6\'d0\'c2\'d2\'b3\'c3\'e6
+\f0 \cf0 \
+    \cf8 if\cf0  ([url.\cf10 absoluteString\cf0  \cf5 hasPrefix\cf0 :\cf6 @"TestApp://bbb"\cf0 ]) \{\
+        [nav.\cf10 topViewController\cf0  \cf5 performSegueWithIdentifier\cf0 :\cf6 @"sss"\cf0  \cf5 sender\cf0 :\cf8 nil\cf0 ];\
+    \}\
+\pard\tx866\pardeftab866\pardirnatural
+\cf2 \
+\
+ 
+\f1\b \cf0 \'c6\'e4\'cb\'fb\'cc\'f8\'d7\'aa
+\f2 \
+
+\f0\b0 \cf2 	
+\f1 \'cc\'f8\'d7\'aa\'b5\'bd\'ce\'a2\'d0\'c5
+\f0  QQ 
+\f1 \'d0\'c2\'c0\'cb\'b5\'c8
+\f0 :
+\f1 \'d4\'da\'b0\'d7\'c3\'fb\'b5\'a5\'d6\'d0\'cc\'ed\'bc\'d3\'d5\'e2\'d0\'a9\'d3\'a6\'d3\'c3\'b5\'c4\'c3\'fb\'b3\'c6\'be\'cd\'bf\'c9\'d2\'d4\'c1\'cb
+\f2\b \cf0 \
+\
+
+\f0\b0 \cf2  
+\f1\b \cf0 \'be\'b2\'cc\'ac\'bf\'e2
+\f2 \
+
+\f1\b0 \cf2 \'b2\'ce\'ca\'fd
+\f0 :
+\f2\b \cf0 \
+}

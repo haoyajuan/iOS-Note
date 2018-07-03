@@ -1,0 +1,180 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red92\green38\blue153;\red170\green13\blue145;
+\red46\green13\blue110;\red28\green0\blue207;\red196\green26\blue22;\red63\green110\blue116;\red100\green56\blue32;
+\red0\green116\blue0;\red38\green71\blue75;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c39100\c22000\c12500;
+\csgenericrgb\c0\c45600\c0;\csgenericrgb\c14900\c27800\c29400;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18460\viewh16740\viewkind0
+\deftab989
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf2 \CocoaLigature0 	<\cf3 WKUIDelegate\cf2 ,\cf3 WKScriptMessageHandler\cf2 >\
+- (\cf4 void\cf2 )makeWKUI\{\
+    \cf4 self\cf2 .\cf3 edgesForExtendedLayout\cf2  = \cf5 UIRectEdgeNone\cf2 ;\
+    \cf4 self\cf2 .\cf3 automaticallyAdjustsScrollViewInsets\cf2  = \cf4 NO\cf2 ;\
+    \
+    \cf3 WKWebViewConfiguration\cf2  *config = [[\cf3 WKWebViewConfiguration\cf2  \cf5 alloc\cf2 ]\cf5 init\cf2 ];\
+    config.\cf3 preferences\cf2  = [[\cf3 WKPreferences\cf2  \cf5 alloc\cf2 ]\cf5 init\cf2 ];\
+    config.\cf3 preferences\cf2 .\cf3 minimumFontSize\cf2  = \cf6 10\cf2 ;\
+    config.\cf3 preferences\cf2 .\cf3 javaScriptEnabled\cf2  = \cf4 YES\cf2 ;\
+    config.\cf3 preferences\cf2 .\cf3 javaScriptCanOpenWindowsAutomatically\cf2  = \cf4 NO\cf2 ;\
+    \
+    config.\cf3 processPool\cf2  = [[\cf3 WKProcessPool\cf2  \cf5 alloc\cf2 ]\cf5 init\cf2 ];\
+    config.\cf3 userContentController\cf2  = [[\cf3 WKUserContentController\cf2  \cf5 alloc\cf2 ]\cf5 init\cf2 ];\
+    [config.\cf3 userContentController\cf2  \cf5 addScriptMessageHandler\cf2 :\cf4 self\cf2  \cf5 name\cf2 :\cf7 @"phoneGoBack"\cf2 ];\
+    \
+    \cf8 wkWebView\cf2 =[[\cf3 WKWebView\cf2  \cf5 alloc\cf2 ] \cf5 initWithFrame\cf2 :\cf5 CGRectMake\cf2 (\cf6 0\cf2 , \cf9 NAVTOPEDGE\cf2 , \cf9 IPHONE_WIDTH\cf2 ,\cf9 IPHONE_HEIGHT\cf2 -\cf9 NAVTOPEDGE\cf2 )\cf5 configuration\cf2 :config];\
+    \cf8 wkWebView\cf2 .\cf3 UIDelegate\cf2  = \cf4 self\cf2 ;\
+    \
+    \cf3 NSURL\cf2  *url = [\cf3 NSURL\cf2  \cf5 URLWithString\cf2 :\cf4 self\cf2 .\cf8 web_url\cf2 ];\
+    \cf3 NSURLRequest\cf2  *request= [\cf3 NSURLRequest\cf2  \cf5 requestWithURL\cf2 :url];\
+    [\cf8 wkWebView\cf2  \cf5 loadRequest\cf2 :request];\
+    [\cf4 self\cf2 .\cf3 view\cf2  \cf5 addSubview\cf2 :\cf8 wkWebView\cf2 ];\
+    \
+\}\
+- (\cf4 void\cf2 )enterBackLast\{\
+    [\cf4 self\cf2 .\cf3 navigationController\cf2  \cf5 popViewControllerAnimated\cf2 :\cf4 YES\cf2 ];\
+\}\
+\
+\cf9 #pragma mark - WKScriptMessageHandler\
+\cf2 \
+\cf10 /**\
+ window.webkit.messageHandlers.phoneGoBack.postMessage(\{methodName: 'phoneGoBack'\});\
+\
+ @param userContentController\
+ @param message NSDictionary\
+ */\cf2 \
+- (\cf4 void\cf2 )userContentController:(\cf3 WKUserContentController\cf2  *)userContentController didReceiveScriptMessage:(\cf3 WKScriptMessage\cf2  *)message\{\
+    \cf3 NSDictionary\cf2  *params = message.\cf3 body\cf2 ;\
+    \
+    \cf4 if\cf2  ([params[\cf7 @"methodName"\cf2 ] \cf5 isEqualToString\cf2 :\cf7 @"phoneGoBack"\cf2 ]) \{\
+        [\cf4 self\cf2 .\cf3 navigationController\cf2  \cf5 popViewControllerAnimated\cf2 :\cf4 YES\cf2 ];\
+    \}\
+\}\
+\
+\cf9 #pragma mark - WKUIDelegate\
+\cf10 /**\
+ 
+\f1 \'d4\'da
+\f0 JS
+\f1 \'b6\'cb\'b5\'f7\'d3\'c3
+\f0 alert
+\f1 \'ba\'af\'ca\'fd\'ca\'b1\'a3\'ac\'bb\'e1\'b4\'a5\'b7\'a2\'b4\'cb\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'a1\'a3
+\f0 \
+ \
+ @param webView\
+ @param message JS
+\f1 \'b6\'cb\'b5\'f7\'d3\'c3
+\f0 alert
+\f1 \'ca\'b1\'cb\'f9\'b4\'ab\'b5\'c4\'ca\'fd\'be\'dd\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd
+\f0 message
+\f1 \'c4\'c3\'b5\'bd
+\f0 \
+ @param frame\
+ @param completionHandler 
+\f1 \'d4\'da\'d4\'ad\'c9\'fa\'b5\'c3\'b5\'bd\'bd\'e1\'b9\'fb\'ba\'f3\'a3\'ac\'d0\'e8\'d2\'aa\'bb\'d8\'b5\'f7
+\f0 JS
+\f1 \'a3\'ac\'ca\'c7\'cd\'a8\'b9\'fd
+\f0 completionHandler
+\f1 \'bb\'d8\'b5\'f7
+\f0 \
+ */\cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView runJavaScriptAlertPanelWithMessage:(\cf3 NSString\cf2  *)message initiatedByFrame:(\cf3 WKFrameInfo\cf2  *)frame completionHandler:(\cf4 void\cf2  (^)(\cf4 void\cf2 ))completionHandler\{\
+    \cf3 UIPasteboard\cf2  *pasteboard = [\cf3 UIPasteboard\cf2  \cf5 generalPasteboard\cf2 ];\
+    [pasteboard \cf5 setString\cf2 :message];\
+    [\cf4 self\cf2  \cf11 showTextDialog\cf2 :\cf7 @"
+\f1 \'b5\'d8\'d6\'b7\'d2\'d1\'b8\'b4\'d6\'c6
+\f0 "\cf2 ];\
+    \
+    completionHandler();\
+\}\
+\
+\cf10 /**\
+ JS
+\f1 \'b6\'cb\'b5\'f7\'d3\'c3
+\f0 confirm
+\f1 \'ba\'af\'ca\'fd\'ca\'b1\'a3\'ac\'bb\'e1\'b4\'a5\'b7\'a2\'b4\'cb\'b7\'bd\'b7\'a8
+\f0 \
+ \
+ @param webView 
+\f1 \'d4\'da
+\f0 iOS
+\f1 \'b6\'cb\'cf\'d4\'ca\'be\'d4\'ad\'c9\'fa
+\f0 alert
+\f1 \'b5\'c3\'b5\'bd
+\f0 YES/NO
+\f1 \'ba\'f3
+\f0 \
+ @param message 
+\f1 \'cd\'a8\'b9\'fd
+\f0 message
+\f1 \'bf\'c9\'d2\'d4\'c4\'c3\'b5\'bd
+\f0 JS
+\f1 \'b6\'cb\'cb\'f9\'b4\'ab\'b5\'c4\'ca\'fd\'be\'dd
+\f0 \
+ @param frame\
+ @param completionHandler 
+\f1 \'cd\'a8\'b9\'fd
+\f0 completionHandler
+\f1 \'bb\'d8\'b5\'f7\'b8\'f8
+\f0 JS
+\f1 \'b6\'cb
+\f0 \
+ */\cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView runJavaScriptConfirmPanelWithMessage:(\cf3 NSString\cf2  *)message initiatedByFrame:(\cf3 WKFrameInfo\cf2  *)frame completionHandler:(\cf4 void\cf2  (^)(\cf4 BOOL\cf2  result))completionHandler\{\
+    completionHandler(\cf4 YES\cf2 );\
+\}\
+\cf10 /**\
+ JS
+\f1 \'b6\'cb\'b5\'f7\'d3\'c3
+\f0 prompt
+\f1 \'ba\'af\'ca\'fd\'ca\'b1\'a3\'ac\'bb\'e1\'b4\'a5\'b7\'a2\'b4\'cb\'b7\'bd\'b7\'a8
+\f0 \
+ \
+ @param webView\
+ @param prompt prompt
+\f1 \'d6\'d0\'b5\'c4
+\f0 key\
+ @param defaultText prompt
+\f1 \'d6\'d0\'b5\'c4
+\f0 value\
+ @param frame\
+ @param completionHandler 
+\f1 \'d4\'da\'d4\'ad\'c9\'fa\'ca\'e4\'c8\'eb\'b5\'c3\'b5\'bd\'ce\'c4\'b1\'be\'c4\'da\'c8\'dd\'ba\'f3\'a3\'ac\'cd\'a8\'b9\'fd
+\f0 completionHandler
+\f1 \'bb\'d8\'b5\'f7\'b8\'f8
+\f0 JS\
+ */\cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView runJavaScriptTextInputPanelWithPrompt:(\cf3 NSString\cf2  *)prompt defaultText:(\cf4 nullable\cf2  \cf3 NSString\cf2  *)defaultText initiatedByFrame:(\cf3 WKFrameInfo\cf2  *)frame completionHandler:(\cf4 void\cf2  (^)(\cf3 NSString\cf2  * \cf4 _Nullable\cf2  result))completionHandler\{\
+    \
+\}\
+\
+\cf3 WKNavigationDelegate\
+\cf10 /// 1 
+\f1 \'d2\'b3\'c3\'e6\'bf\'aa\'ca\'bc\'bc\'d3\'d4\'d8
+\f0 \cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView didStartProvisionalNavigation:(\cf3 WKNavigation\cf2  *)navigation\{\
+    [\cf4 self\cf2  \cf11 startLoading\cf2 ];\
+\
+\}\
+\cf10 /// 2 
+\f1 \'bf\'aa\'ca\'bc\'bb\'f1\'c8\'a1\'b5\'bd\'cd\'f8\'d2\'b3\'c4\'da\'c8\'dd\'ca\'b1\'b7\'b5\'bb\'d8
+\f0 \cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView didCommitNavigation:(\cf3 WKNavigation\cf2  *)navigation\{\
+    \
+\}\
+\cf10 /// 3 
+\f1 \'d2\'b3\'c3\'e6\'bc\'d3\'d4\'d8\'cd\'ea\'b3\'c9\'d6\'ae\'ba\'f3\'b5\'f7\'d3\'c3
+\f0 \cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView didFinishNavigation:(\cf3 WKNavigation\cf2  *)navigation\{\
+    [\cf4 self\cf2  \cf11 stopLoading\cf2 ];\
+\}\
+\cf10 /// 4 
+\f1 \'d2\'b3\'c3\'e6\'bc\'d3\'d4\'d8\'ca\'a7\'b0\'dc\'ca\'b1\'b5\'f7\'d3\'c3
+\f0 \cf2 \
+- (\cf4 void\cf2 )webView:(\cf3 WKWebView\cf2  *)webView didFailProvisionalNavigation:(\cf3 WKNavigation\cf2  *)navigation\{\
+    [\cf4 self\cf2  \cf11 stopLoading\cf2 ];\
+\}\
+}

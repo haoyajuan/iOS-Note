@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red46\green13\blue110;\red170\green13\blue145;
+\red92\green38\blue153;\red100\green56\blue32;\red28\green0\blue207;\red196\green26\blue22;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17040\viewh19660\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs48 \cf0 \CocoaLigature0 \'b9\'d8\'d3\'da
+\f1 Model
+\f0 \'b5\'c4\'bd\'e2\'ce\'f6
+\f1\fs36 \
+\cf2 	1.KVC
+\f0 \'a3\'ba
+\f1 \cf0 \
+	
+\f2\b0 \cf3 setValuesForKeysWithDictionary 
+\f0 \'b0\'d1\'d7\'d6\'b5\'e4\'d7\'aa\'bb\'af\'b3\'c9Model\'b6\'d4\'cf\'f3
+\f1\b \cf0 \
+\pard\tx963\pardeftab963\pardirnatural
+
+\f2\b0 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f1\b \cf2 	2.
+\f0 \'bd\'e2\'be\'f6\'c8\'e7\'b9\'fb
+\f1 josn
+\f0 \'d6\'d0\'b0\'fc\'ba\'ac\'b6\'e0\'d3\'e0\'d7\'d6\'b6\'ce
+\f1 ,
+\f0 \'b3\'cc\'d0\'f2\'b1\'c0\'c0\'a3\'b5\'c4\'ce\'ca\'cc\'e2\
+\pard\tx963\pardeftab963\pardirnatural
+
+\f2\b0 \cf0 	- (\cf4 void\cf0 )setValue:(\cf4 id\cf0 )value forUndefinedKey:(\cf5 NSString\cf0  *)key \{\}
+\f0\b \cf2 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf2  	3.\'d7\'a2:\'b8\'c3\'b7\'bd\'b7\'a8\'bb\'b9\'bf\'c9\'d2\'d4\'bd\'e2\'be\'f6josn\'d6\'d0\'ba\'cdModel\'d6\'d0 \'b9\'d8\'bc\'fc\'d7\'d6\'b2\'bb\'b6\'d4\'d3\'a6\'b5\'c4\'ce\'ca\'cc\'e2,\'d4\'da\'b1\'be\'b7\'bd\'b7\'a8\'c4\'da\'ca\'d6\'b6\'af\'b8\'b3\'d6\'b5
+\f2\b0 \cf0 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 \
+\
+\
+\
+
+\f0 \cf2  \'bf\'c9\'d2\'d4\'b4\'b4\'bd\'a8\'ca\'b5\'cc\'e5\'c0\'e0\'ca\'b5\'cf\'d6\'d2\'d4\'c9\'cf\'c1\'bd\'b8\'f6\'b7\'bd\'b7\'a8(\'bd\'e2\'ce\'f6\'ba\'cd\'d2\'ec\'b3\'a3\'b4\'a6\'c0\'ed)
+\f2 ,
+\f0 \'c6\'e4\'cb\'fb
+\f2 Model
+\f0 \'c0\'e0\'b6\'bc\'bc\'cc\'b3\'d0\'d7\'d4\'d5\'e2\'b8\'f6\'c0\'e0
+\f2 \cf0 \
+- (\cf4 id\cf0  )initWithDictionary:(\cf5 NSDictionary\cf0 * )aDictionary \{\
+    \cf4 self\cf0 =[\cf4 super\cf0  \cf3 init\cf0 ];\
+    \cf4 if\cf0  (\cf4 self\cf0 ) \{\
+        \cf4 if\cf0  (![aDictionary \cf3 isEqual\cf0 :[\cf5 NSNull\cf0  \cf3 null\cf0 ]]) \{\
+            [\cf4 self\cf0  \cf3 setValuesForKeysWithDictionary\cf0 :aDictionary];\
+        \}\
+    \}\
+    \cf4 return\cf0  \cf4 self\cf0 ;\
+\}\
+- (\cf4 void\cf0 )setValue:(\cf4 id\cf0 )value forUndefinedKey:(\cf5 NSString\cf0  *)key \{\
+    \cf6 kYLog\cf0 (\cf7 3\cf0 ,\cf8 @"\\nsetValue:(%@:%@) forUndefinedKey:(%@) ofEntity:(%@)"\cf0 , value, [value \cf3 class\cf0 ], key, [\cf4 self\cf0  \cf3 class\cf0 ]);\
+\}\
+}

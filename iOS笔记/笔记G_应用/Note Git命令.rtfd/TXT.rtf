@@ -1,0 +1,299 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red0\green0\blue0;\red0\green0\blue0;
+\red28\green0\blue207;\red62\green62\blue62;\red255\green255\blue255;\red38\green38\blue38;\red102\green57\blue2;
+\red100\green56\blue32;\red28\green28\blue28;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\csgenericrgb\c0\c0\c0;\csgray\c0\c0;
+\csgenericrgb\c11000\c0\c81000;\cssrgb\c30980\c30980\c30980;\cssrgb\c100000\c100000\c100000;\cssrgb\c20000\c20000\c20000;\cssrgb\c47914\c28845\c0;
+\csgenericrgb\c39100\c22000\c12500;\cssrgb\c14510\c14510\c14510;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15840\viewh11820\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf2 \'b4\'b4\'bd\'a8\'b7\'d6\'d6\'a7
+\f0 \cf0 \
+git checkout -b dev-hyj\
+git push origin dev-hyj\
+git push --set-upstream origin dev-hyj\
+
+\f1 \cf2 \'c7\'d0\'bb\'bb\'b7\'d6\'d6\'a7
+\f0 \cf0 \
+git checkout dev-hyj\
+
+\f1 \cf2 \'b2\'e9\'bf\'b4\'b7\'d6\'d6\'a7
+\f0 \cf0 \
+git branch -a 
+\f1 \'b2\'e9\'bf\'b4\'c8\'ab\'b2\'bf\'b7\'d6\'d6\'a7
+\f0 \
+git branch    
+\f1 \'b2\'e9\'bf\'b4\'b1\'be\'b5\'d8\'b7\'d6\'d6\'a7
+\f0 \
+git branch -r 
+\f1 \'b2\'e9\'bf\'b4\'d4\'b6\'b3\'cc\'b7\'d6\'d6\'a7
+\f0 \
+
+\f1 \cf2 \'c9\'be\'b3\'fd\'b1\'be\'b5\'d8\'b7\'d6\'d6\'a7
+\f0 \cf0 \
+git branch -d dev-hyj\
+git branch -D dev-hyj  
+\f1 \'c7\'bf\'d6\'c6\'c9\'be\'b3\'fd
+\f0 \
+
+\f1 \cf2 \'c9\'be\'b3\'fd\'d4\'b6\'b3\'cc\'b7\'d6\'d6\'a7
+\f0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 git branch -r -d origin/dev-hyj\
+git push origin : dev-hyj\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 1.
+\f1 \'cc\'e1\'bd\'bb\'b4\'fa\'c2\'eb
+\f0 \cf0 \
+git commit -am \'93
+\f1 \'cc\'e6\'bb\'bb\'d6\'b1\'b2\'a5
+\f0 SDK\'94\
+\
+\cf2 2.
+\f1 \'cd\'ac\'b2\'bd\'d6\'f7\'b8\'c9\'b4\'fa\'c2\'eb
+\f0 \cf0 \
+git remote\
+git pull origin dev-130\
+\cf2 2.
+\f1 \'cd\'ac\'b2\'bd\'d6\'f7\'b8\'c9\'b4\'fa\'c2\'eb
+\f0  
+\f1 \'b1\'a3\'d6\'a4\'cc\'e1\'bd\'bb\'cb\'b3\'d0\'f2
+\f0 \cf0 \
+git pull --rebase origin dev-master\
+\cf2 3.push\cf0 \
+git push\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \'b4\'f2\'b0\'e6\'b1\'be
+\f0 Tag\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf2 1.
+\f1 \'ba\'ac\'b8\'bd\'d7\'a2\'b5\'c4\'b1\'ea\'c7\'a9
+\f0 \cf0  \
+-a
+\f1 \'d6\'b8\'b6\'a8\'b1\'ea\'c7\'a9\'c3\'fb\'d7\'d6
+\f0  -m
+\f1 \'d6\'b8\'b6\'a8\'b6\'d4\'d3\'a6\'b5\'c4\'b1\'ea\'c7\'a9\'cb\'b5\'c3\'f7\'d0\'c5\'cf\'a2
+\f0 \
+git tag -a v2.9.5 -m 'school version 2.9.5'\
+git push \'97-tags\
+\cf2 2.
+\f1 \'c9\'be\'b3\'fd
+\f0 tag\cf0 \
+git -d tag v1.0.0\
+\cf2 3.
+\f1 \'c7\'d0\'bb\'bb\'b5\'bd\'d6\'b8\'b6\'a8
+\f0 tag\cf0 \
+git checkout v1.0.0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \'cb\'bd\'d3\'d0\'bf\'e2\'b4\'f2
+\f0 Tag\cf0 \
+1. git checkout master
+\f1 \'c7\'d0\'b5\'bd\'d6\'f7\'b7\'d6\'d6\'a7
+\f0 \
+2. vi SNAttendClass.podspec  
+\f1 \'d0\'de\'b8\'c4
+\f0 .podspec
+\f1 \'ce\'c4\'bc\'fe\'b5\'c4\'b0\'e6\'b1\'be\'ba\'c5
+\f0 \
+3. commit + push .podspec
+\f1 \'ce\'c4\'bc\'fe
+\f0 \
+4. git pull origin master\
+5. git tag\
+6. git tag 0.2.9\
+7. git push -\'97tag\
+8. git tag\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \'d0\'de\'b8\'c4\'cb\'bd\'d3\'d0\'bf\'e2\'a3\'ba
+\f0 \
+
+\f1 \'bf\'aa\'b7\'a2\'c1\'f7\'b3\'cc
+\f0 \
+git config --global user.email "haoyajuan@51talk.com"\
+git config --global user.name "haoyajuan"\
+git commit -a\
+git push origin dev-hyj\
+\
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf3 \cb4 Profile
+\f1 \'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'d0\'de\'b8\'c4\'ce\'aa\'d6\'b1\'bd\'d3\'b8\'fc\'d0\'c2\'b7\'d6\'d6\'a7\'c9\'cf\'b5\'c4\'b4\'fa\'c2\'eb
+\f0 \
+pod \cf5 'SNAttendClass'\cf3 , :git => \cf5 'git@vcs.51talk.com:ios_third/SNAttendClass.git'\cf3 , :branch => \cf5 'dev-hyj'\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 \
+\
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+
+\f1 \cf3 \cb4 \'b2\'e2\'ca\'d4\'cd\'a8\'b9\'fd\'ba\'f3\'a3\'ac\'ca\'b9\'d3\'c3
+\f0 pod
+\f1 \'bd\'f8\'d0\'d0
+\f0 lint
+\f1 \'bc\'b0
+\f0 push\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 pod lib lint --sources=http://vcs.51talk.com/ios_third/fospecs,https://github.com/CocoaPods/Specs.git --allow-warnings  --use-libraries --verbose\
+# pod repo push fospecs SNAttendClass.podspec --sources=http://vcs.51talk.com/ios_third/fospecs,https://github.com/CocoaPods/Specs.git --allow-warnings  --use-libraries --verbose\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \'d0\'de\'b8\'c4
+\f0 gitignore 
+\f1 \'ce\'c4\'bc\'fe\'c4\'bf\'c2\'bc
+\f0 \
+git config --global core.excludesfile /Users/51talk/.gitignoreglobal\
+
+\f1 \'b2\'e9\'bf\'b4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe
+\f0 \
+git config --global --list\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 git rebase
+\f1 \'d3\'c3\'d3\'da\'b0\'d1\'d2\'bb\'b8\'f6\'b7\'d6\'d6\'a7\'b5\'c4\'d0\'de\'b8\'c4\'ba\'cf\'b2\'a2\'b5\'bd\'b5\'b1\'c7\'b0\'b7\'d6\'d6\'a7
+\f0 \
+\
+stash
+\f1 \'c3\'fc\'c1\'ee
+\f0 \
+git stash\
+git stash list\
+git stash pop\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 rebase
+\f1 \'b4\'fa\'c2\'eb
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\'b2\'bd\'d6\'e8\'c8\'e7\'cf\'c2\'a3\'ba
+\f0 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf8 \cb7 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+git fetch(
+\f1 \'bf\'c9\'d2\'d4\'b2\'bb\'d7\'f6\'d5\'e2\'b8\'f6\'b2\'d9\'d7\'f7
+\f0 )\cb1 \
+\ls1\ilvl0\cb7 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+git rebase\cb1 \
+\ls1\ilvl0\cb7 \kerning1\expnd0\expndtw0 		
+\f1 \expnd0\expndtw0\kerning0
+\'bd\'e2\'be\'f6\'b3\'e5\'cd\'bb
+\f0 \cb1 \
+\ls1\ilvl0\cb7 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+git add 
+\f1 \'b3\'e5\'cd\'bb\'ce\'c4\'bc\'fe
+\f0 \cb1 \
+\ls1\ilvl0\cb7 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+git rebase \'96continue\cb1 \
+\ls1\ilvl0\cb7 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+git push\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf2 \'b4\'fa\'c0\'ed
+\f0 \
+
+\f1 \cf0 \'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed
+\f0 \
+git config --global http.proxy http://proxy.51talk.com:80\
+git config --global https.proxy http://proxy.51talk.com:80\
+
+\f1 \'c8\'a1\'cf\'fb\'b4\'fa\'c0\'ed
+\f0 \
+git config --global --unset http.proxy\
+git config --global --unset https.proxy\
+
+\f1 \'b2\'e9\'d1\'af\'b4\'fa\'c0\'ed
+\f0 \
+git config \'97global http.proxy\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \'d6\'b4\'d0\'d0\'b4\'f2\'b0\'fc\'bd\'c5\'b1\'be
+\f0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	bash scripts/iphone_make_ipa.sh\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \'b2\'e2\'ca\'d4\'b0\'fc\'b5\'d8\'d6\'b7
+\f0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 https://fir.im/b2stest\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \'b7\'a2\'b2\'bc\'c1\'f7\'b3\'cc
+\f0 \cf0 \
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf0 1. pull
+\f1 \'b4\'fa\'c2\'eb
+\f0 \
+2. SCConfig.h
+\f1 \'b9\'d8\'b1\'d5
+\f0  \cf9 kInDebugMode\cf0 \
+	
+\f1 \'c7\'d0\'b8\'f6\'cd\'c6\'bb\'b7\'be\'b3
+\f0  \cf10 \cb4 kGeTuiAppId  kGeTuiAppKey  kGeTuiAppSecret\cf0 \cb1 \
+3. commit+push 
+\f1 \'b0\'e6\'b1\'be\'ba\'c5
+\f0 \
+4. command+u 
+\f1 \'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4
+\f0 \
+5. 
+\f1 \'b2\'e2\'ca\'d4\'b0\'fc\'b8\'f8\'b2\'e2\'ca\'d4
+\f0 \
+6. appstoreconnect
+\f1 \'d6\'d0\'cc\'ed\'bc\'d3\'b0\'e6\'b1\'be
+\f0  
+\f1 \'b4\'b4\'bd\'a8
+\f0 \
+7. Product -> Archives -> Upload to App Store\
+8. 
+\f1 \'b9\'b9\'bd\'a8\'b0\'e6\'b1\'be
+\f0  
+\f1 \'d1\'a1\'d2\'bb\'b8\'f6\'bf\'c9\'d3\'c3\'b0\'e6\'b1\'be
+\f0 \
+9. 
+\f1 \'cc\'e1\'bd\'bb\'d2\'d4\'b9\'a9\'c9\'f3\'ba\'cb
+\f0  1.NO 2.YES 
+\f1 \'b8\'b4\'d1\'a1
+\f0 2\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf11 \cb7 \expnd0\expndtw0\kerning0
+pod\'a0repo\'a0push\'a051talk-ios_third-fospecs\'a0SNAttendClass.podspec
+\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+}

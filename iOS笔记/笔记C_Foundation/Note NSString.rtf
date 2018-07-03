@@ -1,0 +1,584 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fnil\fcharset134 HannotateSC-W5;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset134 STHeitiSC-Light;\f5\fnil\fcharset0 Menlo-Bold;
+\f6\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red92\green38\blue153;\red46\green13\blue110;\red196\green26\blue22;
+\red28\green0\blue207;\red0\green116\blue0;\red170\green13\blue145;\red0\green0\blue0;\red46\green13\blue110;
+\red63\green110\blue116;\red0\green116\blue0;\red92\green38\blue153;\red196\green26\blue22;\red28\green0\blue207;
+\red170\green13\blue145;\red100\green56\blue32;}
+{\*\expandedcolortbl;;\csgenericrgb\c36078\c14902\c60000;\csgenericrgb\c18039\c5098\c43137;\csgenericrgb\c76863\c10196\c8627;
+\csgenericrgb\c10980\c0\c81176;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c66667\c5098\c56863;\csgenericrgb\c0\c0\c0;\csgenericrgb\c18100\c5200\c43100;
+\csgenericrgb\c24706\c43137\c45490;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;
+\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c39216\c21961\c12549;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26020\viewh19880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf0 NSString(
+\f1 \'b2\'bb\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae
+\f0 )\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+	
+\f3 \cf2 \CocoaLigature0 NSString\cf0  *str1=[[\cf2 NSString\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];
+\f2 \CocoaLigature1 \
+	
+\f3 \cf2 \CocoaLigature0 NSString\cf0  *str2 = \cf4 @"Hello"\cf0 ;\
+	\cf2 NSString\cf0  *str4=[\cf2 NSString\cf0  \cf3 stringWithFormat\cf0 :\cf4 @"Hello"\cf0 ];\
+	\cf2 NSString\cf0  *str =[[\cf2 NSString\cf0  \cf3 alloc\cf0 ]\cf3 initWithFormat\cf0 :\cf4 @"Hello"\cf0 ];\
+	\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\b \cf0 \'bd\'e1\'b9\'b9\'cc\'e5\'ba\'af\'ca\'fd
+\b0 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 NSRange\cf0  r2 = NSMakeRange(<
+\f4 \'bf\'aa\'ca\'bc\'ce\'bb\'d6\'c3
+\f3 >, <
+\f4 \'b3\'a4\'b6\'c8
+\f3 >);\
+\cf2 NSRange\cf0  r2 = \cf3 NSMakeRange\cf0 (\cf5 2\cf0 , \cf5 6\cf0 );\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f5\b \cf0 	NSString
+\f4 \'b5\'c4j\'bd\'d8\'c8\'a1
+\f3\b0 \
+\cf6 		//
+\f4 \'b4\'d3\'cd\'b7\'bf\'aa\'ca\'bc\'bd\'d8\'c8\'a1
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd\'a3\'ba\'bd\'d8\'c8\'a1\'ce\'bb\'ca\'fd
+\f3 \cf0 \
+        \cf2 NSString\cf0  *str6 = [str5 \cf3 substringToIndex\cf0 :\cf5 3\cf0 ];\
+        \
+        \cf6 //
+\f4 \'bd\'d8\'c8\'a1\'ce\'b2
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd\'a3\'ba\'b4\'d3\'b5\'da\'bc\'b8\'ce\'bb\'bf\'aa\'ca\'bc\'cd\'f9\'ba\'f3\'bd\'d8\'c8\'a1\'a3\'ac\'d6\'b1\'b5\'bd\'c4\'a9\'ce\'b2
+\f3 \cf0 \
+        \cf2 NSString\cf0  *str7 = [str5 \cf3 substringFromIndex\cf0 :\cf5 3\cf0 ];\
+        \
+        \cf6 //
+\f4 \'bd\'d8\'c8\'a1\'d6\'b8\'b6\'a8\'b7\'b6\'ce\'a7\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1
+\f4 \'a3\'ba\'b4\'d3\'b5\'da\'bc\'b8\'ce\'bb\'bf\'aa\'ca\'bc\'a3\'ac\'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'bd\'d8\'c8\'a1\'ce\'bb\'ca\'fd
+\f3 \cf0 \
+        \cf2 NSRange\cf0  r = \{\cf5 4\cf0 ,\cf5 6\cf0 \};\
+        \cf2 NSString\cf0  *str8 = [str5 \cf3 substringWithRange\cf0 :r];\
+\
+
+\f5\b 	NSString
+\f4 \'b5\'c4\'c6\'b4\'bd\'d3
+\f3\b0 \
+\cf6 		//NSString
+\f4 \'b5\'c4\'c6\'b4\'bd\'d3
+\f3 \cf0 \
+        \cf2 NSString\cf0  *st1 = \cf4 @"hello"\cf0 ;\
+        \cf2 NSString\cf0  *st2 = \cf4 @"world"\cf0 ;\
+        \cf6 //
+\f4 \'b3\'f5\'ca\'bc\'bb\'af
+\f3 \cf0 \
+        \cf2 NSString\cf0  *stt= [[\cf2 NSString\cf0  \cf3 alloc\cf0 ]\cf3 initWithFormat\cf0 :\cf4 @"%@%@%d"\cf0 ,st1,st2,\cf5 1\cf0 ];\
+\cf6 		//
+\f4 \'d7\'b7\'bc\'d3(\'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd)
+\f3 \cf0 \
+        \cf2 NSString\cf0  *st3 = [st1 \cf3 stringByAppendingString\cf0 :st2];\
+		\cf2 NSString\cf0  *stt3= [st1 \cf3 stringByAppendingString\cf0 :\cf4 @"hello"\cf0 ];\
+        \cf6 //
+\f4 \'b0\'b4\'d6\'b8\'b6\'a8\'b8\'f1\'ca\'bd\'d7\'b7\'bc\'d3\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf2 NSString\cf0  *st4 = [st3 \cf3 stringByAppendingFormat\cf0 :\cf4 @",%@,%@"\cf0 ,st1,st2];\
+
+\f5\b 	NSString
+\f4 \'b5\'c4\'cc\'e6\'bb\'bb\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0 		stringByReplacingCharactersInRange:<(
+\f4 \'b7\'b6\'ce\'a7
+\f3 )> withString:<(
+\f4 \'cc\'e6\'bb\'bb\'c4\'da\'c8\'dd
+\f3 )>
+\f4\b \
+
+\f3\b0         \cf6 //
+\f6 \'b0\'b4\'d5\'d5\'b7\'b6\'ce\'a7
+\f4 \'cc\'e6\'bb\'bb\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'b4\'d3\'b5\'da\'bc\'b8\'ce\'bb\'bf\'aa\'ca\'bc
+\f3  
+\f4 \'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'cc\'e6\'bb\'bb\'b5\'c4\'ce\'bb\'ca\'fd
+\f3  @\'93
+\f4 \'b2\'ce\'ca\'fd
+\f3 3\'94 
+\f4 \'a3\'ba\'cc\'e6\'bb\'bb\'c4\'da\'c8\'dd
+\f3 \cf0 \
+        \cf2 NSRange\cf0  r2 = \cf3 NSMakeRange\cf0 (\cf5 3\cf0 , \cf5 1\cf0 );\
+        \cf2 NSString\cf0  *st5 = [str5 \cf3 stringByReplacingCharactersInRange\cf0 :r2 \cf3 withString\cf0 :\cf4 @"@"\cf0 ];
+\f4\b 			
+\f5 NSString
+\f4 \'b5\'c4\'b1\'c8\'bd\'cf\
+
+\f3\b0         \cf2 NSString\cf0  *str2 = \cf4 @"Hello"\cf0 ;\
+        \cf2 NSString\cf0  *str3 = [[\cf2 NSString\cf0  \cf3 alloc\cf0 ]\cf3 initWithFormat\cf0 :\cf4 @"%@"\cf0 ,\cf4 @"Hello"\cf0 ];\
+        \cf7 BOOL\cf0  isflag = [str3 \cf3 isEqualToString\cf0 :str2];\
+        \cf3 NSLog\cf0 (\cf4 @"
+\f4 \'c1\'bd\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 :%@"\cf0 ,(isflag?\cf4 @"
+\f4 \'cf\'e0\'cd\'ac
+\f3 "\cf0 :\cf4 @"
+\f4 \'b2\'bb\'cf\'e0\'cd\'ac
+\f3 "\cf0 ));
+\f4\b 	\
+\
+
+\f3\b0         \cf6 //
+\f6 \'d3\'c3\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'cc\'e6\'bb\'bb\'c1\'ed\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\
+		//
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'b1\'bb\'cc\'e6\'bb\'bb\'b6\'d4\'cf\'f3
+\f3  
+\f4 \'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'cc\'e6\'bb\'bb\'b6\'d4\'cf\'f3
+\f3  
+\f4\b \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f3\b0 \cf8         html = [html \cf9 stringByReplacingOccurrencesOfString\cf8 :targetStr \cf9 withString\cf8 :replaceStr];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f4\b \cf0 \
+\
+\
+
+\f5 \
+	NSString
+\f4 \'b5\'c4\'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 //
+\f4 \'b0\'d1\'bb\'f9\'b1\'be\'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae\'c0\'e0\'d0\'cd\'a3\'ac\'cd\'ac\'ca\'b1\'bd\'f8\'d0\'d0\'c6\'b4\'bd\'d3
+\b \cf0 \
+
+\f3\b0 	    \cf2 NSString\cf0  *strObj = [\cf2 NSString\cf0  \cf3 stringWithFormat\cf0 :\cf4 @"%@|%d|%f\'94\cf0 ,\cf4 @\'93Hao"\cf0 ,\cf5 22\cf0 ,\cf5 23000.00f\cf0 ];\
+	    \cf3 NSLog\cf0 (\cf4 @"%@"\cf0 ,strObj); \cf6 //
+\f4 \'ca\'e4\'b3\'f6\'bd\'e1\'b9\'fb\'a3\'ba
+\f3 \cf0 Hao|22|23000.000000\
+\
+    \cf6 //
+\f4 \'b0\'d1\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'f4\'d0\'d4\'c6\'b4\'bd\'d3\'b3\'c9\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 		\
+    \cf10 TRStudent\cf0  *stu = [[\cf10 TRStudent\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];\
+    stu.\cf10 name\cf0  = \cf4 @"juan"\cf0 ;\
+    stu.\cf10 age\cf0  = \cf5 111\cf0 ;\
+    stu.\cf10 salary\cf0  = \cf5 13000.00f\cf0 ;\
+    \cf2 NSString\cf0  *strobj = [\cf2 NSString\cf0  \cf3 stringWithFormat\cf0 :\cf4 @"%@|%d|%f"\cf0 ,stu.\cf10 name\cf0 ,stu.\cf10 age\cf0 ,stu.\cf10 salary\cf0 ];\
+\
+    \cf6 //
+\f4 \'b0\'d1\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'f4\'d0\'d4\'c6\'b4\'bd\'d3\'b3\'c9\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b2\'f0\'b7\'d6\'a3\'ac\'b2\'a2\'c7\'d2\'d7\'aa\'bb\'bb\'b3\'c9\'cf\'e0\'d3\'a6\'c0\'e0\'d0\'cd
+\f3 \cf0 	\
+    \cf2 NSArray\cf0  *objStr = [strobj \cf3 componentsSeparatedByString\cf0 :\cf4 @"|"\cf0 ];\
+    \cf2 NSString\cf0  *name = objStr[\cf5 0\cf0 ];\
+    \cf7 int\cf0  age = [objStr[\cf5 1\cf0 ] \cf3 intValue\cf0 ];\
+    \cf7 float\cf0  salary = [objStr[\cf5 2\cf0 ] \cf3 floatValue\cf0 ];\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf0 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f5\fs36 \cf0 \CocoaLigature0 	NSString
+\f4 \'b2\'e9\'d5\'d2\'d7\'d6\'b7\'fb\'b4\'ae(\'b7\'b5\'bb\'d8\'ce\'bb\'d6\'c3)\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0     \cf2 NSRange\cf0  range = [str \cf3 rangeOfString\cf0 :\cf4 @"@"\cf0 ];\
+    \cf7 if\cf0  (range.\cf2 length\cf0 ==\cf5 0\cf0 ) \{\
+        \cf7 return\cf0  \cf4 @""\cf0 ;\
+    \}
+\fs40 \
+
+\fs36 \cf4     
+\f4 \'d7\'a2\'d2\'e2
+\f3 :
+\f4 \'ca\'b9\'d3\'c3\'ca\'b1\'d2\'bb\'b6\'a8\'d2\'aa\'c5\'d0\'b6\'cf\'ca\'c7\'b7\'f1\'d5\'d2\'b5\'bd
+\f3 ,
+\f4 \'b7\'f1\'d4\'f2\'b3\'f6\'b4\'ed
+\f0\b\fs48 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	\
+NSMutableString(
+\f1 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae
+\f0 )\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs36 \cf0 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'ca\'c7\'b2\'bb\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d7\'d3\'c0\'e0
+\f0\fs48 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f5\fs36 \cf0 \CocoaLigature0 \
+	NSMutableString
+\f4 \'b5\'c4\'b3\'f5\'ca\'bc\'bb\'af\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 //
+\f4 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'f5\'ca\'bc\'bb\'af
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'bb\'bf\'c9\'d2\'d4\'d3\'c3\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'d2\'fd\'d3\'c3\'d6\'b8\'cf\'f2\'d7\'d6\'c3\'e6\'d6\'b5\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4
+\f3 \cf0 \
+        \cf2 NSMutableString\cf0  *mustr1 = [\cf2 NSMutableString\cf0  \cf3 string\cf0  ];\cf6 //
+\f4 \'b9\'a4\'b3\'a7\'b7\'bd\'b7\'a8 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bf\'d5\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf2 NSMutableString\cf0  *mustr2 = [[\cf2 NSMutableString\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];\
+       
+\f4 \cf6 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3 \cf6 		//mustr1 = @"hao";
+\f4 \'b3\'cc\'d0\'f2\'b1\'c0\'c0\'a3
+\f3 \cf0 \
+        mustr1 = [\cf2 NSMutableString\cf0  \cf3 stringWithString\cf0 :str2];\
+        
+\f4\b \
+
+\f5 	NSMutableString
+\f4 \'b5\'c4\'c6\'b4\'bd\'d3\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 //
+\f4 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'c6\'b4\'bd\'d3
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b1\'ea\'d7\'bc\'b8\'f1\'ca\'bd\
+
+\f3 \cf2 		NSString\cf0  *str2 = \cf4 @"Hello"\cf0 ;\
+        [mustr1 \cf3 appendString\cf0 :str2];\
+        \cf6 //[mustr1 appendString:@"Hello"];//
+\f4 \'d0\'a7\'b9\'fb\'cd\'ac\'c9\'cf
+\f3 \cf0 \
+        \cf3 NSLog\cf0 (\cf4 @"mustr1:%@"\cf0 ,mustr1);\
+        \cf6 //
+\f4 \'d6\'b8\'b6\'a8\'b8\'f1\'ca\'bd\'ca\'e4\'b3\'f6
+\f3 \cf0 \
+        [mustr1 \cf3 appendFormat\cf0 :\cf4 @"%@%d"\cf0 ,\cf4 @"word"\cf0 ,\cf5 1\cf0 ];\
+        \cf3 NSLog\cf0 (\cf4 @"mustr1:%@"\cf0 ,mustr1);
+\f4\b \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f5 \cf0 	NSMutableString
+\f4 \'b5\'c4\'c9\'be\'b3\'fd\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 //
+\f4 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'c9\'be\'b3\'fd
+\f3 \cf0 \
+        \cf2 NSMutableString\cf0  *mustr2 = [\cf2 NSMutableString\cf0  \cf3 stringWithString\cf0 :\cf4 @"hellohaoword"\cf0 ];\
+        \cf6 //
+\f4 \'cf\'b5\'cd\'b3\'b7\'bd\'b7\'a8\'d5\'d2\'b5\'bd
+\f3 range
+\f4 \'b5\'c4\'b7\'b6\'ce\'a7
+\f3 \cf0 \
+        \cf2 NSRange\cf0  range = [mustr2 \cf3 rangeOfString\cf0 :\cf4 @"hao"\cf0 ];\
+        \cf6 //NSRange range = NSMakeRange(5, 3);\cf0 \
+        [mustr2 \cf3 deleteCharactersInRange\cf0 :range];
+\f4\b \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f5 \cf0 	NSMutableString
+\f4 \'b5\'c4\'cc\'e6\'bb\'bb\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 //
+\f4 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'cc\'e6\'bb\'bb
+\f3 \cf0 \
+        \cf2 NSMutableString\cf0  *mustr3 = [\cf2 NSMutableString\cf0  \cf3 stringWithString\cf0 :\cf4 @"hellohaoword"\cf0 ];\
+        \cf2 NSRange\cf0  range2= [mustr3 \cf3 rangeOfString\cf0 :\cf4 @"hao"\cf0 ];\
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'cc\'e6\'bb\'bb\'c4\'da\'c8\'dd\'b7\'b6\'ce\'a7
+\f3   
+\f4 \'b2\'ce\'ca\'fd
+\f3 2
+\f4 \'a3\'ba\'cc\'e6\'bb\'bb\'c4\'da\'c8\'dd
+\f3 \cf0 \
+        [mustr3 \cf3 replaceCharactersInRange\cf0 :range2 \cf3 withString\cf0 :mustr2];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2 \cf0 \CocoaLigature1 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f3\fs40 \cf8 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs36 \cf11     1.NSMutanleString
+\f6 \'ca\'c7
+\f3 NString
+\f6 \'b5\'c4\'d7\'d3\'c0\'e0\'a3\'ac\'d7\'f7\'ce\'aa\'bf\'c9\'b1\'e4\'b3\'a4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'bf\'c9\'d2\'d4\'cd\'ea\'b3\'c9\'d0\'ed\'b6\'e0
+\f3 NSString
+\f6 \'b2\'bb\'c4\'dc\'cd\'ea\'b3\'c9\'b5\'c4\'b9\'a6\'c4\'dc\'a1\'a3\'b1\'c8\'c8\'e7\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'d7\'d6\'b7\'fb\'b5\'c4\'d4\'f6\'a1\'a2\'c9\'be\'a1\'a2\'b8\'c4\'ba\'cd\'b2\'e9\'a1\'a3
+\f3 \cf8 \
+\cf11     NSMutableString * str = @"Hello world";\cf8 \
+\cf11     
+\f6 \'d5\'e2\'d1\'f9\'d0\'b4\'ca\'c7\'b4\'ed\'ce\'f3\'b5\'c4\'a3\'ac\'d2\'f2\'ce\'aa\'d7\'f7\'ce\'aa\'d2\'bb\'b8\'f6\'d7\'d3\'c0\'e0\'a3\'ac\'cf\'e0\'b5\'b1\'d3\'da\'d7\'d3\'c0\'e0\'b5\'c4\'d6\'b8\'d5\'eb\'d6\'b8\'cf\'f2\'b8\'b8\'c0\'e0\'a1\'a3
+\f3 \cf8 \
+\cf11     2.\cf8 \
+  \cf12 NSMutableString\cf8  * str=[[\cf12 NSMutableString\cf8  \cf9 alloc\cf8 ]\cf9 init\cf8 ];\
+  \cf11 //
+\f6 \'d7\'d3\'c0\'e0\'cc\'d8\'d3\'d0\'b5\'c4\'a3\'ac\'d6\'bb\'b4\'b4\'bd\'a8\'b2\'bb\'b3\'f5\'ca\'bc\'bb\'af\'a3\'ac\'d2\'f2\'ce\'aa\'bf\'c9\'b1\'e4\'a3\'ac\'d2\'d4\'ba\'f3\'bf\'c9\'d3\'c3
+\f3 set
+\f6 \'ba\'af\'ca\'fd\'b8\'b3\'d6\'b5
+\f3 \cf8 \
+  str.\cf9 string\cf8 =\cf13 @"hello world"\cf8 ;\
+  \cf11 //NSMutableString
+\f6 \'b5\'c4\'ca\'b5\'c0\'fd\'a3\'ac\'cb\'f9\'d5\'bc\'bf\'d5\'bc\'e4\'ca\'c7\'b6\'af\'cc\'ac\'b8\'fc\'b8\'c4\'b5\'c4\'a3\'ac\'cb\'e6\'d7\'c5\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8\'b2\'bb\'cd\'ac\'a3\'ac
+\f3     
+\f6 \'bb\'e1\'d7\'d4\'b6\'af\'b8\'c4\'b1\'e4
+\f3 \cf8 \
+\cf11     3.
+\f6 \'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d4\'f6\'bc\'d3\'a3\'a8
+\f3 append
+\f6 \'a3\'a9
+\f3 \cf8 \
+  [str \cf9 appendString\cf8 :\cf13 @"good"\cf8 ];\cf11 //
+\f6 \'ce\'aa
+\f3 str
+\f6 \'d7\'b7\'bc\'d3\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf8 \
+  [str \cf9 appendFormat\cf8 :\cf13 @"%d"\cf8 ,\cf14 45\cf8 ];\cf11 //
+\f6 \'ce\'aa
+\f3 str
+\f6 \'d7\'b7\'bc\'d3\'d2\'bb\'ca\'fd\'d7\'d6
+\f3 \cf8 \
+  [str \cf9 appendString\cf8 :[\cf12 NSString\cf8  \cf9 stringWithFormat\cf8 :\cf13 @"%d"\cf8 ,\cf14 36\cf8 ]];\
+  \cf11 //
+\f6 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'ba\'f3\'a3\'ac\'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'b7\'bc\'d3\'b5\'bd
+\f3 str
+\f6 \'d6\'d0
+\f3 \cf8 \
+\cf11     4.
+\f6 \'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b2\'e5\'c8\'eb\'a3\'a8
+\f3 insert
+\f6 \'a3\'a9
+\f3 \cf8 \
+  [str \cf9 insertString\cf8 :\cf13 @"good"\cf8  \cf9 atIndex\cf8 :\cf14 5\cf8 ];\
+  \cf11 //
+\f6 \'b2\'e5\'c8\'eb\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'a3\'ac\'bd\'ab\'b3\'f6\'cf\'d6\'d4\'da
+\f3 str
+\f6 \'b5\'da\'ce\'e5\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'c8\'bb\'ba\'f3\'d2\'c0\'b4\'ce\'ba\'f3\'d2\'c6
+\f3 \cf8 \
+\cf11     5.
+\f6 \'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'c9\'be\'b3\'fd\'a3\'a8
+\f3 delete
+\f6 \'a3\'a9
+\f3 \cf8 \
+  [str \cf9 deleteCharactersInRange\cf8 :\cf9 NSMakeRange\cf8 (\cf14 3\cf8 ,\cf14 5\cf8 )];\
+  \cf11 //
+\f6 \'b4\'d3\'b5\'da\'c8\'fd\'b8\'f6\'bf\'aa\'ca\'bc\'c9\'be\'b3\'fd\'a3\'ac\'c9\'be\'b3\'fd
+\f3 5
+\f6 \'b8\'f6\'d7\'d6\'bd\'da
+\f3 \cf8 \
+\cf11     6.
+\f6 \'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b8\'fc\'b8\'c4\'a3\'a8
+\f3 replace
+\f6 \'a3\'a9
+\f3 \cf8 \
+  [str \cf9 replaceCharactersInRange\cf8 :\cf9 NSMakeRange\cf8 (\cf14 3\cf8 ,\cf14 5\cf8 ) \cf9 withString\cf8 :\cf13 @"welcom"\cf8 ];\
+  \cf11 //
+\f6 \'d0\'de\'b8\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b8\'c4\'ba\'f3\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b2\'bb\'b1\'d8\'ba\'cd\'c9\'be\'b5\'f4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d2\'bb\'d1\'f9\'b3\'a4
+\f3 \cf8 \
+\cf11     7.
+\f6 \'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b2\'e9\'d5\'d2
+\f3 \cf8 \
+\cf11     
+\f6 \'d2\'f2\'ce\'aa\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b2\'e9\'d5\'d2\'a3\'ac\'b2\'bb\'bb\'e1\'b8\'c4\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'cb\'f9\'d2\'d4\'cb\'fc\'b5\'c4\'b2\'e9\'d5\'d2\'cd\'ac\'b8\'b8\'c0\'e0
+\f3 NSString
+\f6 \'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b2\'e9\'d5\'d2\'d2\'bb\'d1\'f9\'a1\'a3\'ca\'b9\'d3\'c3
+\f3 RangeOfString
+\f6 \'bc\'b4\'bf\'c9\'a1\'a3
+\f3 \cf8 \
+  \cf14 8.\cf15 BOOL\cf8  ret=[str hasPrefix:\cf13 @"hello"\cf8 ];\
+  \cf11 //
+\f6 \'b2\'e9\'bf\'b4
+\f3 str
+\f6 \'ca\'c7\'b7\'f1\'d2\'d4
+\f3 hello
+\f6 \'bf\'aa\'cd\'b7\'a3\'ac\'ca\'c7\'b7\'b5\'bb\'d8
+\f3 YES
+\f6 \'a3\'ac\'b7\'f1\'b7\'b5\'bb\'d8
+\f3 NO
+\f6 \'a1\'a3
+\f3 \cf8 \
+  \cf15 BOOL\cf8  ret=[str \cf9 hasSuffix\cf8 :\cf13 @"world"\cf8 ];\
+  \cf11 //
+\f6 \'b2\'e9\'bf\'b4
+\f3 str
+\f6 \'ca\'c7\'b7\'f1\'d2\'d4
+\f3 \'93world\'94
+\f6 \'bd\'e1\'ce\'b2\'a3\'ac\'ca\'c7\'b7\'b5\'bb\'d8
+\f3 YES
+\f6 \'a3\'ac\'b7\'f1\'b7\'b5\'bb\'d8
+\f3 NO
+\f6 \'a1\'a3
+\f3 \cf8 \
+\cf11     
+\f6 \'d5\'e2\'c1\'bd\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'bb\'e1\'d4\'da\'b3\'cc\'d0\'f2\'bf\'aa\'b7\'a2\'d6\'d0\'a3\'ac\'b6\'d4\'d3\'da\'c2\'b7\'be\'b6\'b5\'c4\'c5\'d0\'b6\'cf\'c6\'f0\'b5\'bd\'ba\'dc\'ba\'c3\'b5\'c4\'d7\'f7\'d3\'c3\'a3\'ac\'d7\'ee\'ba\'c3\'bc\'c7\'cf\'c2\'a1\'a3
+\f3 \cf8 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf8 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b\fs48 \cf0 \CocoaLigature1 \'b1\'e0\'c2\'eb\'bc\'af
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf0 \CocoaLigature0         \cf6 // 
+\f4 \'b6\'c1\'c8\'a1\'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'ce\'c4\'bc\'fe\'c2\'b7\'be\'b6
+\f3  
+\f4 \'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'d7\'d6\'b7\'fb\'bc\'af    \'b2\'ce\'ca\'fd
+\f3  3:
+\f4 \'d2\'ec\'b3\'a3\'b4\'a6\'c0\'ed
+\f3 \cf0 \
+        \cf2 NSString\cf0  *str1 = [\cf2 NSString\cf0  \cf3 stringWithContentsOfFile\cf0 :\cf4 @"/Users/tarena/Desktop/txt1.txt"\cf0  \cf3 encoding\cf0 :\cf3 NSUTF8StringEncoding\cf0  \cf3 error\cf0 :\cf7 nil\cf0 ];
+\f0\b\fs48 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f4\fs36 \cf0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
+\cf0 C
+\f1 \'d3\'ef\'d1\'d4\'ba\'cd
+\f0 OC
+\f1 \'d3\'ef\'d1\'d4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d7\'aa\'bb\'bb\
+\pard\tx1541\pardeftab1541\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf6 \CocoaLigature0 	//C
+\f4 \'d3\'ef\'d1\'d4\'d6\'d0\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf7 char\cf0  *str = \cf4 "string"\cf0 ;\
+        \cf7 char\cf0  str2[] = \cf4 "string"\cf0 ;\
+        \cf6 //C
+\f4 \'d7\'aa\'bb\'bb\'b3\'c9
+\f3 OC
+\f4 \'d6\'d0\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\
+
+\f3 \cf0         \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'d0\'e8\'d2\'aa\'d7\'aa\'bb\'bb\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f3   
+\f4 \'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'d7\'d6\'b7\'fb\'bc\'af	
+\f3 \cf0 \
+        \cf2 NSString\cf0  *str3 = [\cf2 NSString\cf0  \cf3 stringWithCString\cf0 :str \cf3 encoding\cf0 :\cf3 NSUTF8StringEncoding\cf0 ];\
+        \cf6 //OC
+\f4 \'d6\'d0\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'bb\'b3\'c9
+\f3 C
+\f4 \'d3\'ef\'d1\'d4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \cf0 \
+        \cf7 const\cf0  \cf7 char\cf0  *str4 = [str3 \cf3 UTF8String\cf0 ];
+\f1\b\fs48 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
+
+\f4\fs36 \cf0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0         \cf6 // 
+\f4 \'b6\'c1\'c8\'a1\'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd
+\f3 \cf0 \
+        \cf6 //
+\f4 \'b2\'ce\'ca\'fd
+\f3 1:
+\f4 \'ce\'c4\'bc\'fe\'c2\'b7\'be\'b6
+\f3  
+\f4 \'b2\'ce\'ca\'fd
+\f3 2:
+\f4 \'d7\'d6\'b7\'fb\'bc\'af\'b2\'ce\'ca\'fd
+\f3  3:
+\f4 \'d2\'ec\'b3\'a3\'b4\'a6\'c0\'ed
+\f3 \cf0 \
+        \cf2 NSString\cf0  *str1 = [\cf2 NSString\cf0  \cf3 stringWithContentsOfFile\cf0 :\cf4 @"/Users/tarena/Desktop/txt1.txt"\cf0  \cf3 encoding\cf0 :\cf3 NSUTF8StringEncoding\cf0  \cf3 error\cf0 :\cf7 nil\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f4\b \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\fs48 \cf0 \CocoaLigature1 \'bb\'f1\'c8\'a1Label\'b8\'df\'b6\'c8
+\f4\fs36 \CocoaLigature0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f3\b0 \cf0 + (\cf7 float\cf0 )getLabelHeight:(\cf2 NSString\cf0 * )aTxt font:(\cf2 UIFont\cf0 * )afont width:(\cf7 float\cf0  )aWidth \{\
+    \cf7 if\cf0  ([aTxt \cf3 isEqualToString\cf0 :\cf4 @""\cf0 ]) \{\
+        \cf7 return\cf0  \cf5 0\cf0 ;\
+    \}\
+    \cf2 NSMutableDictionary\cf0  *attrs = [\cf2 NSMutableDictionary\cf0  \cf3 dictionary\cf0 ];\
+    attrs[\cf2 NSFontAttributeName\cf0 ] = afont;\
+    \cf2 CGSize\cf0  maxSize = \cf3 CGSizeMake\cf0 (aWidth, \cf16 MAXFLOAT\cf0 );\
+    \
+    \cf7 return\cf0  [aTxt \cf3 boundingRectWithSize\cf0 :maxSize \cf3 options\cf0 :\cf3 NSStringDrawingUsesLineFragmentOrigin\cf0  \cf3 attributes\cf0 :attrs \cf3 context\cf0 :\cf7 nil\cf0 ].\cf2 size\cf0 .\cf2 height\cf0 ;\
+\}\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b\fs48 \cf0 \CocoaLigature1  \'b9\'fd\'c2\'cbHTML\'b1\'ea\'c7\'a9
+\f4\fs36 \CocoaLigature0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f3\b0 \cf8 + (\cf12 NSString\cf8  *)flattenHTML:(\cf12 NSString\cf8  *)html \{\
+    \
+    \cf12 NSScanner\cf8  *theScanner;\
+    \cf12 NSString\cf8  *text = \cf15 nil\cf8 ;\
+    \
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&nbsp;"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&nbsp"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&quot;"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&quot"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&gt;"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&gt"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&lt;"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&lt"\cf8  \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"&map"\cf8  \cf9 withString\cf8 :\cf13 @"&"\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"<replace>"\cf8  \cf9 withString\cf8 :\cf13 @"\\n"\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"<br/>"\cf8  \cf9 withString\cf8 :\cf13 @"\\n"\cf8 ];\
+    html=[html \cf9 stringByReplacingOccurrencesOfString\cf8 :\cf13 @"<br>"\cf8  \cf9 withString\cf8 :\cf13 @"\\n"\cf8 ];\
+    \
+    theScanner = [\cf12 NSScanner\cf8  \cf9 scannerWithString\cf8 :html];\
+    \cf15 while\cf8  ([theScanner \cf9 isAtEnd\cf8 ] == \cf15 NO\cf8 ) \{\
+        [theScanner \cf9 scanUpToString\cf8 :\cf13 @"<"\cf8  \cf9 intoString\cf8 :\cf15 NULL\cf8 ] ;\
+        [theScanner \cf9 scanUpToString\cf8 :\cf13 @">"\cf8  \cf9 intoString\cf8 :&text] ;\
+        \cf12 NSString\cf8  *targetStr = [\cf12 NSString\cf8  \cf9 stringWithFormat\cf8 :\cf13 @"%@>"\cf8 , text];\
+        html = [html \cf9 stringByReplacingOccurrencesOfString\cf8 :targetStr \cf9 withString\cf8 :\cf13 @""\cf8 ];\
+    \}\
+    \cf15 return\cf8  html;\
+\}
+\fs40 \
+\
+}

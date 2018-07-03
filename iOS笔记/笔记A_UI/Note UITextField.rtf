@@ -1,0 +1,1002 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red170\green13\blue145;\red0\green116\blue0;\red0\green0\blue0;\red100\green56\blue32;\red170\green13\blue145;
+\red92\green38\blue153;\red46\green13\blue110;\red63\green110\blue116;\red28\green0\blue207;\red63\green110\blue116;
+\red100\green56\blue32;\red196\green26\blue22;\red28\green0\blue207;\red196\green26\blue22;\red255\green0\blue0;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c36078\c14902\c60000;\csgenericrgb\c18039\c5098\c43137;
+\csgenericrgb\c66667\c5098\c56863;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c24706\c43137\c45490;
+\csgenericrgb\c39216\c21961\c12549;\csgenericrgb\c76863\c10196\c8627;\csgenericrgb\c10980\c0\c81176;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c100000\c0\c0;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22480\viewh19880\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b\fs44 \cf0 \'bc\'e0\'cc\'fd\'bc\'fc\'c5\'cc\'b5\'af\'b3\'f6\'ca\'d5\'c6\'f0\'b5\'c4\'b7\'bd\'ca\'bd
+\f1 \
+\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \CocoaLigature0     \cf2 //
+\f0 \'cc\'ed\'bc\'d3\'bc\'fc\'c5\'cc\'cf\'d4\'ca\'be\'ba\'cd\'d2\'fe\'b2\'d8\'b5\'c4\'cd\'a8\'d6\'aa
+\f2 \cf0 \
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ]\cf4 addObserver\cf0 :\cf5 self\cf0  \cf4 selector\cf0 :\cf5 @selector\cf0 (keyboardWillShow:) \cf4 name\cf0 :\cf3 UIKeyboardWillShowNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ]\cf4 addObserver\cf0 :\cf5 self\cf0  \cf4 selector\cf0 :\cf5 @selector\cf0 (keyboardWillHide:) \cf4 name\cf0 :\cf3 UIKeyboardWillHideNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ]\cf4 addObserver\cf0 :\cf5 self\cf0  \cf4 selector\cf0 :\cf5 @selector\cf0 (keyboardWillShow:) \cf4 name\cf0 :\cf3 UIKeyboardWillChangeFrameNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+\
+    \cf2 //
+\f0 \'d2\'c6\'b3\'fd\'bc\'fc\'c5\'cc\'cf\'d4\'ca\'be\'ba\'cd\'d2\'fe\'b2\'d8\'b5\'c4\'cd\'a8\'d6\'aa
+\f2 \cf0 \
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ] \cf4 removeObserver\cf0 :\cf5 self\cf0  \cf4 name\cf0 :\cf3 UIKeyboardWillShowNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ] \cf4 removeObserver\cf0 :\cf5 self\cf0  \cf4 name\cf0 :\cf3 UIKeyboardWillHideNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+    [[\cf3 NSNotificationCenter\cf0  \cf4 defaultCenter\cf0 ] \cf4 removeObserver\cf0 :\cf5 self\cf0  \cf4 name\cf0 :\cf3 UIKeyboardWillChangeFrameNotification\cf0  \cf4 object\cf0 :\cf5 nil\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 \CocoaLigature1 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2\b0 \cf6 \CocoaLigature0 /*Scrollview -> View -> UITextField*/\cf7 \
+\cf8 #pragma mark - 
+\f0 \'bc\'fc\'c5\'cc\'cf\'d4\'ca\'be\'ba\'cd\'d2\'fe\'b2\'d8\'b5\'c4\'cd\'a8\'d6\'aa\'ba\'af\'ca\'fd
+\f2 \
+\cf7 - (\cf9 void\cf7 )keyboardWillShow:(\cf10 NSNotification\cf7  * )notification\{\
+    \cf10 NSDictionary\cf7  * userInfo=[notification \cf11 userInfo\cf7 ];\
+    \cf10 NSValue\cf7  * aValue=[userInfo \cf11 objectForKey\cf7 :\cf10 UIKeyboardFrameEndUserInfoKey\cf7 ];\
+    \cf10 CGRect\cf7  keyboardRect=[aValue \cf11 CGRectValue\cf7 ];\
+    \
+    \cf10 CGPoint\cf7  textToWindow = [\cf12 publicTextField\cf7 .\cf10 superview\cf7  \cf11 convertPoint\cf7 :\cf12 publicTextField\cf7 .\cf10 frame\cf7 .\cf10 origin\cf7  \cf11 toView\cf7 :[\cf10 UIApplication\cf7  \cf11 sharedApplication\cf7 ].\cf10 keyWindow\cf7 ];\
+    \
+    \cf9 if\cf7  (keyboardRect.\cf10 size\cf7 .\cf10 height\cf7 >\cf13 0\cf7  && (textToWindow.\cf10 y\cf7 +\cf12 publicTextField\cf7 .\cf12 height\cf7 >=keyboardRect.\cf10 origin\cf7 .\cf10 y\cf7 ||textToWindow.\cf10 y\cf7 <\cf13 0\cf7 ))\{\
+        \cf6 //
+\f0 \'bc\'fc\'c5\'cc
+\f2 origin
+\f0 \'d3\'b3\'c9\'e4\'b5\'bd
+\f2 ScrollView
+\f0 \'c9\'cf\'b5\'c4\'ce\'bb\'d6\'c3
+\f2 \cf7 \
+        \cf10 CGPoint\cf7  keyBoradDistance = [[\cf10 UIApplication\cf7  \cf11 sharedApplication\cf7 ].\cf10 keyWindow\cf7  \cf11 convertPoint\cf7 :keyboardRect.\cf10 origin\cf7  \cf11 toView\cf7 :\cf12 ScrollView\cf7 ];\
+        \cf6 //textField origin
+\f0 \'d3\'b3\'c9\'e4\'b5\'bd
+\f2 ScrollView
+\f0 \'c9\'cf\'b5\'c4\'ce\'bb\'d6\'c3
+\f2 \cf7 \
+        \cf10 CGPoint\cf7  textFieldDistance = [\cf12 publicTextField\cf7 .\cf10 superview\cf7  \cf11 convertPoint\cf7 :\cf12 publicTextField\cf7 .\cf10 frame\cf7 .\cf10 origin\cf7  \cf11 toView\cf7 :\cf12 ScrollView\cf7 ];\
+        \cf10 CGFloat\cf7  offsetY = \cf13 0\cf7 ;\
+        \cf10 CGFloat\cf7  textBottom = textFieldDistance.\cf10 y\cf7 +\cf12 publicTextField\cf7 .\cf10 frame\cf7 .\cf10 size\cf7 .\cf10 height\cf7 +\cf13 50\cf7 ;\
+        \cf9 if\cf7  (textBottom >= keyBoradDistance.\cf10 y\cf7 ) \{\
+            \cf10 CGFloat\cf7  keyDistanceToScroll = textBottom-keyBoradDistance.\cf10 y\cf7 ;  \cf6 // 
+\f0 \'d0\'e8\'b5\'f7\'d5\'fb
+\f2  
+\f0 \'be\'e0\'c0\'eb
+\f2 \cf7 \
+            offsetY = \cf12 ScrollView\cf7 .\cf10 contentOffset\cf7 .\cf10 y\cf7  + keyDistanceToScroll;\
+        \}\
+        [\cf12 ScrollView\cf7  \cf11 setContentOffset\cf7 :\cf11 CGPointMake\cf7 (\cf13 0\cf7 , offsetY) \cf11 animated\cf7 :\cf9 NO\cf7 ];\
+    \}\
+    \cf9 else\cf7 \{\
+        \cf9 return\cf7 ;\
+    \}\
+\}\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0 \
+- (\cf5 void\cf0 )keyboardWillHide:(\cf3 NSNotification\cf0  *)notification\{\
+\
+    \cf14 ScrollView\cf0 .\cf3 contentSize\cf0 =\cf4 CGSizeMake\cf0 (\cf15 kScreenWidth\cf0 , \cf14 lastView\cf0 .\cf14 bottom\cf0 );\
+\cf2 //    [ScrollView setContentOffset:CGPointMake(0, 0) animated:YES];\cf0 \
+\}
+\f1\b \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs44 \cf0 \
+\
+UITextField(
+\f0 \'b5\'a5\'d0\'d0\'ce\'c4\'b1\'be\'bf\'f2\'bf\'d8\'bc\'fe
+\f1 )
+\f2\b0\fs36 \cf2 \CocoaLigature0 \
+	
+\f0 \'d7\'f7\'d3\'c3\'a3\'ba\'bc\'c7\'c2\'bc\'d2\'bb\'b8\'f6\'bf\'c9\'b1\'e4\'bb\'af\'b5\'c4\'ca\'fd\'d6\'b5\'a3\'ac\'b2\'a2\'c7\'d2\'cc\'e1\'b9\'a9\'c1\'cb\'b2\'d9\'d7\'f7\'b5\'c4\'b0\'b4\'c5\'a5\'a3\'ac\'bf\'c9\'d2\'d4\'be\'ab\'c8\'b7\'b5\'c4\'bf\'d8\'d6\'c6\'d5\'e2\'b8\'f6\'ca\'fd\'be\'dd
+\f2 \
+	
+\f0 \'c0\'e0\'d0\'cd\'a3\'ba
+\f2 UITextField\
+	
+\f0 \'ca\'f4\'d0\'d4\'a3\'ba
+\f2 .text\
+	Placeholder 
+\f0 \'ce\'c4\'b1\'be\'bf\'f2\'ce\'b4\'ca\'e4\'c8\'eb\'c4\'da\'c8\'dd\'ca\'b1\'cf\'d4\'ca\'be\'b5\'c4\'cc\'e1\'ca\'be\'d0\'c5\'cf\'a2
+\f2 \
+	Background 
+\f0 \'ce\'c4\'b1\'be\'bf\'f2\'bf\'c9\'d3\'c3\'ca\'b1\'cf\'d4\'ca\'be\'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac
+\f2 \
+	Disabled 
+\f0 \'ce\'c4\'b1\'be\'bf\'f2\'b2\'bb\'bf\'c9\'d3\'c3\'ca\'b1\'cf\'d4\'ca\'be\'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac
+\f2 \
+	Clean Button 
+\f0 \'ce\'c4\'b1\'be\'bf\'f2\'ba\'f3\'c3\'e6\'b5\'c4\'b2\'e6\'b2\'e6\'cf\'d4\'ca\'be\'b7\'bd\'ca\'bd\'a3\'ba
+\f2 \
+		Never appears\
+		Appears while editing\cf0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 		Appears unless editing\
+		Is always visible\
+	Min Font Size
+\f0 \'a3\'ba\'d7\'ee\'d0\'a1\'d7\'d6\'cc\'e5
+\f2 \
+		Adjust to Fit
+\f0 \'a3\'ba\'b8\'f9\'be\'dd\'ce\'c4\'b1\'be\'bf\'f2\'c4\'da\'c8\'dd\'b5\'c4\'b6\'e0\'c9\'d9\'a3\'ac\'d7\'d4\'b6\'af\'b5\'f7\'bd\'da\'d7\'d6\'cc\'e5\'b4\'f3\'d0\'a1
+\f2 \
+	Capitalization
+\f0 \'a3\'ba\'d7\'d6\'c4\'b8\'b4\'f3\'d0\'a1\'d0\'b4
+\f2 \
+	Correction
+\f0 \'a3\'ba\'d7\'d4\'b6\'af\'b8\'fc\'d5\'fd
+\f2 \
+	keyboardType 
+\f0 \'bc\'fc\'c5\'cc\'d6\'d6\'c0\'e0
+\f2 \
+	Appearance
+\f0 \'a3\'ba\'bc\'fc\'c5\'cc\'d1\'d5\'c9\'ab
+\f2 \
+	returnKeyType
+\f0 \'a3\'ba\'bc\'fc\'c5\'cc\'d3\'d2\'cf\'c2\'bd\'c7\'b0\'b4\'c5\'a5\'cf\'d4\'ca\'be\'c4\'da\'c8\'dd
+\f2 \
+		Auto
+\f0 \'a3\'ad
+\f2 enable Return Key
+\f0 \'a3\'ba\'d7\'d4\'b6\'af\'bc\'ec\'b2\'e2\'bc\'fc\'c5\'cc\'d3\'d2\'cf\'c2\'bd\'c7\'b0\'b4\'c5\'a5\'ca\'c7\'b7\'f1\'bf\'c9\'d3\'c3
+\f2 \
+		secureTextEntry
+\f0 \'a3\'ba\'c3\'dc\'c2\'eb\'ca\'e4\'c8\'eb\'d1\'f9\'ca\'bd
+\f2 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f0 \'bc\'fc\'c5\'cc\'ca\'c7\'c8\'e7\'ba\'ce\'d0\'de\'b8\'c4
+\f1 UITextField
+\f0 \'d1\'f9\'ca\'bd
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b0 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf2 	
+\f0 \'c9\'e8\'d6\'c3\'d5\'bc\'ce\'bb\'ce\'c4\'d7\'d6\'b5\'c4\'d1\'d5\'c9\'ab\'ce\'aa\'ba\'ec\'c9\'ab
+\f2 (
+\f0 \'d7\'a2\'d2\'e2\'cf\'c2\'c3\'e6\'b5\'c4
+\f2 'self'
+\f0 \'b4\'fa\'b1\'ed\'c4\'e3\'d2\'aa\'d0\'de\'b8\'c4\'d5\'bc\'ce\'bb\'ce\'c4\'d7\'d6\'b5\'c4
+\f2 UITextField
+\f0 \'bf\'d8\'bc\'fe
+\f2 )\cf0 \
+	[\cf5 self\cf0  \cf4 setValue\cf0 :[\cf3 UIColor\cf0  \cf4 redColor\cf0 ] \cf4 forKeyPath\cf0 :\cf16 @"_placeholderLabel.textColor"\cf0 ];\
+	[\cf5 self\cf0  \cf4 setValue\cf0 :[\cf3 UIFont\cf0  \cf4 boldSystemFontOfSize\cf0 :\cf17 16\cf0 ] \cf4 forKeyPath\cf0 :\cf16 @"_placeholderLabel.font"\cf0 ];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b\fs44 \cf0 \CocoaLigature1 \'c8\'e7\'ba\'ce\'b9\'d8\'b1\'d5\'cf\'b5\'cd\'b3\'b5\'af\'b3\'f6\'b5\'c4\'bc\'fc\'c5\'cc
+\f1\fs36 \CocoaLigature0 \
+	
+\f0 \'bc\'fc\'c5\'cc\'ca\'c7\'c8\'e7\'ba\'ce\'b5\'af\'b3\'f6\'b5\'c4
+\f2\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f0 \'cf\'b5\'cd\'b3\'ca\'b1\'c8\'e7\'ba\'ce\'b2\'e9\'d5\'d2\'b4\'a5\'c6\'c1\'b6\'af\'d7\'f7\'cb\'f9\'b6\'d4\'d3\'a6\'b5\'c4\'b6\'d4\'cf\'f3\'b5\'c4
+\f2\b0 \cf2 \
+
+\f1\b \cf0 	
+\f0 \'cf\'b5\'cd\'b3\'ca\'c7\'c8\'e7\'ba\'ce\'cf\'ec\'d3\'a6\'b4\'a5\'c6\'c1\'b6\'af\'d7\'f7\'b5\'c4
+\f1 \
+\
+	
+\f0 \'b4\'a5\'c6\'c1\'b6\'af\'d7\'f7\'b7\'a2\'c9\'fa\'ba\'f3\'b5\'c4\'cf\'b5\'cd\'b3\'b4\'a6\'c0\'ed\'b9\'fd\'b3\'cc
+\f1 :
+\f2\b0 \cf2 \
+	step1
+\f0 \'a3\'ba\'b2\'e9\'d5\'d2
+\f2 hitView\
+	    hitTest:System->window->view->subView->...->hitView(object)\
+    	
+\f0 \'cf\'b5\'cd\'b3\'b2\'b6\'bb\'f1\'b5\'bd\'b4\'a5\'c6\'c1\'b6\'af\'d7\'f7\'ba\'f3\'a3\'ac\'bc\'c7\'c2\'bc\'b4\'a5\'b5\'e3\'b5\'c4\'d7\'f8\'b1\'ea\'a3\'ac\'b8\'f8
+\f2 window
+\f0 \'b7\'a2
+\f2 hitTest
+\f0 \'a3\'ba\'cf\'fb\'cf\'a2\'a3\'ac\'b2\'a2\'b8\'e6\'d6\'aa\'b4\'a5\'b5\'e3\'d7\'f8\'b1\'ea\'a3\'ac
+\f2 window
+\f0 \'bb\'e1\'b8\'f8\'cb\'f9\'d3\'d0\'d6\'b1\'bd\'d3\'d7\'d3\'b6\'d4\'cf\'f3\'b7\'a2\'cb\'cd
+\f2 hitTest
+\f0 \'cf\'fb\'cf\'a2\'a3\'ac\'b8\'e6\'d6\'aa\'b4\'a5\'b5\'e3\'d7\'f8\'b1\'ea\'a3\'ac\'d7\'d3\'b6\'d4\'cf\'f3\'bc\'ec\'b2\'e2\'d7\'f8\'b1\'ea\'ca\'c7\'b7\'f1\'d4\'da\'c6\'e4\'d6\'d0\'a3\'ac\'c8\'e7\'b9\'fb\'b2\'bb\'d4\'da\'c6\'e4\'d6\'d0\'a3\'ac\'d4\'f2\'b7\'b5\'bb\'d8
+\f2 nil
+\f0 \'a3\'ac\'c8\'e7\'b9\'fb\'b5\'e3\'d4\'da\'c6\'e4\'d6\'d0\'a3\'ac\'d4\'f2\'d4\'d9\'bc\'cc\'d0\'f8\'b8\'f8\'cb\'f9\'d3\'d0\'d6\'b1\'bd\'d3\'d7\'d3\'ca\'d3\'cd\'bc\'b7\'a2\'cf\'fb\'cf\'a2\'a3\'ac\'d6\'b1\'b5\'bd\'c4\'b3\'d2\'bb\'b8\'f6\'d7\'d3\'ca\'d3\'cd\'bc\'a3\'ac\'b2\'bb\'d4\'d9\'d3\'d0\'d7\'d3\'ca\'d3\'cd\'bc\'a3\'ac\'c7\'d2\'b4\'a5\'b5\'e3\'d4\'da\'c6\'e4\'d6\'d0\'a3\'ac\'d4\'f2\'b7\'b5\'bb\'d8\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'a3\'ac\'cf\'b5\'cd\'b3\'be\'cd\'d5\'d2\'b5\'bd\'c1\'cb\'b1\'be\'b4\'ce\'b5\'e3\'bb\'f7\'b5\'c4\'b6\'d4\'cf\'f3
+\f2 \
+	step2
+\f0 \'a3\'ba\'d5\'d2\'b5\'bd
+\f2 hitView
+\f0 \'ba\'f3\'a3\'ac\'d6\'b4\'d0\'d0\'ca\'c2\'bc\'fe\'cf\'ec\'d3\'a6
+\f2 \
+    	
+\f0 \'b2\'e9\'d5\'d2\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 :hitView->superView->...->appDelegate\
+    	
+\f0 \'b2\'e9\'bf\'b4\'d5\'d2\'b5\'bd\'b5\'c4
+\f2 hitView
+\f0 \'ca\'c7\'b7\'f1\'cc\'e1\'b9\'a9\'c1\'cb\'ca\'c2\'bc\'fe\'cf\'ec\'d3\'a6\'a3\'ac\'c8\'e7\'b9\'fb\'d3\'d0\'a3\'ac\'d4\'f2\'d6\'b4\'d0\'d0\'cf\'ec\'d3\'a6\'a3\'ac\'c3\'bb\'d3\'d0\'cc\'e1\'b9\'a9\'cf\'ec\'d3\'a6\'a3\'ac\'d4\'f2\'bd\'ab\'b8\'c3\'b4\'ce\'ca\'c2\'bc\'fe\'b4\'ab\'b5\'dd\'b8\'f8\'b8\'b8\'ca\'d3\'cd\'bc\'a3\'ac\'bf\'b4\'b8\'b8\'ca\'d3\'cd\'bc\'ca\'c7\'b7\'f1\'cf\'ec\'d3\'a6\'a3\'ac\'bb\'b9\'c3\'bb\'d3\'d0\'cf\'ec\'d3\'a6\'a3\'ac\'d4\'d9\'bc\'cc\'d0\'f8\'cf\'f2\'c9\'cf\'b4\'ab\'b5\'dd\'a3\'ac\'d6\'b1\'b5\'bd
+\f2 appdelegate
+\f0 \'a3\'ac\'d2\'c0\'c8\'bb\'c3\'bb\'d3\'d0\'cf\'ec\'d3\'a6\'d4\'f2\'c5\'d7\'c6\'fa\'b1\'be\'b4\'ce\'ca\'c2\'bc\'fe\'a3\'ac\'d5\'e2\'b8\'f6\'bd\'ab\'ca\'c2\'bc\'fe\'b2\'e3\'b2\'e3\'c9\'cf\'b4\'ab\'a3\'ac\'d2\'c0\'b4\'ce\'b2\'e9\'d5\'d2\'cf\'ec\'d3\'a6\'b5\'c4\'b9\'fd\'b3\'cc\'a3\'ac\'bd\'d0\'d7\'f6\'cf\'ec\'d3\'a6\'d5\'df\'c1\'b4
+\f2 \
+\
+
+\f1\b \cf0 	1.
+\f0 \'b9\'d8\'b1\'d5\'bc\'fc\'c5\'cc\'b5\'c4\'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd\'a3\'ba
+\f2\b0 \cf2 \
+
+\f1\b \cf0 	
+\f0 \'b7\'bd\'b7\'a8
+\f1 1
+\f0 \'a3\'ba\'b7\'c5\'c6\'fa\'ce\'c4\'b1\'be\'bf\'f2\'b5\'c4\'b5\'da\'d2\'bb\'cf\'ec\'d3\'a6\'d5\'df\'c9\'ed\'b7\'dd
+\f2\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     [\cf5 self\cf0 .\cf14 textFieldKey\cf0  \cf4 resignFirstResponder\cf0 ];
+\f1\b \
+	
+\f0 \'b7\'bd\'b7\'a8
+\f1 2
+\f0 \'a3\'ba\'c8\'c3\'ce\'c4\'b1\'be\'bf\'f2\'b5\'c4\'b8\'b8\'ca\'d3\'cd\'bc\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad\'d7\'b4\'cc\'ac
+\f1 \
+
+\f2\b0     [\cf5 self\cf0 .\cf3 view\cf0  \cf4 endEditing\cf0 :\cf5 YES\cf0 ];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	2.
+\f0 \'b9\'d8\'b1\'d5\'bc\'fc\'c5\'cc\'b5\'c4\'c1\'bd\'b8\'f6\'ca\'b1\'bb\'fa\'a3\'ba
+\f2\b0 \cf2 \
+
+\f1\b \cf0 	
+\f0 \'ca\'b1\'bb\'fa
+\f1 1
+\f0 \'a3\'ba\'b7\'c5\'c6\'fa\'ce\'c4\'b1\'be\'bf\'f2\'b5\'c4\'b5\'da\'d2\'bb\'cf\'ec\'d3\'a6\'d5\'df\'c9\'ed\'b7\'dd
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b0 \cf2 	//
+\f0 \'ce\'c4\'b1\'be\'bf\'f2
+\f2 return
+\f0 \'b0\'b4\'c5\'a5\'ca\'c2\'bc\'fe
+\f2 Did End On Exit\cf0 \
+\cf2 	//
+\f0 \'ca\'b1\'bb\'fa\'d2\'bb\'a3\'ba\'b5\'e3\'bb\'f7\'bc\'fc\'c5\'cc\'c9\'cf\'b5\'c4
+\f2 return\cf0 \
+	- (\cf5 IBAction\cf0 )closeKeyBoardByReturn:(\cf3 UITextField\cf0  *)sender \{\
+	    [\cf5 self\cf0 .\cf3 view\cf0  \cf4 endEditing\cf0 :\cf5 YES\cf0 ];\
+	\}\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f0 \'ca\'b1\'bb\'fa
+\f1 2
+\f0 \'a3\'ba\'c8\'c3\'ce\'c4\'b1\'be\'bf\'f2\'b5\'c4\'b8\'b8\'ca\'d3\'cd\'bc\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad\'d7\'b4\'cc\'ac
+\f2\b0 \cf2 \
+	//
+\f0 \'ca\'b1\'bb\'fa\'b6\'fe\'a3\'ba\'b5\'e3\'bb\'f7\'bf\'d5\'b0\'d7\'b4\'a6
+\f2 (
+\f0 \'d6\'d8\'d0\'b4
+\f2 touchesBegan
+\f0 \'b7\'bd\'b7\'a8
+\f2 )\cf0 \
+	- (\cf5 void\cf0 )touchesBegan:(\cf3 NSSet\cf0  *)touches withEvent:(\cf3 UIEvent\cf0  *)event\{\
+	    [\cf5 self\cf0 .\cf3 view\cf0  \cf4 endEditing\cf0 :\cf5 YES\cf0 ];\
+	\}\
+
+\f1\b 	1.
+\f0 \'b4\'f2\'bf\'aa\'bc\'fc\'c5\'cc\'a3\'ba
+\f2\b0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 	
+\f0 \'b5\'b1\'b4\'a5\'b5\'e3\'ce\'aa\'ce\'c4\'b1\'be\'bf\'f2\'ca\'b1\'a3\'ac\'d4\'f2\'cf\'b5\'cd\'b3\'bb\'e1\'d7\'d4\'b6\'af\'bd\'ab\'b8\'c3\'ce\'c4\'b1\'be\'bf\'f2\'c9\'e8\'d6\'c3\'ce\'aa\'b5\'da\'d2\'bb\'cf\'ec\'d3\'a6\'d5\'df
+\f2 \cf0 \
+\cf2 	//
+\f0 \'b4\'f2\'bf\'aa\'bc\'fc\'c5\'cc\'b0\'b4\'c5\'a5
+\f2 \cf0 \
+	- (\cf5 IBAction\cf0 )openKeyBoard:(\cf5 id\cf0 )sender \{\
+	    \cf2 //
+\f0 \'b3\'c9\'ce\'aa\'c1\'cb\'b5\'da\'d2\'bb\'cf\'ec\'d3\'a6\'d5\'df
+\f2 \cf0 \
+	    [\cf5 self\cf0 .\cf14 textFieldKey\cf0  \cf4 becomeFirstResponder\cf0 ];\
+	\}\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \'d2\'d4\'cf\'c2\'b9\'a6\'c4\'dc \'d0\'e8\'d2\'aa\'ce\'aa
+\f1 textField
+\f0 \'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b0 \cf0  \cf2 /*
+\f0 \'bc\'e0\'cc\'fd\'ca\'e4\'c8\'eb\'bf\'f2\'b5\'c4\'bb\'d8\'b3\'b5\'ca\'c2\'bc\'fe
+\f2 */\cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7 - (\cf9 BOOL\cf7 )textFieldShouldReturn:(\cf10 UITextField\cf7  *)textField\
+\{\
+    [textField \cf11 resignFirstResponder\cf7 ];\
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0  \cf2 /*
+\f0 \'bc\'e0\'cc\'fd\'ca\'e4\'c8\'eb\'bf\'f2\'b5\'c4\'b1\'e0\'bc\'ad\'ca\'c2\'bc\'fe
+\f2 */\cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7 - (\cf9 BOOL\cf7 )textFieldShouldBeginEditing:(\cf10 UITextField\cf7  *)textField\
+\{\
+    \cf12 publicTextField\cf7 =textField;\
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 /*
+\f0 \'bc\'e0\'cc\'fd\'ca\'e4\'c8\'eb\'bf\'f2\'b5\'c4\'ca\'e4\'c8\'eb\'ba\'cd\'c9\'be\'b3\'fd\'ca\'c2\'bc\'fe
+\f2 */\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7 - (\cf9 BOOL\cf7 )textField:(\cf10 UITextField\cf7  *)textField shouldChangeCharactersInRange:(\cf10 NSRange\cf7 )range replacementString:(\cf10 NSString\cf7  *)string\{\
+    \cf11 NSLog\cf7 (\cf18 @"range:%ld***%ld"\cf7 ,range.\cf10 location\cf7 ,range.\cf10 length\cf7 );\
+    \cf11 NSLog\cf7 (\cf18 @"%@"\cf7 ,string);\
+    \cf9 if\cf7  (textField==\cf12 walletTextField\cf7 ) \{\
+        \cf9 if\cf7  (string.\cf10 length\cf7 !=\cf13 0\cf7 ) \{\cf6 //
+\f0 \'cc\'ed\'bc\'d3
+\f2 \cf7 \
+            \cf9 if\cf7  (range.\cf10 location\cf7 >=\cf13 5\cf7 ) \{\
+                \cf12 walletPayButton\cf7 .\cf10 enabled\cf7  = \cf9 YES\cf7 ;\
+                [\cf12 walletPayButton\cf7  \cf11 setBackgroundColor\cf7 :\cf8 UIColorFromRGB\cf7 (\cf8 BrightRed_color\cf7 )];\
+            \}\
+        \}\cf9 else\cf7 \{\cf6 //
+\f0 \'c9\'be\'b3\'fd
+\f2 \cf7 \
+            \cf9 if\cf7  (range.\cf10 location\cf7 <\cf13 6\cf7 ) \{\
+                \cf12 walletPayButton\cf7 .\cf10 enabled\cf7  = \cf9 NO\cf7 ;\
+                [\cf12 walletPayButton\cf7  \cf11 setBackgroundColor\cf7 :\cf8 UIColorFromRGB\cf7 (\cf8 Unenable_color\cf7 )];\
+            \}\
+        \}\
+    \}\
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf7  \'d2\'bb\'bc\'fc\'c9\'be\'b3\'fd\'b0\'b4\'c5\'a5
+\fs44 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf19  
+\fs36 \'d7\'d4\'b6\'a8\'d2\'e5\'b0\'b4\'c5\'a5\'d1\'f9\'ca\'bd
+\f1 :
+\f2\b0 \cf10 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7     \cf10 UIButton\cf7  *clearButton = [\cf12 nameTextField\cf7  \cf11 valueForKey\cf7 :\cf18 @"_clearButton"\cf7 ];\
+    \cf9 if\cf7  (clearButton && [clearButton \cf11 isKindOfClass\cf7 :[\cf10 UIButton\cf7  \cf11 class\cf7 ]]) \{\
+        [clearButton \cf11 setImage\cf7 :[\cf10 UIImage\cf7  \cf11 imageNamed\cf7 :\cf18 @"close_text"\cf7 ] \cf11 forState\cf7 :\cf11 UIControlStateNormal\cf7 ];\
+        [clearButton \cf11 setImage\cf7 :[\cf10 UIImage\cf7  \cf11 imageNamed\cf7 :\cf18 @"close_text"\cf7 ] \cf11 forState\cf7 :\cf11 UIControlStateHighlighted\cf7 ];\
+    \}\cf10 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b \cf7 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1 \cf19  
+\f0 \'ca\'f4\'d0\'d4\'a3\'ba
+\f2\b0 \cf7  \
+	.\cf10 clearButtonMode\
+Mode
+\f0 \'a3\'ba
+\b \cf7 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2\b0 \cf9 	typedef\cf7  \cf9 NS_ENUM\cf7 (NSInteger, UITextFieldViewMode) \{\
+    		UITextFieldViewModeNever,\
+    		UITextFieldViewModeWhileEditing,\
+    		UITextFieldViewModeUnlessEditing,\
+    		UITextFieldViewModeAlways\
+	\};\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1\b \cf7 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf19  
+\f0 \'ca\'c2\'bc\'fe:
+\f2\b0 \cf2 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7 - (\cf9 BOOL\cf7 )textFieldShouldClear:(\cf10 UITextField\cf7  *)textField\{\
+    \cf9 if\cf7  (textField==\cf12 walletTextField\cf7 ) \{\
+        \cf12 walletPayButton\cf7 .\cf10 enabled\cf7  = \cf9 NO\cf7 ;\
+        [\cf12 walletPayButton\cf7  \cf11 setBackgroundColor\cf7 :\cf8 UIColorFromRGB\cf7 (\cf8 Unenable_color\cf7 )];\
+    \}\
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf7 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf7   \'bc\'e0\'cc\'fdtextField\'b5\'c4\'b1\'e0\'bc\'ad\'ca\'c2\'bc\'fe
+\f2\b0\fs40 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs36 \cf7     [\cf12 cardTextField\cf7  \cf11 addTarget\cf7 :\cf9 self\cf7  \cf11 action\cf7 :\cf9 @selector\cf7 (textFieldDidEditing:) \cf11 forControlEvents\cf7 :\cf11 UIControlEventEditingChanged\cf7 ];\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1\b\fs40 \cf19  
+\f0 \'ca\'b5\'cf\'d6\'c9\'ed\'b7\'dd\'d6\'a4\'ba\'c5\'b5\'c4\'d7\'d4\'b6\'af\'b7\'d6\'b8\'ee:
+\f1 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf7 - (\cf9 void\cf7 )textFieldDidEditing:(\cf10 UITextField\cf7  *)textField\{\
+    \cf9 if\cf7  (textField.\cf10 text\cf7 .\cf10 length\cf7  > \cf12 i\cf7 ) \{\
+        \cf9 if\cf7  (textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 4\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 8\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 13\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 18\cf7 ) \{\cf6 //
+\f0 \'ca\'e4\'c8\'eb
+\f2 \cf7 \
+            \cf10 NSMutableString\cf7  * str = [[\cf10 NSMutableString\cf7  \cf11 alloc\cf7  ] \cf11 initWithString\cf7 :textField.\cf10 text\cf7 ];\
+            [str \cf11 insertString\cf7 :\cf18 @" "\cf7  \cf11 atIndex\cf7 :(textField.\cf10 text\cf7 .\cf10 length\cf7 -\cf13 1\cf7 )];\
+            textField.\cf10 text\cf7  = str;\
+        \}\cf9 if\cf7  (textField.\cf10 text\cf7 .\cf10 length\cf7  >= \cf13 22\cf7  ) \{\cf6 //
+\f0 \'ca\'e4\'c8\'eb\'cd\'ea\'b3\'c9
+\f2 \cf7 \
+            textField.\cf10 text\cf7  = [textField.\cf10 text\cf7  \cf11 substringToIndex\cf7 :\cf13 22\cf7 ];\
+            [textField \cf11 resignFirstResponder\cf7 ];\
+        \}\
+        \cf12 i\cf7  = textField.\cf10 text\cf7 .\cf10 length\cf7 ;\
+        \
+    \}\cf9 else\cf7  \cf9 if\cf7  (textField.\cf10 text\cf7 .\cf10 length\cf7  < \cf12 i\cf7 )\{\cf6 //
+\f0 \'c9\'be\'b3\'fd
+\f2 \cf7 \
+        \cf9 if\cf7  (textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 4\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 8\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 13\cf7  || textField.\cf10 text\cf7 .\cf10 length\cf7  == \cf13 18\cf7 ) \{\
+            textField.\cf10 text\cf7  = [\cf10 NSString\cf7  \cf11 stringWithFormat\cf7 :\cf18 @"%@"\cf7 ,textField.\cf10 text\cf7 ];\
+            textField.\cf10 text\cf7  = [textField.\cf10 text\cf7  \cf11 substringToIndex\cf7 :(textField.\cf10 text\cf7 .\cf10 length\cf7 -\cf13 1\cf7 )];\
+        \}\
+        \cf12 i\cf7  = textField.\cf10 text\cf7 .\cf10 length\cf7 ;\
+    \}\
+\}
+\fs40 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f1\b \cf19  
+\f0 \'ca\'b5\'cf\'d6\'c9\'ed\'b7\'dd\'d6\'a4\'ba\'c5\'b5\'c4\'d7\'d4\'b6\'af\'b7\'d6\'b8\'ee:\'c8\'a5\'b3\'fd\'bf\'d5\'b8\'f1:
+\f2\b0 \cf7 \
+    \cf10 NSString\cf7  *cardText = [\cf12 cardTextField\cf7 .\cf10 text\cf7  \cf11 stringByReplacingOccurrencesOfString\cf7 :\cf18 @" "\cf7  \cf11 withString\cf7 :\cf18 @""\cf7 ];\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf7    \'bc\'e0\'cc\'fdtextField\'b5\'c4\'bb\'d8\'b3\'b5\'b0\'b4\'c5\'a5\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe
+\fs44 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf19  
+\fs36 \'d7\'d4\'b6\'a8\'d2\'e5\'b0\'b4\'c5\'a5\'d1\'f9\'ca\'bd
+\f1 :
+\f2\b0 \cf10 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf7 - (\cf9 BOOL\cf7 )textFieldShouldReturn:(\cf10 UITextField\cf7  *)textField\
+\{\
+    \cf9 if\cf7  (textField == \cf12 nameTextField\cf7 ) \{\
+        [\cf12 cardTextField\cf7  \cf11 becomeFirstResponder\cf7 ];\
+    \}\cf9 else\cf7  \cf9 if\cf7  (textField == \cf12 cardTextField\cf7 )\{\
+        [\cf12 cardTextField\cf7  \cf11 resignFirstResponder\cf7 ];\
+    \}\
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\cf10 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\fs40 \cf7 \
+\
+\
+\
+\
+\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'b3\'f5\'ca\'bc\'bb\'af
+\f2 textfield
+\f0 \'b2\'a2\'c9\'e8\'d6\'c3\'ce\'bb\'d6\'c3\'bc\'b0\'b4\'f3\'d0\'a1
+\f2 \cf7 \
+\
+UITextField *text = [[UITextField alloc]initWithFrame:CGRectMake(\cf13 20\cf7 , \cf13 20\cf7 , \cf13 130\cf7 , \cf13 30\cf7 )];\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'b1\'df\'bf\'f2\'d1\'f9\'ca\'bd\'a3\'ac\'d6\'bb\'d3\'d0\'c9\'e8\'d6\'c3\'c1\'cb\'b2\'c5\'bb\'e1\'cf\'d4\'ca\'be\'b1\'df\'bf\'f2\'d1\'f9\'ca\'bd
+\f2 \cf7 \
+\
+text.borderStyle = UITextBorderStyleRoundedRect;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{   UITextBorderStyleNone,\
+    UITextBorderStyleLine,\
+    UITextBorderStyleBezel,\
+    UITextBorderStyleRoundedRect  \} UITextBorderStyle;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'ca\'e4\'c8\'eb\'bf\'f2\'b5\'c4\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab\'a3\'ac\'b4\'cb\'ca\'b1\'c9\'e8\'d6\'c3\'ce\'aa\'b0\'d7\'c9\'ab
+\f2  
+\f0 \'c8\'e7\'b9\'fb\'ca\'b9\'d3\'c3\'c1\'cb\'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac\'b1\'df\'bf\'f2\'bb\'e1\'b1\'bb\'ba\'f6\'c2\'d4\'b5\'f4
+\f2  text.backgroundColor = [UIColor whiteColor];\cf7 \
+\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0
+\f2 \cf7 \
+text.background = [UIImage imageNamed:\cf18 @"dd.png"\cf7 ];\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0
+\f2 \cf7 \
+text.disabledBackground = [UIImage imageNamed:\cf18 @"cc.png"\cf7 ];\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'ca\'e4\'c8\'eb\'bf\'f2\'c4\'da\'c8\'dd\'b5\'c4\'d7\'d6\'cc\'e5\'d1\'f9\'ca\'bd\'ba\'cd\'b4\'f3\'d0\'a1
+\f2 \cf7 \
+text.font = [UIFont fontWithName:\cf18 @"Arial"\cf7  size:\cf13 20.0f\cf7 ];\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'d7\'d6\'cc\'e5\'d1\'d5\'c9\'ab
+\f2 \cf7 \
+text.textColor = [UIColor redColor];\
+\cf6 //
+\f0 \'b5\'b1\'ca\'e4\'c8\'eb\'bf\'f2\'c3\'bb\'d3\'d0\'c4\'da\'c8\'dd\'ca\'b1\'a3\'ac\'cb\'ae\'d3\'a1\'cc\'e1\'ca\'be
+\f2  
+\f0 \'cc\'e1\'ca\'be\'c4\'da\'c8\'dd\'ce\'aa
+\f2 password\cf7 \
+text.placeholder = \cf18 @"password"\cf7 ;\
+\
+\
+\cf6 //
+\f0 \'ca\'e4\'c8\'eb\'bf\'f2\'d6\'d0\'ca\'c7\'b7\'f1\'d3\'d0\'b8\'f6\'b2\'e6\'ba\'c5\'a3\'ac\'d4\'da\'ca\'b2\'c3\'b4\'ca\'b1\'ba\'f2\'cf\'d4\'ca\'be\'a3\'ac\'d3\'c3\'d3\'da\'d2\'bb\'b4\'ce\'d0\'d4\'c9\'be\'b3\'fd\'ca\'e4\'c8\'eb\'bf\'f2\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd
+\f2 \cf7 \
+text.clearButtonMode = UITextFieldViewModeAlways;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{    UITextFieldViewModeNever,  
+\f0 \'d6\'d8\'b2\'bb\'b3\'f6\'cf\'d6
+\f2 \
+    UITextFieldViewModeWhileEditing, 
+\f0 \'b1\'e0\'bc\'ad\'ca\'b1\'b3\'f6\'cf\'d6
+\f2 \
+    UITextFieldViewModeUnlessEditing,  
+\f0 \'b3\'fd\'c1\'cb\'b1\'e0\'bc\'ad\'cd\'e2\'b6\'bc\'b3\'f6\'cf\'d6
+\f2 \
+    UITextFieldViewModeAlways   
+\f0 \'d2\'bb\'d6\'b1\'b3\'f6\'cf\'d6
+\f2 \} UITextFieldViewMode;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'ca\'e4\'c8\'eb\'bf\'f2\'d6\'d0\'d2\'bb\'bf\'aa\'ca\'bc\'be\'cd\'d3\'d0\'b5\'c4\'ce\'c4\'d7\'d6
+\f2 \cf7 \
+text.text = \cf18 @"
+\f0 \'d2\'bb\'bf\'aa\'ca\'bc\'be\'cd\'d4\'da\'ca\'e4\'c8\'eb\'bf\'f2\'b5\'c4\'ce\'c4\'d7\'d6
+\f2 "\cf7 ;\
+\
+\cf6 //
+\f0 \'c3\'bf\'ca\'e4\'c8\'eb\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'be\'cd\'b1\'e4\'b3\'c9\'b5\'e3
+\f2  
+\f0 \'d3\'c3\'d3\'ef\'c3\'dc\'c2\'eb\'ca\'e4\'c8\'eb
+\f2 \cf7 \
+text.secureTextEntry = \cf9 YES\cf7 ;\
+\
+\cf6 //
+\f0 \'ca\'c7\'b7\'f1\'be\'c0\'b4\'ed
+\f2 \cf7 \
+\
+text.autocorrectionType = UITextAutocorrectionTypeNo;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{  UITextAutocorrectionTypeDefault, 
+\f0 \'c4\'ac\'c8\'cf
+\f2 \
+    UITextAutocorrectionTypeNo, 
+\f0 \'b2\'bb\'d7\'d4\'b6\'af\'be\'c0\'b4\'ed
+\f2 \
+    UITextAutocorrectionTypeYes, 
+\f0 \'d7\'d4\'b6\'af\'be\'c0\'b4\'ed
+\f2 \} UITextAutocorrectionType;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'d4\'d9\'b4\'ce\'b1\'e0\'bc\'ad\'be\'cd\'c7\'e5\'bf\'d5
+\f2 \cf7 \
+text.clearsOnBeginEditing = \cf9 YES\cf7 ;\
+\
+\cf6 //
+\f0 \'c4\'da\'c8\'dd\'b6\'d4\'c6\'eb\'b7\'bd\'ca\'bd
+\f2 \cf7 \
+text.textAlignment = UITextAlignmentLeft;\
+\
+\cf6 //
+\f0 \'c4\'da\'c8\'dd\'b5\'c4\'b4\'b9\'d6\'b1\'b6\'d4\'c6\'eb\'b7\'bd\'ca\'bd
+\f2  UITextField
+\f0 \'bc\'cc\'b3\'d0\'d7\'d4
+\f2 UIControl,
+\f0 \'b4\'cb\'c0\'e0\'d6\'d0\'d3\'d0\'d2\'bb\'b8\'f6\'ca\'f4\'d0\'d4
+\f2 contentVerticalAlignment text.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;\cf7 \
+\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'ce\'aa
+\f2 YES
+\f0 \'ca\'b1\'ce\'c4\'b1\'be\'bb\'e1\'d7\'d4\'b6\'af\'cb\'f5\'d0\'a1\'d2\'d4\'ca\'ca\'d3\'a6\'ce\'c4\'b1\'be\'b4\'b0\'bf\'da\'b4\'f3\'d0\'a1
+\f2 .
+\f0 \'c4\'ac\'c8\'cf\'ca\'c7\'b1\'a3\'b3\'d6\'d4\'ad\'c0\'b4\'b4\'f3\'d0\'a1
+\f2 ,
+\f0 \'b6\'f8\'c8\'c3\'b3\'a4\'ce\'c4\'b1\'be\'b9\'f6\'b6\'af
+\f2  textFied.adjustsFontSizeToFitWidth = YES;\cf7 \
+\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'d7\'d4\'b6\'af\'cb\'f5\'d0\'a1\'cf\'d4\'ca\'be\'b5\'c4\'d7\'ee\'d0\'a1\'d7\'d6\'cc\'e5\'b4\'f3\'d0\'a1
+\f2 \cf7 \
+text.minimumFontSize = \cf13 20\cf7 ;\
+\
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'bc\'fc\'c5\'cc\'b5\'c4\'d1\'f9\'ca\'bd
+\f2 \cf7 \
+\
+text.keyboardType = UIKeyboardTypeNumberPad;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{ UIKeyboardTypeDefault,  
+\f0 \'c4\'ac\'c8\'cf\'bc\'fc\'c5\'cc\'a3\'ac\'d6\'a7\'b3\'d6\'cb\'f9\'d3\'d0\'d7\'d6\'b7\'fb
+\f2 \
+    UIKeyboardTypeASCIICapable,  
+\f0 \'d6\'a7\'b3\'d6
+\f2 ASCII
+\f0 \'b5\'c4\'c4\'ac\'c8\'cf\'bc\'fc\'c5\'cc
+\f2 \
+    UIKeyboardTypeNumbersAndPunctuation, 
+\f0 \'b1\'ea\'d7\'bc\'b5\'e7\'bb\'b0\'bc\'fc\'c5\'cc\'a3\'ac\'d6\'a7\'b3\'d6\'a3\'ab\'a3\'aa\'a3\'a3\'d7\'d6\'b7\'fb
+\f2 \
+    UIKeyboardTypeNumberPad, 
+\f0 \'ca\'fd\'d7\'d6\'bc\'fc\'c5\'cc
+\f2 UIKeyboardTypePhonePad, 
+\f0 \'b5\'e7\'bb\'b0\'bc\'fc\'c5\'cc
+\f2 \
+    UIKeyboardTypeNamePhonePad,   
+\f0 \'b5\'e7\'bb\'b0\'bc\'fc\'c5\'cc\'a3\'ac\'d2\'b2\'d6\'a7\'b3\'d6\'ca\'e4\'c8\'eb\'c8\'cb\'c3\'fb
+\f2 \
+    UIKeyboardTypeEmailAddress,   
+\f0 \'d3\'c3\'d3\'da\'ca\'e4\'c8\'eb\'b5\'e7\'d7\'d3
+\f2  
+\f0 \'d3\'ca\'bc\'fe\'b5\'d8\'d6\'b7\'b5\'c4\'bc\'fc\'c5\'cc
+\f2 \
+    UIKeyboardTypeDecimalPad,     
+\f0 \'ca\'fd\'d7\'d6\'bc\'fc\'c5\'cc
+\f2  
+\f0 \'d3\'d0\'ca\'fd\'d7\'d6\'ba\'cd\'d0\'a1\'ca\'fd\'b5\'e3
+\f2 \
+    UIKeyboardTypeTwitter,        
+\f0 \'d3\'c5\'bb\'af\'b5\'c4\'bc\'fc\'c5\'cc\'a3\'ac\'b7\'bd\'b1\'e3\'ca\'e4\'c8\'eb
+\f2 @
+\f0 \'a1\'a2
+\f2 #
+\f0 \'d7\'d6\'b7\'fb
+\f2 \
+    UIKeyboardTypeAlphabet = UIKeyboardTypeASCIICapable, \}UIKeyboardType;\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'ca\'d7\'d7\'d6\'c4\'b8\'ca\'c7\'b7\'f1\'b4\'f3\'d0\'b4
+\f2 \cf7 \
+\
+text.autocapitalizationType = UITextAutocapitalizationTypeNone;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{    UITextAutocapitalizationTypeNone, 
+\f0 \'b2\'bb\'d7\'d4\'b6\'af\'b4\'f3\'d0\'b4
+\f2 \
+    UITextAutocapitalizationTypeWords,  
+\f0 \'b5\'a5\'b4\'ca\'ca\'d7\'d7\'d6\'c4\'b8\'b4\'f3\'d0\'b4
+\f2 \
+    UITextAutocapitalizationTypeSentences,  
+\f0 \'be\'e4\'d7\'d3\'b5\'c4\'ca\'d7\'d7\'d6\'c4\'b8\'b4\'f3\'d0\'b4
+\f2 \
+    UITextAutocapitalizationTypeAllCharacters, 
+\f0 \'cb\'f9\'d3\'d0\'d7\'d6\'c4\'b8\'b6\'bc\'b4\'f3\'d0\'b4
+\f2 \}\
+UITextAutocapitalizationType;\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //return
+\f0 \'bc\'fc\'b1\'e4\'b3\'c9\'ca\'b2\'c3\'b4\'bc\'fc
+\f2 \cf7 \
+\
+text.returnKeyType =UIReturnKeyDone;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{    UIReturnKeyDefault, 
+\f0 \'c4\'ac\'c8\'cf
+\f2  
+\f0 \'bb\'d2\'c9\'ab\'b0\'b4\'c5\'a5\'a3\'ac\'b1\'ea\'d3\'d0
+\f2 Return\
+    UIReturnKeyGo,      
+\f0 \'b1\'ea\'d3\'d0
+\f2 Go
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyGoogle,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Google
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5\'a3\'ac\'d3\'c3\'d3\'ef\'cb\'d1\'cb\'f7
+\f2 \
+    UIReturnKeyJoin,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Join
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyNext,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Next
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyRoute,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Route
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeySearch,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Search
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeySend,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Send
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyYahoo,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Yahoo
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyYahoo,
+\f0 \'b1\'ea\'d3\'d0
+\f2 Yahoo
+\f0 \'b5\'c4\'c0\'b6\'c9\'ab\'b0\'b4\'c5\'a5
+\f2 \
+    UIReturnKeyEmergencyCall, 
+\f0 \'bd\'f4\'bc\'b1\'ba\'f4\'bd\'d0\'b0\'b4\'c5\'a5
+\f2 \} UIReturnKeyType;\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'bc\'fc\'c5\'cc\'cd\'e2\'b9\'db
+\f2 \cf7 \
+\
+textView.keyboardAppearance=UIKeyboardAppearanceDefault
+\f0 \'a3\'bb
+\f2 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{UIKeyboardAppearanceDefault
+\f0 \'a3\'ac
+\f2  
+\f0 \'c4\'ac\'c8\'cf\'cd\'e2\'b9\'db\'a3\'ac\'c7\'b3\'bb\'d2\'c9\'ab
+\f2 \
+    UIKeyboardAppearanceAlert
+\f0 \'a3\'ac
+\f2   
+\f0 \'c9\'ee\'bb\'d2
+\f2  
+\f0 \'ca\'af\'c4\'ab\'c9\'ab
+\f2  \} UIReturnKeyType;\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed
+\f2  
+\f0 \'d3\'c3\'d3\'da\'ca\'b5\'cf\'d6\'d0\'ad\'d2\'e9
+\f2 \cf7 \
+text.delegate = \cf9 self\cf7 ;\
+\
+\cf6 //
+\f0 \'d7\'ee\'d3\'d2\'b2\'e0\'bc\'d3\'cd\'bc\'c6\'ac\'ca\'c7\'d2\'d4\'cf\'c2\'b4\'fa\'c2\'eb
+\f2 \cf7 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f0 \cf7 \'d7\'f3\'b2\'e0\'c0\'e0\'cb\'c6
+\f2 \
+\
+UIImageView *image=[[UIImageView alloc] initWithImage:[UIImage imageNamed:\cf18 @"right.png"\cf7 ]];\
+text.rightView=image;\
+text.rightViewMode = UITextFieldViewModeAlways;\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf9 typedef\cf7  \cf9 enum\cf7  \{    UITextFieldViewModeNever,\
+    UITextFieldViewModeWhileEditing,\
+    UITextFieldViewModeUnlessEditing,\
+    UITextFieldViewModeAlways\} UITextFieldViewMode;\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+\cf6 //
+\f0 \'b0\'b4
+\f2 return
+\f0 \'bc\'fc\'bc\'fc\'c5\'cc\'cd\'f9\'cf\'c2\'ca\'d5
+\f2  becomeFirstResponder 
+\f0 \'c0\'e0\'d2\'aa\'b2\'c9\'d3\'c3
+\f2 UITextFieldDelegate
+\f0 \'d0\'ad\'d2\'e9
+\f2  text.delegate = self; 
+\f0 \'c9\'f9\'c3\'f7
+\f2 text
+\f0 \'b5\'c4\'b4\'fa\'c0\'ed\'ca\'c7\'ce\'d2\'a3\'ac\'ce\'d2\'bb\'e1\'c8\'a5\'ca\'b5\'cf\'d6\'b0\'d1\'bc\'fc\'c5\'cc\'cd\'f9\'cf\'c2\'ca\'d5\'b5\'c4\'b7\'bd\'b7\'a8
+\f2  
+\f0 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d4\'da
+\f2 UITextFieldDelegate
+\f0 \'c0\'ef\'cb\'f9\'d2\'d4\'ce\'d2\'c3\'c7\'d2\'aa\'b2\'c9\'d3\'c3
+\f2 UITextFieldDelegate
+\f0 \'d5\'e2\'b8\'f6\'d0\'ad\'d2\'e9
+\f2 \cf7 \
+\
+- (\cf9 BOOL\cf7 )textFieldShouldReturn:(UITextField *)textField\{\
+    [text resignFirstResponder];\
+    \cf6 //
+\f0 \'d6\'f7\'d2\'aa\'ca\'c7
+\f2 [receiver resignFirstResponder]
+\f0 \'d4\'da\'c4\'c4\'b5\'f7\'d3\'c3\'be\'cd\'c4\'dc\'b0\'d1
+\f2 receiver
+\f0 \'b6\'d4\'d3\'a6\'b5\'c4\'bc\'fc\'c5\'cc\'cd\'f9\'cf\'c2\'ca\'d5
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+\
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f0 \cf7 \'d6\'d8\'d0\'b4\'bb\'e6\'d6\'c6\'d0\'d0\'ce\'aa\'b3\'fd\'c1\'cb
+\f2 UITextField
+\f0 \'b6\'d4\'cf\'f3\'b5\'c4\'b7\'e7\'b8\'f1\'d1\'a1\'cf\'ee\'a3\'ac\'c4\'e3\'bb\'b9\'bf\'c9\'d2\'d4\'b6\'a8\'d6\'c6\'bb\'af
+\f2 UITextField
+\f0 \'b6\'d4\'cf\'f3\'a3\'ac\'ce\'aa\'cb\'fb\'cc\'ed\'bc\'d3\'d0\'ed\'b6\'e0\'b2\'bb\'cd\'ac\'b5\'c4\'d6\'d8\'d0\'b4\'b7\'bd\'b7\'a8\'a3\'ac\'c0\'b4\'b8\'c4\'b1\'e4\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'b5\'c4\'cf\'d4\'ca\'be\'d0\'d0\'ce\'aa\'a1\'a3\'d5\'e2\'d0\'a9\'b7\'bd\'b7\'a8\'b6\'bc\'bb\'e1\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6
+\f2 CGRect
+\f0 \'bd\'e1\'b9\'b9\'a3\'ac\'d6\'c6\'b6\'a8\'c1\'cb\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'c3\'bf\'b8\'f6\'b2\'bf\'bc\'fe\'b5\'c4\'b1\'df\'bd\'e7\'b7\'b6\'ce\'a7\'a1\'a3\'d2\'d4\'cf\'c2\'b7\'bd\'b7\'a8\'b6\'bc\'bf\'c9\'d2\'d4\'d6\'d8\'d0\'b4\'a1\'a3
+\f2 \
+\
+\'96 textRectForBounds:
+\f0 \'a1\'a1\'a1\'a1
+\f2     \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'c0\'b4\'d6\'d8\'d6\'c3\'ce\'c4\'d7\'d6\'c7\'f8\'d3\'f2
+\f2 \cf7 \
+\
+\'96 drawTextInRect:
+\f0 \'a1\'a1\'a1\'a1
+\f2         \cf6 //
+\f0 \'b8\'c4\'b1\'e4\'bb\'e6\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
+\f2 .
+\f0 \'d6\'d8\'d0\'b4\'ca\'b1\'b5\'f7\'d3\'c3
+\f2 super
+\f0 \'bf\'c9\'d2\'d4\'b0\'b4\'c4\'ac\'c8\'cf\'cd\'bc\'d0\'ce\'ca\'f4\'d0\'d4\'bb\'e6\'d6\'c6
+\f2 ,
+\f0 \'c8\'f4\'d7\'d4\'bc\'ba\'cd\'ea\'c8\'ab\'d6\'d8\'d0\'b4\'bb\'e6\'d6\'c6\'ba\'af\'ca\'fd\'a3\'ac\'be\'cd\'b2\'bb\'d3\'c3\'b5\'f7\'d3\'c3
+\f2 super
+\f0 \'c1\'cb
+\f2 .\cf7 \
+\
+\'96 placeholderRectForBounds:
+\f0 \'a1\'a1\'a1\'a1
+\f2 \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'c0\'b4\'d6\'d8\'d6\'c3\'d5\'bc\'ce\'bb\'b7\'fb\'c7\'f8\'d3\'f2
+\f2 \cf7 \
+\
+\'96 drawPlaceholderInRect:
+\f0 \'a1\'a1\'a1\'a1
+\f2 \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'b8\'c4\'b1\'e4\'bb\'e6\'d6\'c6\'d5\'bc\'ce\'bb\'b7\'fb\'ca\'f4\'d0\'d4
+\f2 .
+\f0 \'d6\'d8\'d0\'b4\'ca\'b1\'b5\'f7\'d3\'c3
+\f2 super
+\f0 \'bf\'c9\'d2\'d4\'b0\'b4\'c4\'ac\'c8\'cf\'cd\'bc\'d0\'ce\'ca\'f4\'d0\'d4\'bb\'e6\'d6\'c6
+\f2 ,
+\f0 \'c8\'f4\'d7\'d4\'bc\'ba\'cd\'ea\'c8\'ab\'d6\'d8\'d0\'b4\'bb\'e6\'d6\'c6\'ba\'af\'ca\'fd\'a3\'ac\'be\'cd\'b2\'bb\'d3\'c3\'b5\'f7\'d3\'c3
+\f2 super
+\f0 \'c1\'cb
+\f2 .\cf7 \
+\
+\'96 borderRectForBounds:
+\f0 \'a1\'a1\'a1\'a1
+\f2 \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'c0\'b4\'d6\'d8\'d6\'c3\'b1\'df\'d4\'b5\'c7\'f8\'d3\'f2
+\f2 \cf7 \
+\
+\'96 editingRectForBounds:
+\f0 \'a1\'a1\'a1\'a1
+\f2 \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'c0\'b4\'d6\'d8\'d6\'c3\'b1\'e0\'bc\'ad\'c7\'f8\'d3\'f2
+\f2 \cf7 \
+\
+\'96 clearButtonRectForBounds:
+\f0 \'a1\'a1\'a1\'a1
+\f2 \cf6 //
+\f0 \'d6\'d8\'d0\'b4\'c0\'b4\'d6\'d8\'d6\'c3
+\f2 clearButton
+\f0 \'ce\'bb\'d6\'c3
+\f2 ,
+\f0 \'b8\'c4\'b1\'e4
+\f2 size
+\f0 \'bf\'c9\'c4\'dc\'b5\'bc\'d6\'c2
+\f2 button
+\f0 \'b5\'c4\'cd\'bc\'c6\'ac\'ca\'a7\'d5\'e6
+\f2 \cf7 \
+\
+\'96 leftViewRectForBounds:\
+\
+\'96 rightViewRectForBounds:\
+\
+
+\f0 \'ce\'af\'cd\'d0\'b7\'bd\'b7\'a8
+\f2 \
+\
+- (\cf9 BOOL\cf7 )textFieldShouldBeginEditing:(UITextField *)textField\{\
+    \cf6 //
+\f0 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6
+\f2 BOOL
+\f0 \'d6\'b5\'a3\'ac\'d6\'b8\'b6\'a8\'ca\'c7\'b7\'f1\'d1\'ad\'d0\'f2\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'bf\'aa\'ca\'bc\'b1\'e0\'bc\'ad
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+- (\cf9 void\cf7 )textFieldDidBeginEditing:(UITextField *)textField\{\
+    \cf6 //
+\f0 \'bf\'aa\'ca\'bc\'b1\'e0\'bc\'ad\'ca\'b1\'b4\'a5\'b7\'a2\'a3\'ac\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'bd\'ab\'b3\'c9\'ce\'aa
+\f2 first responder\cf7 \
+\}\
+- (\cf9 BOOL\cf7 )textFieldShouldEndEditing:(UITextField *)textField\{\
+    \cf6 //
+\f0 \'b7\'b5\'bb\'d8
+\f2 BOOL
+\f0 \'d6\'b5\'a3\'ac\'d6\'b8\'b6\'a8\'ca\'c7\'b7\'f1\'d4\'ca\'d0\'ed\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad\'a3\'ac\'b5\'b1\'b1\'e0\'bc\'ad\'bd\'e1\'ca\'f8\'a3\'ac\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'bb\'e1\'c8\'c3\'b3\'f6
+\f2 first responder\cf7 \
+    \cf6 //
+\f0 \'d2\'aa\'cf\'eb\'d4\'da\'d3\'c3\'bb\'a7\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad\'ca\'b1\'d7\'e8\'d6\'b9\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'cf\'fb\'ca\'a7\'a3\'ac\'bf\'c9\'d2\'d4\'b7\'b5\'bb\'d8
+\f2 NO\cf7 \
+    \cf6 //
+\f0 \'d5\'e2\'b6\'d4\'d2\'bb\'d0\'a9\'ce\'c4\'b1\'be\'d7\'d6\'b6\'ce\'b1\'d8\'d0\'eb\'ca\'bc\'d6\'d5\'b1\'a3\'b3\'d6\'bb\'ee\'d4\'be\'d7\'b4\'cc\'ac\'b5\'c4\'b3\'cc\'d0\'f2\'ba\'dc\'d3\'d0\'d3\'c3\'a3\'ac\'b1\'c8\'c8\'e7\'bc\'b4\'ca\'b1\'cf\'fb\'cf\'a2
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 NO\cf7 ;\
+\}\
+- (\cf9 BOOL\cf7 )textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string\{\
+    \cf6 //
+\f0 \'b5\'b1\'d3\'c3\'bb\'a7\'ca\'b9\'d3\'c3\'d7\'d4\'b6\'af\'b8\'fc\'d5\'fd\'b9\'a6\'c4\'dc\'a3\'ac\'b0\'d1\'ca\'e4\'c8\'eb\'b5\'c4\'ce\'c4\'d7\'d6\'d0\'de\'b8\'c4\'ce\'aa\'cd\'c6\'bc\'f6\'b5\'c4\'ce\'c4\'d7\'d6\'ca\'b1\'a3\'ac\'be\'cd\'bb\'e1\'b5\'f7\'d3\'c3\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a1\'a3
+\f2 \cf7 \
+    \cf6 //
+\f0 \'d5\'e2\'b6\'d4\'d3\'da\'cf\'eb\'d2\'aa\'bc\'d3\'c8\'eb\'b3\'b7\'cf\'fa\'d1\'a1\'cf\'ee\'b5\'c4\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'cc\'d8\'b1\'f0\'d3\'d0\'d3\'c3
+\f2 \cf7 \
+    \cf6 //
+\f0 \'bf\'c9\'d2\'d4\'b8\'fa\'d7\'d9\'d7\'d6\'b6\'ce\'c4\'da\'cb\'f9\'d7\'f6\'b5\'c4\'d7\'ee\'ba\'f3\'d2\'bb\'b4\'ce\'d0\'de\'b8\'c4\'a3\'ac\'d2\'b2\'bf\'c9\'d2\'d4\'b6\'d4\'cb\'f9\'d3\'d0\'b1\'e0\'bc\'ad\'d7\'f6\'c8\'d5\'d6\'be\'bc\'c7\'c2\'bc
+\f2 ,
+\f0 \'d3\'c3\'d7\'f7\'c9\'f3\'bc\'c6\'d3\'c3\'cd\'be\'a1\'a3
+\f2 \cf7 \
+    \cf6 //
+\f0 \'d2\'aa\'b7\'c0\'d6\'b9\'ce\'c4\'d7\'d6\'b1\'bb\'b8\'c4\'b1\'e4\'bf\'c9\'d2\'d4\'b7\'b5\'bb\'d8
+\f2 NO\cf7 \
+    \cf6 //
+\f0 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'b5\'c4\'b2\'ce\'ca\'fd\'d6\'d0\'d3\'d0\'d2\'bb\'b8\'f6
+\f2 NSRange
+\f0 \'b6\'d4\'cf\'f3\'a3\'ac\'d6\'b8\'c3\'f7\'c1\'cb\'b1\'bb\'b8\'c4\'b1\'e4\'ce\'c4\'d7\'d6\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'bd\'a8\'d2\'e9\'d0\'de\'b8\'c4\'b5\'c4\'ce\'c4\'b1\'be\'d2\'b2\'d4\'da\'c6\'e4\'d6\'d0
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+- (\cf9 BOOL\cf7 )textFieldShouldClear:(UITextField *)textField\{\
+    \cf6 //
+\f0 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6
+\f2 BOOL
+\f0 \'d6\'b5\'d6\'b8\'c3\'f7\'ca\'c7\'b7\'f1\'d4\'ca\'d0\'ed\'b8\'f9\'be\'dd\'d3\'c3\'bb\'a7\'c7\'eb\'c7\'f3\'c7\'e5\'b3\'fd\'c4\'da\'c8\'dd
+\f2 \cf7 \
+    \cf6 //
+\f0 \'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'d4\'da\'cc\'d8\'b6\'a8\'cc\'f5\'bc\'fe\'cf\'c2\'b2\'c5\'d4\'ca\'d0\'ed\'c7\'e5\'b3\'fd\'c4\'da\'c8\'dd
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+- (\cf9 BOOL\cf7 )textFieldShouldReturn:(UITextField *)textField\{\
+    \cf6 //
+\f0 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6
+\f2 BOOL
+\f0 \'d6\'b5\'a3\'ac\'d6\'b8\'c3\'f7\'ca\'c7\'b7\'f1\'d4\'ca\'d0\'ed\'d4\'da\'b0\'b4\'cf\'c2\'bb\'d8\'b3\'b5\'bc\'fc\'ca\'b1\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad
+\f2 \cf7 \
+    \cf6 //
+\f0 \'c8\'e7\'b9\'fb\'d4\'ca\'d0\'ed\'d2\'aa\'b5\'f7\'d3\'c3
+\f2 resignFirstResponder 
+\f0 \'b7\'bd\'b7\'a8\'a3\'ac\'d5\'e2\'bb\'d8\'b5\'bc\'d6\'c2\'bd\'e1\'ca\'f8\'b1\'e0\'bc\'ad\'a3\'ac\'b6\'f8\'bc\'fc\'c5\'cc\'bb\'e1\'b1\'bb\'ca\'d5\'c6\'f0
+\f2 [textField resignFirstResponder];\cf7 \
+    \cf6 //
+\f0 \'b2\'e9\'d2\'bb\'cf\'c2
+\f2 resign
+\f0 \'d5\'e2\'b8\'f6\'b5\'a5\'b4\'ca\'b5\'c4\'d2\'e2\'cb\'bc\'be\'cd\'c3\'f7\'b0\'d7\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'c1\'cb
+\f2 \cf7 \
+    \cf9 return\cf7  \cf9 YES\cf7 ;\
+\}\
+}

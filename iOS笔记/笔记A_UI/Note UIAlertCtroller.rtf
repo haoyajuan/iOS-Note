@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset134 STHeitiSC-Light;\f4\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red0\green116\blue0;\red92\green38\blue153;
+\red46\green13\blue110;\red196\green26\blue22;\red170\green13\blue145;\red29\green133\blue25;\red100\green56\blue32;
+\red28\green0\blue207;\red77\green0\blue158;\red186\green0\blue17;\red180\green0\blue98;\red63\green110\blue116;
+\red38\green71\blue75;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22480\viewh19880\viewkind0
+\deftab866
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b\fs44 \cf0 UIAlertView
+\f1 \'c0\'e0\cf2 (\'b9\'fd\'c6\'da)
+\f2\b0\fs36 \cf3 \CocoaLigature0 \
+	
+\f3 \'ca\'c7\'ca\'b2\'c3\'b4\'a3\'ba\'be\'af\'b8\'e6\'bf\'f2
+\f2 \
+	
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'d5\'eb\'b6\'d4\'b1\'d8\'d2\'aa\'b5\'c4\'cc\'e1\'d0\'d1\'d0\'d4\'ce\'c4\'d7\'d6\'b5\'c4\'cf\'d4\'ca\'be\'a3\'ac\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'be\'af\'b8\'e6\'bf\'f2\
+
+\f2 	
+\f3 \'c8\'e7\'ba\'ce\'ca\'b9\'d3\'c3\'a3\'ba
+\f2 \
+		step1:
+\f3 \'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd\'a3\'ac\'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'cc\'e1\'ca\'be\'d0\'d4\'d0\'c5\'cf\'a2\'a1\'a2\'b0\'b4\'c5\'a5\'b5\'c4\'b8\'f6\'ca\'fd\'bc\'b0\'ce\'c4\'d7\'d6\'ba\'cd\'b4\'fa\'c0\'ed\'b7\'bd\
+		
+\f2 \cf4 UIAlertView\cf0  *alert = [[\cf4 UIAlertView\cf0  \cf5 alloc\cf0 ]\cf5 initWithTitle\cf0 :\cf6 @"title"\cf0  \cf5 message\cf0 :\cf6 @"this is the message"\cf0  \cf5 delegate\cf0 :\cf7 self\cf0  \cf5 cancelButtonTitle\cf0 :\cf6 @"YES"\cf0  \cf5 otherButtonTitles\cf0 :\cf6 @"NO"\cf0 , \cf7 nil\cf0 ];\cf3 \
+		step2:
+\f3 \'c9\'e8\'d6\'c3\'b4\'b0\'bf\'da\'cf\'d4\'ca\'be\'a3\'a8
+\f2 show
+\f3 \'a3\'a9\
+		
+\f2 \cf0 [alert \cf5 show\cf0 ];\
+\cf3 \
+	
+\f3 \'ca\'f4\'d0\'d4\'a3\'ba
+\f2 \cf4 alertViewStyle\
+	\cf0 alert.\cf4 alertViewStyle\cf0  = \cf5 UIAlertViewStyleLoginAndPasswordInput\cf0 ;\cf3 \
+	
+\f3 \'b7\'bd\'b7\'a8\'a3\'ba
+\f2 \cf5 buttonTitleAtIndex\cf0 :\
+		 \cf5 textFieldAtIndex\cf0 :\cf3 \
+\
+
+\f0\b\fs44 \cf0 \CocoaLigature1 UIActionSheet
+\f1 \'c0\'e0\cf2 (\'b9\'fd\'c6\'da)
+\f2\b0\fs36 \cf3 \CocoaLigature0 \
+	
+\f3 \'ca\'c7\'ca\'b2\'c3\'b4\'a3\'ba\'ce\'aa\'d3\'c3\'bb\'a7\'cc\'e1\'b9\'a9\'b6\'e0\'b8\'f6\'bf\'c9\'b2\'d9\'d7\'f7\'b5\'c4\'d1\'a1\'cf\'ee
+\f2 \
+	
+\f3 \'d7\'f7\'d3\'c3\'a3\'ba\'b6\'e0\'d3\'da\'c1\'bd\'b8\'f6\'b0\'b4\'c5\'a5\'d1\'a1\'cf\'ee\'b5\'c4\'a3\'ac\'b2\'bb\'d3\'c3alertView\'a3\'ac\'b6\'bc\'bb\'e1\'d1\'a1\'d4\'f1\'b2\'d9\'d7\'f7\'b1\'ed\'a3\'ac\'b2\'a2\'c7\'d2\'b2\'d9\'d7\'f7\'b1\'ed\'c4\'dc\'b9\'bb\'cc\'e1\'b9\'a9\'d2\'bb\'b8\'f6\'ba\'ec\'c9\'ab\'b5\'c4\'be\'af\'b8\'e6\'d0\'d4\'d6\'ca\'b5\'c4\'b0\'b4\'c5\'a5\'a1\'a3\
+
+\f2 	
+\f3 \'c8\'e7\'ba\'ce\'ca\'b9\'d3\'c3\'a3\'ba
+\f2 \
+		step1:
+\f3 \'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd\'a3\'ac\'c9\'e8\'d6\'c3
+\f2 title,buttonTitle,self
+\f3 \'ce\'aa\'b4\'fa\'c0\'ed\'b7\'bd\
+		
+\f2 \cf4 UIActionSheet\cf0  *sheet = [[\cf4 UIActionSheet\cf0  \cf5 alloc\cf0 ]\cf5 initWithTitle\cf0 :\cf6 @"actionSheet"\cf0  \cf5 delegate\cf0 :\cf7 self\cf0  \cf5 cancelButtonTitle\cf0 :\cf6 @"Cancel\'94\cf0  \cf5 destructiveButtonTitle\cf0 :\cf6 @"Delete"\cf0  \cf5 otherButtonTitles\cf0 :\cf6 @"OK"\cf0 ,\cf6 @"ko"\cf0 ,\cf6 @"OOO"\cf0 , \cf7 nil\cf0 ];\cf3 \
+		step2:
+\f3 \'c9\'e8\'d6\'c3\'b4\'b0\'bf\'da\'cf\'d4\'ca\'be
+\f2   
+\f3 \'a3\'a8
+\f2 showInView
+\f3 \'a3\'a9\
+		
+\f2 \cf0 [sheet \cf5 showInView\cf0 :\cf7 self\cf0 .\cf4 view\cf0 ];\
+\cf3 \
+	
+\f3 \'b7\'bd\'b7\'a8\'a3\'ba\'b5\'e3\'bb\'f7
+\f2 sheet
+\f3 \'ca\'b1\'b5\'c4\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+	-(\cf7 void\cf0 )actionSheet:(\cf4 UIActionSheet\cf0  *)actionSheet clickedButtonAtIndex:(\cf4 NSInteger\cf0 )buttonIndex\{\
+	    \cf5 NSLog\cf0 (\cf6 @"buttonIndex:%d"\cf0 ,buttonIndex);\
+	\}\
+\
+\pard\tx963\pardeftab963\pardirnatural
+
+\f1\b\fs44 \cf0  
+\f0 UIAlertController 
+\f1 \cf2 (\'d3\'c3\'c0\'b4\'cc\'e6\'b4\'fa
+\f0 Alert
+\f1 \'ba\'cd
+\f0 Sheet
+\f1 \'c0\'e0)
+\fs40 \cf8 \
+
+\f2\b0  1.
+\f3 \'b3\'f5\'ca\'bc\'bb\'af\'d2\'bb\'b8\'f6
+\f2 UIAlertController\
+	
+\f3 \'c9\'e8\'d6\'c3
+\f2 AlertController
+\f3 \'b5\'c4\'d1\'f9\'ca\'bd
+\f2 preferredStyle
+\f3 \'b2\'ce\'ca\'fd
+\f2 \
+		UIAlertControllerStyleAlert <=>UIAlertView\
+		UIAlertControllerStyleActionSheet <=> UIActionSheet\
+ 2.
+\f3 \'b4\'b4\'bd\'a8
+\f2 UIAlertAction\
+	UIAlertActionStyleCancel(
+\f3 \'c8\'a1\'cf\'fb
+\f2 )
+\f3 \'c0\'e0\'d0\'cd\'b5\'c4
+\f2 Action
+\f3 \'d6\'bb\'c4\'dc\'d3\'d0\'d2\'bb\'b8\'f6
+\f2 \
+	UIAlertActionStyleDefault(
+\f3 \'c4\'ac\'c8\'cf
+\f2 )
+\f3 \'c0\'e0\'d0\'cd\'b5\'c4
+\f2 Action
+\f3 \'ca\'c7\'c1\'d0\'b1\'ed\'d6\'d0\'b5\'c4\'d1\'a1\'cf\'ee\
+
+\f2 	UIAlertActionStyleDestructive(
+\f3 \'be\'af\'b8\'e6
+\f2 )\
+	
+\f3 \'d7\'a2
+\f2 :
+\f3 \'d4\'da
+\f2 Block
+\f3 \'d6\'d0\'c9\'e8\'d6\'c3\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 \
+ 3.
+\f3 \'b0\'d1
+\f2 UIAlertAction
+\f3 \'cc\'ed\'bc\'d3\'b5\'bd
+\f2 UIAlertController
+\f3 \'d6\'d0
+\f2 \
+ 4.
+\f3 \'d3\'c3
+\f2 presentViewController
+\f3 \'b5\'c4\'b7\'bd\'ca\'bd\'cd\'c6\'b3\'f6
+\f2 UIAlertController\
+\
+
+\f3\b \cf0  \'d7\'d4\'b6\'a8\'d2\'e5\'b0\'b4\'c5\'a5\'d1\'f9\'ca\'bd
+\f4 \
+\pard\tx963\pardeftab963\pardirnatural
+
+\f2\b0 \cf0 	[actionCancel \cf5 setValue\cf0 :\cf9 UIColorFromRGB\cf0 (\cf9 Black_color\cf0 ) \cf5 forKey\cf0 :\cf6 @"titleTextColor"\cf0 ];\
+	[actionSure \cf5 setValue\cf0 :\cf9 UIColorFromRGB\cf0 (\cf9 Black_color\cf0 ) \cf5 forKey\cf0 :\cf6 @"titleTextColor"\cf0 ];\
+\pard\tx963\pardeftab963\pardirnatural
+\cf8 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 	\cf4 NSString\cf0  *message = \cf6 @"
+\f3 \'ca\'c7\'b7\'f1\'bd\'ab\'c4\'da\'c8\'dd\'c7\'d0\'bb\'bb\'b5\'bd\'c4\'fa\'b5\'b1\'c7\'b0\'cb\'f9\'d4\'da\'b3\'c7\'ca\'d0\'c4\'d8\'a3\'bf
+\f2 "\cf0 ;\
+	\cf4 NSMutableAttributedString\cf0  *attrMessage = [[\cf4 NSMutableAttributedString\cf0  \cf5 alloc\cf0 ]\cf5 initWithString\cf0 :message];\
+	\cf4 NSRange\cf0  range1 = \cf5 NSMakeRange\cf0 (\cf10 0\cf0 , message.\cf4 length\cf0 );\
+	[attrMessage \cf5 addAttribute\cf0 :\cf4 NSFontAttributeName\cf0  \cf5 value\cf0 :\cf9 FONT\cf0 (\cf10 12\cf0 ) \cf5 range\cf0 :range1];\
+                 \
+	\cf4 UIAlertController\cf0  *alertControl = [\cf4 UIAlertController\cf0  \cf5 alertControllerWithTitle\cf0 :\cf7 nil\cf0  \cf5 message\cf0 :\cf7 nil\cf0  \cf5 preferredStyle\cf0 :\cf5 UIAlertControllerStyleAlert\cf0 ];\
+	\cf3 //
+\f3 \'c9\'e8\'d6\'c3\'cc\'d8\'ca\'e2\'d7\'d6\'cc\'e5\'ba\'cd\'d1\'d5\'c9\'ab
+\f2 \cf0 \
+	[alertControl \cf5 setValue\cf0 :attrTitle \cf5 forKey\cf0 :\cf6 @"attributedTitle"\cf0 ];\
+	[alertControl setValue:attrMessage forKey:\cf6 @"attributedMessage"\cf0 ];\
+\pard\tx963\pardeftab963\pardirnatural
+\cf8 \
+\
+
+\f3\b \'d7\'a2
+\f4 :
+\f2\b0 \
+
+\f3  \'d6\'bb\'d3\'d0\'d4\'da
+\f2 alert
+\f3 \'c7\'e9\'bf\'f6\'cf\'c2\'b2\'c5\'bf\'c9\'d2\'d4\'cc\'ed\'bc\'d3\'ce\'c4\'b1\'be\'bf\'f2
+\f2 \
+\pard\tx963\pardeftab963\pardirnatural
+\cf0 [alertController \cf5 addTextFieldWithConfigurationHandler\cf0 :^(\cf11 UITextField\cf0  *textField) \{\
+        textField.\cf4 placeholder\cf0  = \cf12 @"
+\f3 \'d3\'c3\'bb\'a7\'c3\'fb
+\f2 "\cf0 ;\
+        textField.\cf4 secureTextEntry\cf0  = \cf13 YES\cf0 ;\
+    \}];\
+\pard\tx963\pardeftab963\pardirnatural
+\cf8 	
+\f3 \'c8\'a1\'b3\'f6\'ce\'c4\'b1\'be
+\f2 \cf0 \
+        \cf11 UITextField\cf0  *text = alertController.\cf4 textFields\cf0 .\cf4 firstObject\cf0 ;\
+        \cf11 UIAlertAction\cf0  *action = alertController.\cf4 actions\cf0 .\cf4 firstObject\cf0 ;\
+                    \cf4 UIAlertController\cf0  *alertControl = [\cf4 UIAlertController\cf0  \cf5 alertControllerWithTitle\cf0 :updateModel.\cf14 title\cf0  \cf5 message\cf0 :updateModel.\cf14 message\cf0  \cf5 preferredStyle\cf0 :\cf5 UIAlertControllerStyleAlert\cf0 ];\
+                    \cf3 /*
+\f3 \'c8\'b7\'b6\'a8\'b8\'fc\'d0\'c2
+\f2 */\cf0 \
+                    \cf4 UIAlertAction\cf0  *actionSure = [\cf4 UIAlertAction\cf0  \cf5 actionWithTitle\cf0 :updateModel.\cf14 sureTitle\cf0  \cf5 style\cf0 :\cf5 UIAlertActionStyleDefault\cf0  \cf5 handler\cf0 :^(\cf4 UIAlertAction\cf0  * \cf7 _Nonnull\cf0  action) \{\
+                        \cf3 /*
+\f3 \'cc\'f8\'d7\'aa\'d6\'c1\'b8\'fc\'d0\'c2\'d2\'b3\'c3\'e6
+\f2 */\cf0 \
+                        \cf4 NSString\cf0  *urlStr = \cf6 @"https://appsto.re/cn/8rIf4.i"\cf0 ;\
+                        \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf5 URLWithString\cf0 :urlStr];\
+                        \cf7 if\cf0  (url) \{\
+                            [[\cf4 UIApplication\cf0  \cf5 sharedApplication\cf0 ]\cf5 openURL\cf0 :url];\
+                        \}\
+                    \}];\
+                    \cf3 /*
+\f3 \'c8\'a1\'cf\'fb\'b8\'fc\'d0\'c2
+\f2 */\cf0 \
+                    \cf4 UIAlertAction\cf0  *actionCancel = [\cf4 UIAlertAction\cf0  \cf5 actionWithTitle\cf0 :updateModel.\cf14 cancleTitle\cf0  \cf5 style\cf0 :\cf5 UIAlertActionStyleCancel\cf0  \cf5 handler\cf0 :^(\cf4 UIAlertAction\cf0  * \cf7 _Nonnull\cf0  action) \{\
+                        \cf7 if\cf0  (updateModel.\cf14 needUpdate\cf0 .\cf4 intValue\cf0 ) \{\
+                            \cf7 if\cf0  (\cf10 1\cf0  == updateModel.\cf14 needUpdate\cf0 .\cf4 intValue\cf0 ) \{\
+                                \cf3 /*
+\f3 \'b9\'d8\'b1\'d5
+\f2 APP*/\cf0 \
+                                [\cf7 self\cf0  \cf15 exitApplication\cf0 ];\
+                            \}\
+                        \}\
+                    \}];\
+                    [alertControl \cf5 addAction\cf0 :actionSure];\
+                    [alertControl \cf5 addAction\cf0 :actionCancel];\
+                    \
+                    [\cf7 self\cf0 .\cf14 window\cf0 .\cf4 rootViewController\cf0  \cf5 presentViewController\cf0 :alertControl \cf5 animated\cf0 :\cf7 YES\cf0  \cf5 completion\cf0 :\cf7 nil\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs36 \cf3 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3\b \cf0 \
+}

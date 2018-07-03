@@ -1,0 +1,435 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fnil\fcharset134 HannotateSC-W5;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset134 STHeitiSC-Light;\f5\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red196\green26\blue22;
+\red46\green13\blue110;\red170\green13\blue145;\red28\green0\blue207;\red63\green110\blue116;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17340\viewh19880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs48 \cf0 NSDictionary(
+\f1 \'b2\'bb\'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f2\b0\fs36 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f3\b \cf0 \CocoaLigature0 	
+\f0 NSDictionary
+\f4 \'b8\'c5\'ca\'f6
+\f5\b0 \cf2 \
+	
+\f4 \'bf\'c9\'d2\'d4\'d3\'c3\'c0\'b4\'b1\'a3\'b4\'e6\'b6\'e0\'cc\'f5\'ca\'fd\'be\'dd\'a3\'ac\'c3\'bf\'d2\'bb\'cc\'f5\'ca\'fd\'be\'dd\'b6\'bc\'d3\'d0\'c1\'bd\'b8\'f6\'b2\'bf\'b7\'d6\'d7\'e9\'b3\'c9\'a3\'ac\'d2\'d4 
+\f5 key
+\f4 \'ba\'cd
+\f5 value
+\f4 \'a3\'a8\'bc\'fc\'d6\'b5\'b6\'d4\'a3\'a9\'b5\'c4\'b7\'bd\'ca\'bd\'b4\'e6\'d4\'da\'a1\'a3\
+	\'d7\'a2\'a3\'ba\
+	1.key\'d6\'b5\'d2\'bb\'b0\'e3\'ca\'c7\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\'a3\'acvalue\'d6\'b5\'ca\'c7\'c8\'ce\'d2\'e2\'c0\'e0\'d0\'cd\'b6\'d4\'cf\'f3\'a1\'a3\
+	2.key\'d6\'b5\'ca\'c7\'b2\'bb\'d4\'ca\'d0\'ed\'d6\'d8\'b8\'b4\'b5\'c4\'a3\'acvalue\'d6\'b5\'bf\'c9\'d2\'d4\'d6\'d8\'b8\'b4\'a1\'a3\
+	3.key\'d6\'b5\'ba\'cdvalue\'d6\'b5\'b6\'bc\'b2\'bb\'d4\'ca\'d0\'ed\'ce\'aa\'bf\'d5\'a1\'a3\
+
+\f3\b \cf0 \
+	
+\f0 NSDictionary
+\f4 \'b4\'b4\'bd\'a8\
+
+\f3 \
+
+\f5\b0         \cf3 NSString\cf0  *value1 = \cf4 @"one"\cf0 ;\
+        \cf3 NSString\cf0  *value2 = \cf4 @"two"\cf0 ;\
+        \cf3 NSString\cf0  *value3 = \cf4 @"three"\cf0 ;\
+      \
+        \cf2 //
+\f4 \'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4
+\f5   
+\f4 \'b1\'ea\'d7\'bc\'b7\'bd\'ca\'bd
+\f5 \cf0 \
+        \cf3 NSDictionary\cf0  *dic = [\cf3 NSDictionary\cf0  \cf5 dictionaryWithObjectsAndKeys\cf0 :value1 ,\cf4 @"1"\cf0 ,value2,\cf4 @"2"\cf0 ,value3,\cf4 @"3"\cf0 , \cf6 nil\cf0 ];\cf2 //
+\f4 \'b4\'b4\'bd\'a8
+\f5 ObjectsAndKeys
+\f4 \'a3\'ba
+\f5  value
+\f4 \'a3\'ac
+\f5 key
+\f3\b \cf0 \
+	
+\f5\b0     \
+        \cf2 //iOS6
+\f4 \'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4\'b5\'c4\'d0\'c2\'d3\'ef\'b7\'a8
+\f5   @\{<#key#>: <#object, ...#>\}\cf0 \
+        \cf3 NSDictionary\cf0  *dic3 = \cf7 @\{\cf4 @"1"\cf0 : value1,\cf4 @"2"\cf0 :value2,\cf4 @"3"\cf0 :value3\cf7 \}\cf0 ;\
+\cf2 \
+		//
+\f4 \'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4
+\f5   
+\f4 \'ca\'fd\'d7\'e9\'b7\'bd\'ca\'bd
+\f5 \cf0 \
+        \cf3 NSArray\cf0  *keys1 = \cf7 @[\cf4 @"1"\cf0 ,\cf4 @"2"\cf0 ,\cf4 @"3"\cf7 ]\cf0 ;\
+        \cf3 NSArray\cf0  *values1 = \cf7 @[\cf4 @"one"\cf0 ,\cf4 @"two"\cf0 ,\cf4 @"three"\cf7 ]\cf0 ;\
+        \cf3 NSDictionary\cf0  *dic1 = [\cf3 NSDictionary\cf0  \cf5 dictionaryWithObjects\cf0 :values1 \cf5 forKeys\cf0 :keys1];
+\f3\b \
+\
+
+\f4 	
+\f0 NSDictionary
+\f4 \'b5\'c4\'ca\'b9\'d3\'c3(
+\b0 \cf2 \'cd\'a8\'b9\'fd
+\f5 key
+\f4 \'d6\'b5\'b2\'e9\'d1\'af\'b3\'f6\'cf\'e0\'d3\'a6\'b5\'c4
+\f5 value
+\f4 \'d6\'b5
+\b \cf0 )\
+
+\f5\b0 \cf2 	
+\f4 \cf0 	\
+
+\f5         \cf2 //
+\f4 \'b2\'e9\'d5\'d2\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8
+\f5 \cf0 \
+        \cf3 NSString\cf0  *str = [dic1 \cf5 objectForKey\cf0 :\cf4 @"1"\cf0 ];\
+        \
+        \cf2 //
+\f4 \'b2\'e9\'d5\'d2\'b6\'e0\'b8\'f6\'d4\'aa\'cb\'d8
+\f5 \cf0 \
+        \cf3 NSArray\cf0  *keys2 = \cf7 @[\cf4 @"1"\cf0 ,\cf4 @"4"\cf0 ,\cf4 @"2"\cf7 ]\cf0 ;\
+        \cf3 NSArray\cf0  *values2 = [dic1 \cf5 objectsForKeys\cf0 :keys2 \cf5 notFoundMarker\cf0 :\cf4 @"Not-found"\cf0 ];\
+
+\f4 \
+
+\f5         \cf2 //
+\f4 \'b5\'c3\'b5\'bd\'c8\'ab\'b2\'bf\'d4\'aa\'cb\'d8
+\f5   
+\f4 \'bf\'c9\'d2\'d4\'b5\'c3\'b5\'bd\'d7\'d6\'b5\'e4\'d6\'d0\'c8\'ab\'b2\'bf\'b5\'c4
+\f5 key
+\f4 \'d6\'b5
+\f5 \cf0 \
+        \cf3 NSArray\cf0  *keys = [dic \cf5 allKeys\cf0 ];        \
+        \cf6 for\cf0  (\cf3 NSString\cf0  *key \cf6 in\cf0  keys) \{           \
+            \cf3 NSString\cf0  *value = [dic \cf5 objectForKey\cf0 :key];\cf2 //
+\f4 \'cd\'a8\'b9\'fd
+\f5 key
+\f4 \'d5\'d2\'b5\'bd\'b6\'d4\'d3\'a6\'b5\'c4
+\f5 value
+\f4 \'d6\'b5
+\f5 \cf0 \
+            \cf5 NSLog\cf0 (\cf4 @\'93%@
+\f4 \'a3\'bd
+\f5 %@\'93\cf0 ,key,value );\
+        \}\
+\
+
+\f4 \
+	
+\f0\b NSDictionary
+\f4 \'b5\'c4\'b1\'e9\'c0\'fa
+\b0 	\
+
+\f5 	
+\f3\b 1.
+\f4 \'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4\'d6\'d0\'cb\'f9\'d3\'d0\'b5\'c4
+\f3 key
+\f4 \'d6\'b5\'a3\'ac\'cd\'a8\'b9\'fd
+\f3 key
+\f4 \'d5\'d2\'b5\'bd
+\f3 value
+\f4 \'d6\'b5
+\f3 \
+
+\f5\b0         \cf3 NSArray\cf0  *keys = [dic \cf5 allKeys\cf0 ];        \
+        \cf6 for\cf0  (\cf3 NSString\cf0  *key \cf6 in\cf0  keys) \{           \
+            \cf3 NSString\cf0  *value = [dic \cf5 objectForKey\cf0 :key];\cf2 //
+\f4 \'cd\'a8\'b9\'fd
+\f5 key
+\f4 \'d5\'d2\'b5\'bd\'b6\'d4\'d3\'a6\'b5\'c4
+\f5 value
+\f4 \'d6\'b5
+\f5 \cf0 \
+            \cf5 NSLog\cf0 (\cf4 @\'93%@
+\f4 \'a3\'bd
+\f5 %@\'93\cf0 ,key,value );\
+        \}
+\f4 \
+\
+
+\f5 	
+\f3\b 2.
+\f4 \'cd\'a8\'b9\'fd\'b5\'c3\'b5\'bd\'d7\'d6\'b5\'e4\'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4
+\f3 \
+
+\f0\b0 		
+\b a.
+\f1 \'b5\'c3\'b5\'bd
+\f0 keys
+\f1 \'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7
+\f0 \
+
+\f5\b0         \cf2 //
+\f4 \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4
+\f5  
+\f4 \'b5\'c3\'b5\'bd
+\f5 key
+\f4 \'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7
+\f5  
+\f4 \'cd\'a8\'b9\'fd
+\f5 key
+\f4 \'d5\'d2\'b5\'bd
+\f5 value\cf0 \
+        \cf3 NSEnumerator\cf0  *keyEnumerator = [dic3 \cf5 keyEnumerator\cf0 ];\
+        \cf3 NSString\cf0  *key = \cf6 nil\cf0 ;\
+        \cf6 while\cf0  (key = [keyEnumerator \cf5 nextObject\cf0 ]) \{\
+            \cf3 NSString\cf0  *value = [dic3 \cf5 objectForKey\cf0 :key];\
+            \cf5 NSLog\cf0 (\cf4 @"key:%@-value:%@"\cf0 ,key,value );\
+        \}
+\f4 \
+\
+
+\f0 		
+\b b.
+\f1 \'b5\'c3\'b5\'bd
+\f0 values
+\f1 \'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7
+\f0\b0 \
+
+\f5         \cf2 //
+\f4 \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4
+\f5  
+\f4 \'b5\'c3\'b5\'bd
+\f5 value
+\f4 \'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7
+\f5  
+\f4 \'cd\'a8\'b9\'fd
+\f5 value
+\f4 \'d6\'b5\'d5\'d2\'b5\'bd\'cb\'f9\'d3\'d0\'b5\'c4
+\f5 key\cf0 \
+        \cf3 NSEnumerator\cf0  *valueEnumerator =[dic3 \cf5 objectEnumerator\cf0 ];\
+        \cf3 NSString\cf0  *object = \cf6 nil\cf0 ;\
+        \cf6 while\cf0  (object = [valueEnumerator \cf5 nextObject\cf0 ]) \{\
+            \cf2 //value
+\f4 \'d6\'b5\'bf\'c9\'d2\'d4\'d6\'d8\'b8\'b4\'a3\'ac\'cb\'f9\'d3\'d0\'d2\'aa\'d3\'c3\'ca\'fd\'d7\'e9\'b4\'e6\'b7\'b5\'bb\'d8\'d6\'b5
+\f5 \cf0 \
+            \cf3 NSArray\cf0  *key1 = [dic3 \cf5 allKeysForObject\cf0 :object];\
+            \cf5 NSLog\cf0 (\cf4 @"object:%@"\cf0 ,object);\
+            \cf5 NSLog\cf0 (\cf4 @"key:%@"\cf0 ,key1);\
+        \}\
+
+\f4 \
+
+\f5 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs48 \cf0 \CocoaLigature1 NSMutableDictionary(
+\f1 \'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4)
+\f5\b0\fs36 \CocoaLigature0 	
+\f3\b \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 	
+\f0 NSMutableDictionary
+\f4 \'b4\'b4\'bd\'a8
+\f5\b0 \
+      \
+        \cf2 //
+\f4 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bf\'d5\'b5\'c4\'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4
+\f5 \cf0 \
+        \cf3 NSMutableDictionary\cf0  *mdict = [\cf3 NSMutableDictionary\cf0  \cf5 dictionary\cf0 ];\
+        \
+\cf2 		//
+\f4 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4  \'b2\'a2\'b8\'b3\'d6\'b5
+\f5 \cf0       \
+\cf3 		NSMutableDictionary\cf0  *dic4 = [\cf3 NSMutableDictionary\cf0  \cf5 dictionaryWithObjectsAndKeys\cf0 :\cf4 @"one"\cf0 ,\cf4 @"1"\cf0 ,\cf4 @"two"\cf0 ,\cf4 @"2"\cf0 ,\cf4 @"three"\cf0 ,\cf4 @"3"\cf0 , \cf6 nil\cf0 ];\
+\
+
+\f3\b \
+
+\f4 	
+\f0 NSDictionary
+\f4 \'b5\'c4\'ca\'b9\'d3\'c3(
+\b0 \cf2 \'cd\'a8\'b9\'fd
+\f5 key
+\f4 \'d6\'b5\'b2\'e9\'d1\'af\'b3\'f6\'cf\'e0\'d3\'a6\'b5\'c4
+\f5 value
+\f4 \'d6\'b5
+\b \cf0 )\
+
+\f5\b0 \cf2 	
+\f4 \cf0 	\
+
+\f5         \cf2 //
+\f4 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'e4\'a3\'ac\'cf\'e0\'b5\'b1\'d3\'da\'d7\'d6\'b5\'e4\'b5\'c4\'ba\'cf\'b2\'a2
+\f5 \
+\cf0         \cf3 NSString\cf0  *value1 = \cf4 @"one"\cf0 ;\
+        \cf3 NSString\cf0  *value2 = \cf4 @"two"\cf0 ;\
+        \cf3 NSString\cf0  *value3 = \cf4 @"three"\cf0 ;\
+\
+        \cf3 NSDictionary\cf0  *dic = \cf7 @\{\cf4 @"1"\cf0 :value1,\cf4 @"2"\cf0 :value2,\cf4 @"3"\cf0 :value3\cf7 \}\cf0 ;\
+        \cf3 NSMutableDictionary\cf0  *mdict = [\cf3 NSMutableDictionary\cf0  \cf5 dictionary\cf0 ];\
+\
+        \cf2 //
+\f4 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8
+\f5 \cf0 \
+        [mdict \cf5 setValue\cf0 :\cf4 @"four"\cf0  \cf5 forKey\cf0 :\cf4 @"4"\cf0 ];\
+\
+        \cf2 //
+\f4 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'e4\'a3\'ac\'cf\'e0\'b5\'b1\'d3\'da\'d7\'d6\'b5\'e4\'b5\'c4\'ba\'cf\'b2\'a2
+\f5 \cf0 \
+        [mdict \cf5 addEntriesFromDictionary\cf0 :dic];\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0         \cf2 //
+\f4 \'d3\'c3\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'e4\'b8\'b2\'b8\'c7\'d4\'ad\'d3\'d0\'c4\'da\'c8\'dd
+\f5 \cf0 \
+        [mdict \cf5 setDictionary\cf0 :dic];\
+        \
+        \cf2 //
+\f4 \'c9\'be\'b3\'fd\'d2\'bb\'b8\'f6\'bc\'fc\'d6\'b5\'b6\'d4
+\f5 \cf0 \
+        [mdict \cf5 removeObjectForKey\cf0 :\cf4 @"1"\cf0 ];\
+        \cf2 //
+\f4 \'c9\'be\'b3\'fd\'b6\'e0\'b8\'f6
+\f5 \cf0 \
+        \cf3 NSArray\cf0  *keys = \cf7 @[\cf4 @"2"\cf0 ,\cf4 @"3"\cf7 ]\cf0 ;\
+        [mdict \cf5 removeObjectsForKeys\cf0 :keys];\
+        \cf2 //
+\f4 \'c7\'e5\'bf\'d5\'d7\'d6\'b5\'e4
+\f5 \cf0 \
+        [mdict \cf5 removeAllObjects\cf0 ];\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs48 \cf0 \CocoaLigature1 \
+
+\f1 \'d7\'d6\'b5\'e4\'b5\'c4\'b1\'e9\'c0\'fa
+\f0 (
+\f1 \'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4/\'b2\'bb\'bf\'c9\'b1\'e4\'d7\'d6\'b5\'e4)\
+
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f4\b0\fs36 \cf0 \CocoaLigature0 		
+\b \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4
+\f5\b0 \
+        \cf2 //
+\f4 \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa
+\f5 \cf0 \
+        \cf5 NSLog\cf0 (\cf4 @"
+\f4 \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa\'bd\'e1\'b9\'fb
+\f5 :"\cf0 );\
+        \cf2 //
+\f4 \'c3\'bf\'b8\'f6\'b6\'d4\'cf\'f3\'b6\'bc\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7
+\f5 \cf0 \
+        \cf3 NSEnumerator\cf0  *collg_enum = [school \cf5 objectEnumerator\cf0 ];\
+        \cf3 NSDictionary\cf0  *college = \cf6 nil\cf0 ;\
+        \cf2 //
+\f4 \'cd\'a8\'b9\'fd\'b5\'fc\'b4\'fa\'c6\'f7\'bd\'f8\'d0\'d0\'b1\'e9\'c0\'fa
+\f5  
+\f4 \'d6\'b1\'b5\'bd\'ca\'fd\'d7\'e9\'d6\'d0\'c3\'bb\'d3\'d0\'d6\'b5\'c1\'cb
+\f5 \cf0 \
+        \cf6 while\cf0  (college = [collg_enum \cf5 nextObject\cf0 ]) \{\
+            \cf3 NSEnumerator\cf0  *class_enum = [college \cf5 objectEnumerator\cf0 ];\
+            \cf3 NSDictionary\cf0  *class = \cf6 nil\cf0 ;\
+            \cf6 while\cf0  (class = [class_enum \cf5 nextObject\cf0 ]) \{\
+                \cf3 NSEnumerator\cf0  *stu_enum = [class \cf5 objectEnumerator\cf0 ];\
+                \cf8 TRStudent\cf0  *stu = \cf6 nil\cf0 ;\
+                \cf6 while\cf0  (stu = [stu_enum \cf5 nextObject\cf0 ]) \{\
+                    \cf5 NSLog\cf0 (\cf4 @"%@"\cf0 ,stu );\
+                \}\
+            \}\
+        \}\
+\
+
+\f4 		\'bf\'ec\'cb\'d9
+\b \'c3\'b6\'be\'d9\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4\'a3\'a8\'cd\'a8\'b9\'fdkey\'d5\'d2value\'a3\'a9
+\f5\b0 \
+        \cf2 /
+\f4 /\'c3\'b6\'be\'d9
+\f5 \cf0 \
+        \cf5 NSLog\cf0 (\cf4 @"
+\f4 \'c3\'b6\'be\'d9\'b1\'e9\'c0\'fa\'bd\'e1\'b9\'fb
+\f5 :"\cf0 );\
+        \cf3 NSArray\cf0  *collegekeys = [school \cf5 allKeys\cf0 ];\
+        \cf6 for\cf0  (\cf3 NSString\cf0  *collegekey \cf6 in\cf0  collegekeys) \{\
+            \cf2 //
+\f4 \'b8\'f9\'be\'dd
+\f5 key
+\f4 \'b5\'c3\'b5\'bd
+\f5 value 
+\f4 \'d4\'da\'d1\'a7\'d0\'a3\'c0\'ef\'b1\'e9\'c0\'fa\'d1\'a7\'d4\'ba
+\f5 \cf0 \
+            \cf3 NSDictionary\cf0  *college_obj = [school \cf5 objectForKey\cf0 :collegekey];\
+            \cf3 NSArray\cf0  *classkeys = [college_obj \cf5 allKeys\cf0 ];\
+            \cf6 for\cf0  (\cf3 NSString\cf0  *classkey \cf6 in\cf0  classkeys) \{\
+                \cf3 NSDictionary\cf0  *class_obj = [college_obj \cf5 objectForKey\cf0 :classkey];\
+                \cf3 NSArray\cf0  *stukeys = [class_obj \cf5 allKeys\cf0 ];\
+                \cf6 for\cf0  (\cf3 NSString\cf0  *stukey \cf6 in\cf0  stukeys) \{\
+                    \cf8 TRStudent\cf0  *stu_obj = [class_obj \cf5 objectForKey\cf0 :stukey];\
+                    \cf5 NSLog\cf0 (\cf4 @"%@"\cf0 ,stu_obj);\
+                \}\
+            \}\
+        \}
+\f0\b\fs48 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1 \cf0 \'b0\'d1\'d7\'d6\'b5\'e4\'c6\'b4\'bd\'d3\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae\
+\pard\tx963\pardeftab963\pardirnatural
+
+\f5\b0\fs36 \cf0 \CocoaLigature0 - (\cf3 NSString\cf0  *)getDicStringWithDictionary:(\cf3 NSDictionary\cf0  *)dic\{\
+\
+    \cf3 NSArray\cf0  *keys = [dic \cf5 allKeys\cf0 ];\
+    \cf6 if\cf0  (keys.\cf3 count\cf0  == \cf7 0\cf0 ) \{\
+        \cf6 return\cf0  \cf4 @"\{\}"\cf0 ;\
+    \}\
+    \cf3 NSMutableString\cf0  *mutStr = [\cf3 NSMutableString\cf0  \cf5 stringWithString\cf0 :\cf4 @"\{"\cf0 ];\
+    \cf6 for\cf0  (\cf3 NSString\cf0  *key \cf6 in\cf0  keys) \{\
+        \cf3 NSString\cf0  *value = [dic \cf5 objectForKey\cf0 :key];\
+        [mutStr \cf5 appendFormat\cf0 :\cf4 @"\\"%@\\":\\"%@\\","\cf0 ,key,value];\
+    \}\
+    \cf3 NSRange\cf0  r = \cf5 NSMakeRange\cf0 (mutStr.\cf3 length\cf0 -\cf7 1\cf0 , \cf7 1\cf0 );\
+    \cf3 NSString\cf0  *str = [mutStr \cf5 stringByReplacingCharactersInRange\cf0 :r \cf5 withString\cf0 :\cf4 @"\}"\cf0 ];\
+    \
+    \cf6 return\cf0  str;\
+\}
+\f1\b\fs48 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f5\b0\fs44 \cf6 \CocoaLigature0 @property\cf0  (\cf6 nonatomic\cf0 ,\cf6 strong\cf0 ) \cf8 TRStudent\cf0  *stu;\
+\
+\cf6 @property\cf0  (\cf6 nonatomic\cf0 ,\cf6 copy\cf0 ) \cf3 NSString\cf0  *name;\
+\cf2 //
+\f4 \'d7\'d6\'b7\'fb\'b4\'ae\'d3\'c3
+\f5 copy 
+\f4 \'b5\'b1\'b0\'d1\'d2\'bb\'b8\'f6\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'c4\'da\'c8\'dd\'b8\'b3\'b8\'f8\'ca\'f4\'d0\'d4\'ba\'f3\'a3\'ac\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'c4\'da\'c8\'dd\'d4\'d9\'d7\'f6\'b8\'c4\'b1\'e4\'a3\'ac\'d2\'b2\'b2\'bb\'bb\'e1\'d3\'b0\'cf\'ec\'ca\'f4\'d0\'d4\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd\
+
+\f5 Example
+\f4 \'a3\'ba
+\fs48 \
+
+\f5\fs40 \cf0         \cf3 NSMutableString\cf0  *str = [\cf3 NSMutableString\cf0  \cf5 stringWithString\cf0 :\cf4 @"hao"\cf0 ];\
+        \cf8 TRBlock\cf0  *b = [[\cf8 TRBlock\cf0  \cf5 alloc\cf0 ]\cf5 init\cf0 ];\
+        b.\cf8 name\cf0  = str;\
+        \cf2 //
+\f4 \'b8\'f8\'ca\'f4\'d0\'d4\'b8\'b3\'d6\'b5\'ba\'f3\'d4\'d9\'d0\'de\'b8\'c4
+\f5 str
+\f4 \'b5\'c4\'c4\'da\'c8\'dd\'a3\'ac
+\f5 name
+\f4 \'b5\'c4\'c4\'da\'c8\'dd\'b2\'bb\'bb\'e1\'b8\'c4\'b1\'e4
+\f5 \cf0 \
+        [str \cf5 appendString\cf0 :\cf4 @"juan"\cf0 ];\
+
+\fs48 \
+
+\fs44 \cf6 @property\cf0  (\cf6 nonatomic\cf0 ,\cf6 assign\cf0 ) \cf6 int\cf0  age;\
+\cf2 //
+\f4 \'b6\'d4\'cf\'f3\'d3\'c3
+\f5 strong 
+\f4 \'d7\'d6\'b7\'fb\'b4\'ae\'d3\'c3
+\f5 copy 
+\f4 \'bb\'f9\'b4\'a1\'c0\'e0\'d0\'cd\'d3\'c3
+\f5 assign
+\f1\b\fs48 \cf0 \CocoaLigature1 \
+\
+\
+}

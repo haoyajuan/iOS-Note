@@ -1,0 +1,929 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset134 STHeitiSC-Light;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\froman\fcharset0 Times-Roman;\f5\fnil\fcharset134 STSongti-SC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red133\green0\blue175;\red92\green38\blue153;
+\red196\green26\blue22;\red46\green13\blue110;\red170\green13\blue145;\red29\green133\blue25;\red180\green0\blue98;
+\red48\green111\blue121;\red68\green137\blue147;\red77\green0\blue158;\red186\green0\blue17;\red63\green110\blue116;
+\red28\green0\blue207;\red0\green11\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45490\c0;\csgenericrgb\c52157\c0\c68627;\csgenericrgb\c36078\c14902\c60000;
+\csgenericrgb\c76863\c10196\c8627;\csgenericrgb\c18039\c5098\c43137;\csgenericrgb\c66667\c5098\c56863;\csgenericrgb\c11373\c52157\c9804;\csgenericrgb\c70588\c0\c38431;
+\csgenericrgb\c18824\c43529\c47451;\csgenericrgb\c26667\c53725\c57647;\csgenericrgb\c30196\c0\c61961;\csgenericrgb\c72941\c0\c6667;\csgenericrgb\c24706\c43137\c45490;
+\csgenericrgb\c10980\c0\c81176;\csgenericrgb\c0\c4314\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17320\viewh19880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0   
+\f1\b\fs44 UITableViewCell(
+\f2 \'b5\'a5\'d4\'aa\'b8\'f1
+\f1 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs24 \cf0 		{{\NeXTGraphic tv_cell_parts.jpg \width8960 \height2000
+}¬}
+\f1\b\fs44 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \CocoaLigature0 	
+\f2 \'b5\'a5\'d4\'aa\'b8\'f1\'b5\'c4\'c1\'bd\'b2\'bf\'b7\'d6\'a3\'ba
+\f1\fs44 \CocoaLigature1 \
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	
+\f2 \'d7\'f3\'b1\'df\'a3\'ba
+\f3 Cell content
+\f2 \'a3\'a8\'c4\'da\'c8\'dd\'ca\'d3\'cd\'bc\'a3\'a9
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	
+\f2 \'d3\'d2\'b1\'df\'a3\'ba
+\f3 Accessory view
+\f2 \'a3\'a8\'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'a3\'a9
+\f3 \
+
+\f1\b \cf0 \
+	
+\f2 \'c4\'da\'c8\'dd\'ca\'d3\'cd\'bc\'b5\'c4\'c8\'fd\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ba
+\f3\b0 \cf2 Cell content\
+	.textLabel\
+	.detailTextLabel\
+	.imageView\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0 	cell.\cf4 textLabel\cf0 .\cf4 text\cf0  = \cf5 @"hello"\cf0 ;\
+	cell.\cf4 detailTextLabel\cf0 .\cf4 text\cf0  = \cf5 @"detail"\cf0 ;\
+	cell.\cf4 imageView\cf0 .\cf4 image\cf0  = [\cf4 UIImage\cf0  \cf6 imageNamed\cf0 :\cf5 @"san.jpg"\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+
+\f1\b \cf0 	
+\f2 \'c4\'da\'c8\'dd\'ca\'d3\'cd\'bc\'b5\'c4\'cb\'c4\'b8\'f6\'b1\'ea\'d7\'bc\'d1\'f9\'ca\'bd\'a3\'ba
+\f3\b0 \cf6 initWithStyle\cf0 :\cf6 UITableViewCellStyle\cf2 \
+	
+\f2 \'bf\'c9\'d2\'d4\'d4\'da\'b4\'b4\'bd\'a8
+\f3 cell
+\f2 \'b6\'d4\'cf\'f3\'ca\'b1\'a3\'ac\'d6\'b8\'b6\'a8
+\f3 cell
+\f2 \'b5\'c4\'d1\'f9\'ca\'bd\'a3\'ac\'cf\'b5\'cd\'b3\'cc\'e1\'b9\'a9\'c1\'cb
+\f3 4
+\f2 \'d6\'d6
+\f3 cell
+\f2 \'b5\'c4\'b1\'ea\'d7\'bc\'d1\'f9\'ca\'bd
+\f3 \
+	\cf6 UITableViewCellStyleDefault:
+\f2 \cf2 \'d6\'bb\'cf\'d4\'ca\'be
+\f3 image
+\f2 \'ba\'cd
+\f3 text\
+	\cf6 UITableViewCellStyleSubtitle:
+\f2 \cf2 \'c8\'fd\'b2\'bf\'b7\'d6\'b6\'bc\'cf\'d4\'ca\'be\'a3\'ac
+\f3 text
+\f2 \'ba\'cd
+\f3 default
+\f2 \'c9\'cf\'cf\'c2\'c5\'c5\'b2\'bc
+\f3 \
+	\cf6 UITableViewCellStyleValue1:
+\f2 \cf2 \'c8\'fd\'b2\'bf\'b7\'d6\'b6\'bc\'cf\'d4\'ca\'be\'a3\'ac
+\f3 detail
+\f2 \'d3\'d2\'b6\'d4\'c6\'eb
+\f3 \
+	\cf6 UITableViewCellStyleValue2:
+\f2 \cf2 \'d6\'bb\'cf\'d4\'ca\'be
+\f3 text
+\f2 \'ba\'cd
+\f3 detail
+\f2 \'a3\'ac
+\f3 detail
+\f2 \'d7\'f3\'b6\'d4\'c6\'eb
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     cell=[[\cf4 UITableViewCell\cf0  \cf6 alloc\cf0 ]\cf6 initWithStyle\cf0 :\cf6 UITableViewCellStyleValue1\cf0  \cf6 reuseIdentifier\cf0 :\cf5 @"MyCell"\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+
+\f1\b \cf0 	
+\f2 \'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'b5\'c4\'d1\'f9\'ca\'bd\'a3\'ba
+\f3\b0 \cf2 cell.accessoryViewType	
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf6 \CocoaLigature0 	UITableViewCellAccessoryCheckmark: 
+\f2 \cf6 \'d2\'bb\'b8\'f6\'b6\'d4\'ba\'c5
+\f3 \cf6 \
+	UITableViewCellAccessoryDetailButton:
+\f2 \cf6 \'d2\'bb\'b8\'f6\'b8\'d0\'cc\'be\'ba\'c5
+\f3 \cf6 \
+	UITableViewCellAccessoryDetailDisclosureButton
+\f2 \cf6 \'a3\'ba\'d2\'bb\'b8\'f6\'b8\'d0\'cc\'be\'ba\'c5\'a3\'ab\'b4\'f3\'d3\'da\'ba\'c5
+\f3 \cf6 \
+	UITableViewCellAccessoryDisclosureIndicator
+\f2 \cf6 \'a3\'ba\'d2\'bb\'b8\'f6\'b4\'f3\'d3\'da\'ba\'c5
+\f3 \cf6 \
+	UITableViewCellAccessoryNone
+\f2 \cf6 \'a3\'ba\'c4\'ac\'c8\'cf\'c3\'bb\'d3\'d0\'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf3 \CocoaLigature0 Example
+\f2 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     cell.\cf4 accessoryType\cf0  = \cf6 UITableViewCellAccessoryDetailButton\cf0 ;\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+
+\f1\b \cf0 	
+\f2 \'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'a3\'ba
+\f3\b0 \cf2 (detailButton:
+\f2 \'cf\'d4\'ca\'be\'cf\'ea\'cf\'b8\'d0\'c5\'cf\'a2\'b0\'b4\'c5\'a5
+\f3 )\
+	
+\f2 \'b5\'b1
+\f3 cell
+\f2 \'b5\'c4\'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'d6\'d0\'a3\'ac\'d6\'bb\'d2\'aa\'b0\'fc\'ba\'ac
+\f3 detailButton
+\f2 \'ca\'b1\'a3\'ac\'d4\'f2\'b5\'e3\'bb\'f7
+\f3 detail
+\f2 \'b0\'b4\'c5\'a5\'a3\'ac\'cf\'ec\'d3\'a6\'b6\'af\'d7\'f7\'ca\'c7\'b2\'bb\'d2\'bb\'d1\'f9\'a3\'ba
+\f1\b\fs44 \cf0 \CocoaLigature1 \
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	
+\f2 \'b5\'e3\'bb\'f7
+\f3 detailButton
+\f2 \'b0\'b4\'c5\'a5\'d2\'d4\'cd\'e2\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'cf\'ec\'d3\'a6
+\f3 didSelectRowAtIndexPath
+\f2 \'b7\'bd\'b7\'a8
+\f3 \
+	
+\f2 \'b5\'e3\'bb\'f7
+\f3 detailButton
+\f2 \'b0\'b4\'c5\'a5\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'cf\'ec\'d3\'a6
+\f3 accessoryButtonTappedForRowWithIndexPath
+\f2 \'b7\'bd\'b7\'a8
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 //
+\f2 \'d4\'b2\'c8\'a6
+\f3 i
+\f2 \'b5\'c4\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f3 \cf0 \
+- (\cf7 void\cf0 )tableView:(\cf4 UITableView\cf0  *)tableView accessoryButtonTappedForRowWithIndexPath:(\cf4 NSIndexPath\cf0  *)indexPath\{\
+\}\cf2 \
+//
+\f2 \'d4\'b2\'c8\'a6
+\f3 i
+\f2 \'b0\'b4\'c5\'a5\'d6\'ae\'cd\'e2\'b5\'c4\'c7\'f8\'d3\'f2\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f3 \cf3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0 - (\cf7 void\cf0 )tableView:(\cf4 UITableView\cf0  *)tableView didSelectRowAtIndexPath:(\cf4 NSIndexPath\cf0  *)indexPath\{\
+\}\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5\'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'c7\'f8\'d3\'f2\'a3\'ba
+\f3\b0 \cf2 \
+	
+\f2 \'bf\'c9\'d2\'d4\'d7\'d4\'b6\'a8\'d2\'e5\'b8\'a8\'d6\'fa\'ca\'d3\'cd\'bc\'c7\'f8\'d3\'f2\'a3\'ac\'b8\'f8
+\f3 cell.accessoryView
+\f2 \'b8\'b3\'d6\'b5\'bc\'b4\'bf\'c9\'a1\'a3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \cf0 \
+	\cf2 //
+\f2 \'b8\'f8\'c4\'b3\'d2\'bb\'d0\'d0\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'bf\'aa\'b9\'d8\'b0\'b4\'c5\'a5
+\f3 \cf0 \
+	\cf4 UISwitch\cf0  *mySwitch = [[\cf4 UISwitch\cf0  \cf6 alloc\cf0 ]\cf6 init\cf0 ];\
+	cell.\cf4 accessoryView\cf0  =mySwitch;\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd\'d2\'bb
+\f1 (
+\f2 \'b4\'bf\'b4\'fa\'c2\'eb\'c5\'d0\'b6\'cf\'d6\'d8\'d3\'c3
+\f1 )
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+	
+\f2 \'cf\'b5\'cd\'b3\'bb\'e1\'b8\'f9\'be\'dd\'cf\'d4\'ca\'be\'c2\'fa\'d2\'bb\'c6\'c1\'c4\'bb\'cb\'d1\'d0\'e8\'d2\'aa\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'b8\'f6\'ca\'fd\'a3\'ac\'c0\'b4\'b5\'f7\'d3\'c3\'b5\'da\'c8\'fd\'ce\'ca\'cf\'e0\'d3\'a6\'b5\'c4\'b4\'ce\'ca\'fd\'a1\'a3
+\f3 \
+	
+\f2 \'d6\'bb\'d3\'d0\'b5\'b1\'d3\'c3\'bb\'a7\'b2\'a6\'b6\'af\'c6\'c1\'c4\'bb\'a3\'ac\'b1\'ed\'b8\'f1\'b9\'f6\'b6\'af\'ca\'b1\'a3\'ac\'d4\'ad\'d3\'d0\'be\'c9\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'bb\'e1\'b3\'ac\'b3\'f6\'c6\'c1\'c4\'bb\'a3\'ac\'d0\'c2\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'bd\'f8\'c8\'eb\'c6\'c1\'c4\'bb\'a3\'ac\'d0\'e8\'d2\'aa\'d0\'c2\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'cc\'ee\'b3\'e4\'c6\'c1\'c4\'bb\'ca\'b1\'a3\'ac\'cf\'b5\'cd\'b3\'b2\'c5\'bb\'e1\'d4\'d9\'b4\'ce\'b5\'f7\'d3\'c3\'b5\'da\'c8\'fd\'ce\'ca\'a3\'ac\'c9\'fa\'b3\'c9\'cf\'e0\'d3\'a6\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'a1\'a3
+\f3 \
+	
+\f2 \'b5\'ab\'b6\'d4\'d3\'da\'b3\'ac\'b3\'f6\'c6\'c1\'c4\'bb\'b5\'c4
+\f3 cell
+\f2 \'c3\'bb\'d3\'d0\'ca\'cd\'b7\'c5\'a3\'ac\'b6\'d4\'d3\'da\'d0\'c2\'bd\'f8\'c8\'eb\'c6\'c1\'c4\'bb\'b5\'c4
+\f3 cell
+\f2 \'d3\'d6\'d6\'d8\'d0\'c2\'b4\'b4\'bd\'a8\'a3\'ac\'b2\'bb\'c4\'dc\'ce\'de\'bd\'da\'d6\'c6\'b5\'c4\'b4\'b4\'bd\'a8\'a1\'a3
+\f3 \
+	
+\f2 \'cb\'f9\'d2\'d4\'a3\'ac\'d0\'e8\'d2\'aa\'b6\'d4\'c4\'c7\'d0\'a9\'d2\'d1\'be\'ad\'b3\'ac\'b3\'f6\'c6\'c1\'c4\'bb\'a3\'ac\'b2\'bb\'d0\'e8\'d2\'aa\'d4\'d9\'cf\'d4\'ca\'be\'b5\'c4
+\f3 cell
+\f2 \'cb\'e6\'cf\'eb\'bd\'f8\'d0\'d0\'d6\'d8\'d3\'c3\'b2\'d9\'d7\'f7\'a1\'a3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f2 \'cf\'b5\'cd\'b3\'d2\'d1\'be\'ad\'ca\'b5\'cf\'d6\'b5\'c4\'a3\'ba
+\f1 \
+
+\f3\b0 \cf2 	1.
+\f2 \'cf\'b5\'cd\'b3\'ce\'aa
+\f3 tableView
+\f2 \'d7\'bc\'b1\'b8\'c1\'cb\'d2\'bb\'b8\'f6\'b6\'d3\'c1\'d0\'a3\'ac\'b8\'c3\'b6\'d3\'c1\'d0\'d6\'d0\'bf\'c9\'d2\'d4\'b4\'e6\'b7\'c5
+\f3 UITableViewCell
+\f2 \'b5\'c4\'b6\'d4\'cf\'f3\'a1\'a3
+\f3 \
+	2.
+\f2 \'b5\'b1\'c4\'b3\'b8\'f6\'b5\'a5\'d4\'aa\'b8\'f1\'b6\'d4\'cf\'f3\'d2\'d1\'be\'ad\'cd\'ea\'d5\'fb\'b5\'c4\'b3\'ac\'b3\'f6\'c6\'c1\'c4\'bb\'ca\'b1\'a3\'ac\'cf\'b5\'cd\'b3\'bb\'e1\'d7\'d4\'b6\'af\'bd\'ab\'d5\'e2\'b8\'f6\'b2\'bb\'cf\'d6\'ca\'b5\'b5\'c4
+\f3 cell
+\f2 \'b6\'d4\'cf\'f3\'b7\'c5\'c8\'eb\'b5\'bd\'b6\'d3\'c1\'d0\'d6\'d0\'a1\'a3
+\f3 \
+
+\f1\b \cf0 	
+\f2 \'b3\'cc\'d0\'f2\'d0\'e8\'d2\'aa\'ca\'b5\'cf\'d6\'b5\'c4\'a3\'ba
+\f3\b0 \cf2 \
+	1.
+\f2 \'d4\'da\'bb\'d8\'b4\'f0\'b5\'da\'c8\'fd\'ce\'ca\'ca\'b1\'a3\'ac\'cf\'c8\'b3\'a2\'ca\'d4\'d7\'c5\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'a5\'d4\'aa\'b8\'f1\'a3\'ac\'bf\'b4\'ca\'c7\'b7\'f1\'d2\'d1\'be\'ad\'d3\'d0\'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4
+\f3 cell
+\f2 \'c1\'cb
+\f3 \
+	2.
+\f2 \'c5\'d0\'b6\'cf\'bd\'e1\'b9\'fb\'c0\'b4\'be\'f6\'b6\'a8\'ca\'c7\'b7\'f1\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6
+\f3 cell
+\f2 \'b6\'d4\'cf\'f3
+\f3 \
+		
+\f2 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'c8\'a1\'b5\'bd\'a3\'ac\'d4\'f2\'d0\'c2\'bd\'a8\'a3\'ac\'d0\'c2\'bd\'a8\'ca\'b1\'d3\'a6\'b8\'c3\'ce\'aa\'b5\'a5\'d4\'aa\'b8\'f1\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6
+\f3 \'93
+\f2 \'b1\'ea\'ca\'b6
+\f3 \'94
+\f2 \'a3\'ac\'c8\'a1\'b5\'c4\'ca\'b1\'ba\'f2\'bc\'b0\'ca\'b1\'b0\'b4\'d5\'e2\'b8\'f6\'b1\'ea\'ca\'b6\'c0\'b4\'c8\'a1\'b5\'c4\'a1\'a3
+\f3 \
+	3.
+\f2 \'d4\'d9\'b6\'d4\'d5\'e2\'b8\'f6
+\f3 cell
+\f2 \'bd\'f8\'d0\'d0\'c5\'e4\'d6\'c3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \cf0 \
+    \cf2 //
+\f2 \'cf\'c8\'b3\'a2\'ca\'d4\'b0\'b4\'d5\'d5\'c9\'e8\'b6\'a8\'ba\'c3\'b5\'c4\'b1\'ea\'ca\'b6\'c8\'a5\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1
+\f3 cell
+\f2 \'a3\'ac\'bf\'b4\'d3\'d0\'c3\'bb\'d3\'d0\'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4\'a3\'a8
+\f3 \cf6 dequeueReusableCell
+\f2 \cf6 \'a3\'ba\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'d6\'b5\cf2 \'a3\'a9
+\f3 \cf0 \
+    \cf4 UITableViewCell\cf0  *cell = [tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"MyCell"\cf0 ];\
+    \cf2 //
+\f2 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'c8\'a1\'b5\'bd\'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4\'a3\'ac\'d4\'f2\'d0\'c2\'bd\'a8
+\f3 \cf0 \
+    \cf7 if\cf0  (cell==\cf7 nil\cf0 ) \{\
+        cell = [[\cf4 UITableViewCell\cf0  \cf6 alloc\cf0 ]\cf6 initWithStyle\cf0 :\cf6 UITableViewCellStyleDefault\cf0  \cf6 reuseIdentifier\cf0 :\cf5 @"MyCell"\cf0 ];\
+    \}\
+    \cf2 //cell
+\f2 \'d2\'d1\'be\'ad\'d3\'d0\'c1\'cb\'a3\'ac\'bd\'f8\'d0\'d0\'c5\'e4\'d6\'c3
+\f3 \cf0 \
+    cell.\cf4 textLabel\cf0 .\cf4 text\cf0  = \cf5 @"Hello"\cf0 ;\
+    \cf7 return\cf0  cell;\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd\'b6\'fe
+\f1 (
+\f2 \'d7\'a2\'b2\'e1\'b4\'bf\'b4\'fa\'c2\'ebcell:\'cf\'b5\'cd\'b3\'b5\'c4cell/\'d7\'d4\'b4\'b4\'bd\'a8cell
+\f1 )\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	
+\f2 \'c0\'ed\'c4\'ee\'a3\'ba\'cc\'e1\'c7\'b0\'ba\'cd\'cf\'b5\'cd\'b3\'d7\'a2\'b2\'e1\'b5\'a5\'d4\'aa\'b8\'f1\'a3\'ac\'c8\'bb\'ba\'f3\'b3\'a2\'ca\'d4\'d7\'c5\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'c7\'fe\'b5\'c0\'a3\'ac\'d4\'f1\'d3\'c5\'cf\'b5\'cd\'b3\'b8\'f9\'be\'dd\'cc\'e1\'d4\'e7\'d7\'a2\'b2\'e1\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'d7\'d4\'b6\'af\'b4\'b4\'bd\'a8\'b6\'d4\'cf\'f3\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d3\'c9\'ce\'d2\'c3\'c7\'be\'ad\'b9\'fd\'c5\'d0\'b6\'cf\'ba\'f3\'a3\'ac\'d7\'d4\'bc\'ba\'b4\'b4\'bd\'a8
+\f3 \
+\
+	step1:
+\f2 \'d4\'da
+\f3 ViewDidLoad
+\f2 \'d6\'d0
+\f3  
+\f2 \'cf\'f2\'cf\'b5\'cd\'b3\'d7\'a2\'b2\'e1\'b5\'a5\'d4\'aa\'b8\'f1\'a3\'bb
+\f3 \
+	step2:
+\f2 \'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'a5\'d4\'aa\'b8\'f1
+\f3 (dequeue)
+\f2 \'bc\'b4\'bf\'c9\'a3\'ac\'ce\'de\'d0\'e8\'d4\'d9\'c5\'d0\'b6\'cf\'b4\'b4\'bd\'a8\'a1\'a3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     \cf2 //
+\f2 \'cf\'f2\'cf\'b5\'cd\'b3\'d7\'a2\'b2\'e1\'b5\'a5\'d4\'aa\'b8\'f1
+\f3 \cf0 \
+    \cf2 //
+\f2 \'b2\'ce\'ca\'fd
+\f3 1:
+\f2 \'cf\'b5\'cd\'b3\'bf\'c9\'d2\'d4\'b0\'b4\'d5\'d5\'d5\'e2\'b8\'f6\'c0\'e0\'b5\'c4\'c3\'e8\'ca\'f6\'d0\'c5\'cf\'a2\'a3\'ac\'d4\'da\'d0\'e8\'d2\'aa\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'b4\'b4\'bd\'a8\'b8\'c3\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd
+\f3 \cf0 \
+    \cf2 //
+\f2 \'b2\'ce\'ca\'fd
+\f3 2:
+\f2 \'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4\'b1\'ea\'ca\'b6\'b7\'fb
+\f3 .
+\f2 \'c8\'e7\'b9\'fb\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'a5\'d4\'aa\'b8\'f1\'ca\'b1\'a3\'ac\'b1\'ea\'ca\'b6\'d3\'eb\'d5\'e2\'b8\'f6\'d7\'a2\'b2\'e1\'b5\'c4\'b1\'ea\'ca\'b6\'cf\'e0\'cd\'ac\'a3\'ac\'d4\'f2\'cf\'b5\'cd\'b3\'be\'cd\'d5\'d2\'b5\'bd\'d5\'e2\'b8\'f6\'c0\'e0\'b5\'e3\'d1\'f9\'ca\'bd\'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3 \cf3 Example1
+\f2 :
+\f3 \cf0 \
+    [\cf7 self\cf0 .\cf4 tableView\cf0  \cf6 registerClass\cf0 :[\cf4 UITableViewCell\cf0  \cf6 class\cf0 ] \cf6 forCellReuseIdentifier\cf0 :\cf5 @"MyCell"\cf0 ];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     \cf4 UITableViewCell\cf0  *cell = [tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"MyCell"\cf0  \cf6 forIndexPath\cf0 :indexPath];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example2
+\f2 :
+\f3 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf8 //
+\f2 \'d7\'a2\'b2\'e1
+\f3 cell\cf0 \
+    [\cf9 self\cf0 .\cf4 tableView\cf0  \cf6 registerClass\cf0 :[\cf10 PoemContentTableViewCell\cf0  \cf6 class\cf0 ] \cf6 forCellReuseIdentifier\cf0 :\cf11 reuseIdentifier\cf0 ];\
+    \cf10 PoemContentTableViewCell\cf0  *cell = [tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf11 reuseIdentifier\cf0  \cf6 forIndexPath\cf0 :indexPath];
+\fs40 \
+
+\fs36 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'d7\'a2\'d2\'e2
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	
+\f2\b \cf2 \'d7\'a2
+\f1 :
+\f2 \'b2\'bb\'cd\'ac\'b5\'c4\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd
+\f1 ,
+\f2 \'d4\'da\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a5
+\f1 cell
+\f2 \'ca\'b1\'ca\'b9\'d3\'c3\'b2\'bb\'cd\'ac\'b5\'c4\'b7\'bd\'b7\'a8
+\f3\b0 \cf2 \
+	
+\f2 \'b7\'bd\'ca\'bd\'b6\'fe
+\f3 :
+\f2 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4
+\f3 cell
+\f2 \'b2\'a2\'c7\'d2\'b0\'d1
+\f3 cell
+\f2 \'cc\'ed\'bc\'d3\'b5\'bd
+\f3 table
+\f2 \'d6\'d0
+\f3 ,
+\f2 \'cb\'f9\'d2\'d4\'d4\'da\'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'d6\'ae\'c7\'b0\'d2\'bb\'b6\'a8\'d2\'aa\'cf\'c8\'cf\'f2\'cf\'b5\'cd\'b3\'d7\'a2\'b2\'e1
+\f3 cell\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0 	tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"MyCell"\cf0  \cf6 forIndexPath\cf0 :indexPath\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 	
+\f2 \'b7\'bd\'ca\'bd\'d2\'bb
+\f3 :
+\f2 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'bf\'c9\'d6\'d8\'d3\'c3\'b5\'c4
+\f3 celll\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0 	tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"MyCell"\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd\'c8\'fd
+\f1 (
+\f2 \'ca\'b9\'d3\'c3
+\f1 UITableViewCell.xib
+\f2 \'b4\'b4\'bd\'a8\'b5\'c4
+\f1 cell)\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f3\b0\fs36 \cf2 \CocoaLigature0 	step1:
+\f2 \'d4\'da
+\f3 ViewDidLoad
+\f2 \'d6\'d0
+\f3  
+\f2 \'cf\'f2\'cf\'b5\'cd\'b3\'d7\'a2\'b2\'e1\'b5\'a5\'d4\'aa\'b8\'f1\'a3\'bb
+\f3 \
+	step2:
+\f2 \'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'a5\'d4\'aa\'b8\'f1
+\f3 (dequeue)
+\f2 \'bc\'b4\'bf\'c9\'a3\'ac\'ce\'de\'d0\'e8\'d4\'d9\'c5\'d0\'b6\'cf\'b4\'b4\'bd\'a8\'a1\'a3
+\f3 \cf5 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf0     \cf8 //
+\f2 \'d7\'a2\'b2\'e1\'d3\'c3
+\f3 xib
+\f2 \'ce\'c4\'bc\'fe\'b4\'b4\'bd\'a8\'b5\'c4
+\f3 CollectionViewCell\cf0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs36 \cf0     [\cf9 self\cf0 .\cf4 collectionView\cf0  \cf6 registerNib\cf0 :[\cf12 UINib\cf0  \cf6 nibWithNibName\cf0 :\cf13 @"TRCollectionViewCell"\cf0  \cf6 bundle\cf0 :\cf9 nil\cf0 ] \cf6 forCellWithReuseIdentifier\cf0 :\cf5 @"MyCell"\cf0 ];\
+    \cf10 TRCollectionViewCell\cf0   *cell = [collectionView \cf6 dequeueReusableCellWithReuseIdentifier\cf0 :\cf5 @"MyCell"\cf0  \cf6 forIndexPath\cf0 :indexPath];
+\fs40 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs36 \cf5 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd\'cb\'c4
+\f1 (
+\f2 \'ca\'b9\'d3\'c3
+\f1 StoryBoard
+\f2 \'d6\'d0\'b4\'b4\'bd\'a8\'b5\'c4
+\f1 cell)
+\f3\b0\fs36 \cf5 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf8 //
+\f2 \'d7\'a2\'b2\'e1
+\f3 cell\cf0 \
+    [\cf9 self\cf0 .\cf4 tableView\cf0  \cf6 registerClass\cf0 :[\cf10 PoemContentTableViewCell\cf0  \cf6 class\cf0 ] \cf6 forCellReuseIdentifier\cf0 :\cf11 reuseIdentifier\cf0 ];\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f4\b\fs44 \cf0 UITableViewCell
+\f5 \'b2\'bb\'ca\'b9\'d3\'c3\'d6\'d8\'d3\'c3\'bb\'fa\'d6\'c6\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf2 \'b7\'bd\'b7\'a8
+\f3 1 
+\f2 \'b2\'bb\'ca\'b9\'d3\'c3\'d6\'d8\'d3\'c3\'bb\'fa\'d6\'c6
+\f3 ,
+\f2 \'d6\'bb\'b4\'d3\'d2\'aa\'b8\'fc\'d0\'c2\'b5\'c4
+\f3 cell
+\f2 \'b5\'c4\'c4\'c7\'d2\'bb\'d0\'d0\'c8\'a1\'b3\'f6
+\f3 cell,
+\f2 \'bb\'e1\'c0\'cb\'b7\'d1\'d2\'bb\'d0\'a9\'bf\'d5\'bc\'e4
+\f4 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\f3 \cf7 	static\cf0  \cf4 NSString\cf0  * reuseIdentifier=\cf5 @"questionCell"\cf0 ;\
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf4 	UITableViewCell\cf0  *cell = [tableView \cf6 cellForRowAtIndexPath\cf0 :indexPath];\
+		\cf7 if\cf0  (!cell) \{\
+            cell=[[\cf4 UITableViewCell\cf0  \cf6 alloc\cf0 ]\cf6 initWithStyle\cf0 :\cf6 UITableViewCellStyleDefault\cf0  \cf6 reuseIdentifier\cf0 :reuseIdentifier];\
+        \}\
+\
+
+\f2 \cf2 \'b7\'bd\'b7\'a8
+\f3 2 
+\f2 \'cd\'a8\'b9\'fd\'ce\'aa\'c3\'bf\'b8\'f6
+\f3 cell
+\f2 \'d6\'b8\'b6\'a8\'b2\'bb\'cd\'ac\'b5\'c4\'d6\'d8\'d3\'c3\'b1\'ea\'ca\'b6\'b7\'fb
+\f3 (reuseIdentifier)
+\f2 \'c0\'b4\'bd\'e2\'be\'f6\'a1\'a3
+\f3 \
+         
+\f2 \'d6\'d8\'d3\'c3\'bb\'fa\'d6\'c6\'ca\'c7\'b8\'f9\'be\'dd\'cf\'e0\'cd\'ac\'b5\'c4\'b1\'ea\'ca\'b6\'b7\'fb\'c0\'b4\'d6\'d8\'d3\'c3
+\f3 cell
+\f2 \'b5\'c4\'a3\'ac\'b1\'ea\'ca\'b6\'b7\'fb\'b2\'bb\'cd\'ac\'b5\'c4
+\f3 cell
+\f2 \'b2\'bb\'c4\'dc\'b1\'cb\'b4\'cb\'d6\'d8\'d3\'c3\'a1\'a3\'d3\'da\'ca\'c7\'ce\'d2\'c3\'c7\'bd\'ab\'c3\'bf\'b8\'f6
+\f3 cell
+\f2 \'b5\'c4\'b1\'ea\'ca\'b6\'b7\'fb\'b6\'bc\'c9\'e8\'d6\'c3\'ce\'aa\'b2\'bb\'cd\'ac\'a3\'ac\'be\'cd\'bf\'c9\'d2\'d4\'b1\'dc\'c3\'e2\'b2\'bb\'cd\'ac
+\f3 cell
+\f2 \'d6\'d8\'d3\'c3\'b5\'c4\'ce\'ca\'cc\'e2\'c1\'cb
+\f3 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'c9\'e8\'d6\'c3\'b7\'d6\'c7\'f8\'b1\'ea\'cc\'e2
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	
+\f2 \'c9\'e8\'d6\'c3\'b7\'d6\'c7\'f8\'b5\'c4\'cd\'b7\'b1\'ea\'cc\'e2\'ba\'cd\'ce\'b2\'b1\'ea\'cc\'e2\'a3\'ba
+\f3\b0 \cf2 \
+	
+\f2 \'cf\'b5\'cd\'b3\'b7\'bd\'b7\'a8\'c9\'e8\'d6\'c3\'b7\'d6\'c7\'f8\'cd\'b7\'b1\'ea\'cc\'e2
+\f3 :tableView:titleForHeaderInSection\cf0 \
+\cf2 	
+\f2 \'cf\'b5\'cd\'b3\'b7\'bd\'b7\'a8\'c9\'e8\'d6\'c3\'b7\'d6\'c7\'f8\'ce\'b2\'b1\'ea\'cc\'e2
+\f3 :tableView:titleForFooterInSection\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \cf2 \
+//
+\f2 \'b7\'d6\'c7\'f8\'cd\'b7\'b1\'ea\'cc\'e2
+\f3 \cf0 \
+- (\cf4 NSString\cf0 *)tableView:(\cf4 UITableView\cf0  *)tableView titleForHeaderInSection:(\cf4 NSInteger\cf0 )section\{\
+    \cf14 Area\cf0  *area = \cf7 self\cf0 .\cf14 allAreas\cf0 [section];\
+    \cf7 return\cf0  area.\cf14 name\cf0 ;\
+\}\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 //
+\f2 \'b7\'d6\'c7\'f8\'b5\'c4\'ce\'b2\'b2\'bf
+\f3 \cf0 \
+- (\cf4 NSString\cf0 *)tableView:(\cf4 UITableView\cf0  *)tableView titleForFooterInSection:(\cf4 NSInteger\cf0 )section\{\
+    \cf14 Area\cf0  *area = \cf7 self\cf0 .\cf14 allAreas\cf0 [section];\
+    \cf7 return\cf0  [\cf4 NSString\cf0  \cf6 stringWithFormat\cf0 :\cf5 @"
+\f2 \'c8\'cb\'bf\'da
+\f3 :%d
+\f2 \'cd\'f2
+\f3 "\cf0 , area.\cf14 population\cf0 ];\
+\}\
+\cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf8 //
+\f2 \'c9\'e8\'d6\'c3\'d0\'d0\'b8\'df\'ce\'aa\'d7\'d4\'b6\'af\'d0\'d0\'b8\'df
+\f3\fs36 \cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+
+\fs40 \cf0 - (\cf4 CGFloat\cf0 )tableView:(\cf12 UITableView\cf0  *)tableView estimatedHeightForRowAtIndexPath:(\cf12 NSIndexPath\cf0  *)indexPath\{\
+    \cf9 return\cf0  \cf4 UITableViewAutomaticDimension\cf0 ;\
+\}
+\fs36 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'d7\'d4\'b6\'a8\'d2\'e5\'b5\'a5\'d4\'aa\'b8\'f1
+\f1 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \CocoaLigature0 	1.
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5
+\f1 UITableViewCell
+\f2 \'b5\'c4
+\f1 contentView
+\f2 \'a3\'ba
+\f3\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \CocoaLigature1 	
+\f3\b0\fs36 \cf2 \CocoaLigature0 1) contentView
+\f2 \'ca\'c7
+\f3 UIView
+\f2 \'a3\'ac\'bf\'c9\'d2\'d4\'cc\'ed\'bc\'d3\'d7\'d3\'d4\'aa\'cb\'d8\'a3\'bb
+\f3 \
+
+\f1\b\fs44 \cf0 \CocoaLigature1 	
+\f3\b0\fs36 \cf2 \CocoaLigature0 2) 
+\f2 \'c2\'df\'bc\'ad\'a3\'ba
+\f3 \
+		a.
+\f2 \'c8\'e7\'b9\'fb\'ca\'c7\'d0\'c2\'bd\'a8\'b5\'c4
+\f3 cell
+\f2 \'a3\'ac\'c0\'ef\'c3\'e6\'c3\'bb\'d3\'d0
+\f3 label
+\f2 \'a3\'ac\'cb\'f9\'d2\'d4\'d0\'e8\'d2\'aa\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4
+\f3 label\
+		b.
+\f2 \'c8\'e7\'b9\'fb\'ca\'c7\'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b3\'f6\'b5\'c4\'d2\'bb\'b8\'f6\'d2\'d1\'be\'ad\'b4\'b4\'bd\'a8\'b9\'fd\'b5\'c4
+\f3 cell
+\f2 \'b6\'d4\'cf\'f3\'a3\'ac\'d3\'c9\'d3\'da\'b8\'c3
+\f3 cell
+\f2 \'c0\'ef\'c3\'e6\'d2\'d1\'be\'ad\'b0\'fc\'ba\'ac\'c1\'cb\'d2\'bb\'b8\'f6
+\f3 label
+\f2 \'a3\'ac\'be\'cd\'b2\'bb\'c4\'dc\'d4\'d9\'d0\'c2\'bd\'a8
+\f3 label
+\f2 \'a3\'ac\'b6\'f8\'ca\'c7\'bd\'ab\'d4\'ad\'d3\'d0\'b6\'d4
+\f3 label
+\f2 \'c8\'a1\'b3\'f6\'a3\'ac\'d0\'de\'b8\'c4
+\f3 label
+\f2 \'b5\'c4\'ca\'f4\'d0\'d4
+\f3 \
+	
+\f2 \'ca\'b5\'cf\'d6\'b7\'bd\'ca\'bd\'a3\'ba
+\f3 \
+	
+\f2 \'b4\'b4\'bd\'a8
+\f3 label
+\f2 \'ca\'b1\'a3\'ac\'ce\'aa
+\f3 label
+\f2 \'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b1\'ea\'ca\'b6
+\f3 \
+	
+\f2 \'b4\'d3\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a1\'b5\'bd\'d3\'d0\'b1\'ea\'c7\'a9\'b5\'c4
+\f3 cell
+\f2 \'b6\'d4\'cf\'f3\'ba\'f3\'a3\'ac\'b8\'f9\'be\'dd\'b1\'ea\'ca\'b6\'d5\'d2\'b5\'bd\'c4\'c7\'b8\'f6\'d2\'d1\'be\'ad\'b4\'b4\'bd\'a8\'b5\'c4
+\f3 label
+\f2 \'b6\'d4\'cf\'f3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2 \cf3 \'b9\'d8\'bc\'fc\'b4\'fa\'c2\'eb\'a3\'ba
+\f3 \cf0 \
+        label.\cf4 tag\cf0  = \cf15 1\cf0 ;\
+        label = (\cf4 UILabel\cf0 *)[cell.\cf4 contentView\cf0  \cf6 viewWithTag\cf0 :\cf15 1\cf0 ];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+
+\f1\b \cf0 	2.
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5\'b5\'a5\'d4\'aa\'b8\'f1\'c0\'e0\'a3\'ba
+\f1 \
+
+\f3\b0 \cf2  	
+\f2 \'ba\'cb\'d0\'c4\'c0\'ed\'c4\'ee
+\f3 :
+\f2 \'b1\'e0\'d0\'b4\'d2\'bb\'b8\'f6\'c0\'e0\'a3\'ac\'bc\'cc\'b3\'d0\'d7\'d4
+\f3 UITableViewCell
+\f2 \'a3\'ac\'c8\'bb\'ba\'f3\'d4\'da\'bb\'d8\'b4\'f0\'b5\'da\'c8\'fd\'ce\'ca
+\f3 (\cf0 cellForRowAtIndexPath)
+\f2 \cf2 \'ca\'b1\'a3\'ac\'b4\'b4\'bd\'a8\'d7\'d4\'bc\'ba\'b6\'a8\'d2\'e5\'b5\'c4\'d5\'e2\'b8\'f6\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd\'a3\'ac\'b7\'b5\'bb\'d8\'bc\'b4\'bf\'c9\'a1\'a3
+\f3 \
+	
+\f2 \'b4\'b4\'bd\'a8\'d7\'d4\'b6\'a8\'d2\'e5
+\f3 cell
+\f2 \'c0\'e0\'b5\'c4\'b2\'bd\'d6\'e8\'a3\'ba
+\f3 \
+	step1:
+\f2 \'d0\'c2\'bd\'a8\'c0\'e0\'a3\'ac\'bc\'cc\'b3\'d0\'d7\'d4
+\f3 UITableViewCell
+\f2 \'a3\'ac\'b9\'b4\'d1\'a1\'b4\'f8
+\f3 xib
+\f2 \'ce\'c4\'bc\'fe\'a3\'bb
+\f3 \
+	step2:
+\f2 \'d4\'d9
+\f3 xib
+\f2 \'c9\'cf\'a3\'ac\'d2\'d4\'bf\'c9\'ca\'d3\'bb\'af\'b5\'c4\'d0\'ce\'ca\'bd\'c9\'e8\'bc\'c6
+\f3 cell
+\f2 \'b5\'c4\'cd\'e2\'b9\'db\'a3\'bb
+\f3 \
+	step3:
+\f2 \'bd\'ab\'c9\'e8\'bc\'c6\'b5\'c4
+\f3 cell
+\f2 \'d6\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'d2\'aa\'b1\'bb\'b8\'b3\'d6\'b5\'b5\'c4\'bf\'d8\'bc\'fe\'a3\'ac\'cc\'ed\'bc\'d3\'b9\'ab\'bf\'aa\'b5\'c4\'c1\'ac\'cf\'df\'a1\'a3
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2 \cf3 \'b9\'d8\'bc\'fc\'b4\'fa\'c2\'eb\'a3\'ba
+\f3 \
+\cf0     \cf2 //
+\f2 \'d0\'e8\'d2\'aa\'d7\'a2\'b2\'e1\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd
+\f3 (
+\f2 \'b2\'bb\'cc\'ab\'ba\'c3\'d3\'c3
+\f3 )\cf3 \
+\cf0     [\cf7 self\cf0 .\cf4 tableView\cf0  \cf6 registerNib\cf0 :[\cf4 UINib\cf0  \cf6 nibWithNibName\cf0 :\cf5 @"NewsCell"\cf0  \cf6 bundle\cf0 :\cf7 nil\cf0 ] \cf6 forCellReuseIdentifier\cf0 :\cf5 @"ReuseCell"\cf0 ];\
+    \cf14 NewsCell\cf0  *cell = [tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"ReuseCell"\cf0  \cf6 forIndexPath\cf0 :indexPath];\
+\
+    \cf2 //
+\f2 \'b2\'bb\'d0\'e8\'d2\'aa\'d7\'a2\'b2\'e1\'b5\'c4\'b5\'a5\'d4\'aa\'b8\'f1\'d6\'d8\'d3\'c3\'b7\'bd\'ca\'bd
+\f3 \cf0 \
+    \cf14 NewsCell\cf0  *cell = [tableView \cf6 dequeueReusableCellWithIdentifier\cf0 :\cf5 @"ReuseCell"\cf0  ];\
+    \cf7 if\cf0  (cell==\cf7 nil\cf0 ) \{\
+        cell = (\cf14 NewsCell\cf0 *)[[\cf4 NSBundle\cf0  \cf6 mainBundle\cf0 ]\cf6 loadNibNamed\cf0 :\cf5 @"NewsCell"\cf0  \cf6 owner\cf0 :\cf7 self\cf0  \cf6 options\cf0 :\cf7 nil\cf0 ][\cf15 0\cf0 ];\
+    \}\
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	3.
+\f2 \'c9\'e8\'d6\'c3\'b1\'ea\'cd\'b7\'ca\'d3\'cd\'bc\'ba\'cd\'b1\'ed\'ce\'b2\'ca\'d3\'cd\'bc\'a3\'ba
+\f3\b0 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'a3\'ba
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf0     
+\f2 \cf2 \'c5\'e4\'d6\'c3\'b1\'ed\'cd\'b7\'ca\'d3\'cd\'bc\'a3\'ba
+\f3  \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 tableHeaderView\cf0 \
+    \cf4 UIImageView\cf0  *headerImageView = [[\cf4 UIImageView\cf0  \cf6 alloc\cf0 ]\cf6 initWithImage\cf0 :[\cf4 UIImage\cf0  \cf6 imageNamed\cf0 :\cf5 @"header.png"\cf0 ]];\
+    headerImageView.\cf4 frame\cf0  = \cf6 CGRectMake\cf0 (\cf15 0\cf0 , \cf15 0\cf0 , \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 frame\cf0 .\cf4 size\cf0 .\cf4 width\cf0 , \cf15 200\cf0 );\
+    \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 tableHeaderView\cf0  = headerImageView;\
+\
+    
+\f2 \cf2 \'c5\'e4\'d6\'c3\'b1\'ed\'ce\'b2\'ca\'d3\'cd\'bc\'a3\'ba
+\f3 \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 tableFooterView\cf0 \
+    \cf4 UILabel\cf0  *label = [[\cf4 UILabel\cf0  \cf6 alloc\cf0 ]\cf6 initWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf15 0\cf0 , \cf15 0\cf0 , \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 frame\cf0 .\cf4 size\cf0 .\cf4 width\cf0 , \cf15 50\cf0 )];\
+    label.\cf4 textAlignment\cf0  = \cf6 NSTextAlignmentCenter\cf0 ;\
+    label.\cf4 text\cf0  = \cf5 @\'93
+\f2 \'b1\'ed\'ce\'b2
+\f3 \'94\cf0 ;\
+    label.\cf4 textColor\cf0  = [\cf4 UIColor\cf0  \cf6 lightGrayColor\cf0 ];\
+    \cf7 self\cf0 .\cf4 tableView\cf0 .\cf4 tableFooterView\cf0  = label;\
+    
+\f2 \cf2 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'cd\'bc\'c6\'ac\'ca\'d3\'cd\'bc\'a3\'ba
+\f3 \cf0 \
+    \cf4 UIImageView\cf0  *headerImageView = [[\cf4 UIImageView\cf0  \cf6 alloc\cf0 ]\cf6 initWithImage\cf0 :[\cf4 UIImage\cf0  \cf6 imageNamed\cf0 :\cf5 @"header.png"\cf0 ]];\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \CocoaLigature1  
+\f2 \'b5\'a5\'d4\'aa\'b8\'f1\'d7\'d4\'b6\'af\'ca\'ca\'d3\'a6\'b8\'df\'b6\'c8
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+ 	1.
+\f2 \'d4\'da\'b5\'a5\'d4\'aa\'b8\'f1\'c4\'da\'cc\'ed\'bc\'d3
+\f3 UILabel \
+		
+\f2 \'c9\'e8\'d6\'c3
+\f3 label
+\f2 \'ce\'aa\'d7\'d4\'b6\'af\'bb\'bb\'d0\'d0
+\f3 ,
+\f2 \'cc\'ed\'bc\'d3
+\f3 label
+\f2 \'b5\'c4\'d4\'bc\'ca\'f8\'cc\'f5\'bc\'fe\'be\'e0\'c0\'eb\'b5\'d7\'b2\'bf\'b8\'df\'b6\'c8\'b9\'cc\'b6\'a8
+\f3 \
+	2.
+\f2 \'c9\'e8\'d6\'c3
+\f3 TableView
+\f2 \'b5\'c4\'c1\'bd\'b8\'f6\'ca\'f4\'d0\'d4
+\f3 \
+		a.
+\f2 \cf8 \'c9\'e8\'d6\'c3\'d7\'d4\'ca\'ca\'d3\'a6
+\f3 cell
+\f2 \'b8\'df\'b6\'c8
+\f3 \cf0 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf0 		\cf9 self\cf0 .\cf11 tableView\cf0 .\cf4 rowHeight\cf0  = \cf4 UITableViewAutomaticDimension\cf0 ;\
+		\cf8 b.
+\f2 \cf2 \'c9\'e8\'d6\'c3\cf8 \'d4\'a4\'b9\'c0\'b8\'df\'b6\'c8
+\f3 \cf0 \
+		\cf9 self\cf0 .\cf11 tableView\cf0 .\cf4 estimatedRowHeight\cf0  = \cf16 70\cf0 ;\
+ \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx963\pardeftab963\pardirnatural\partightenfactor0
+\cf8  
+\f2 \'c9\'e8\'d6\'c3
+\f3 cell
+\f2 \'d7\'d4\'ca\'ca\'d3\'a6\'b8\'df\'b6\'c8\'b5\'c4\'b7\'bd\'b7\'a8
+\f3 \cf0 \
+- (\cf4 CGFloat\cf0 )tableView:(\cf12 UITableView\cf0  *)tableView estimatedHeightForRowAtIndexPath:(\cf12 NSIndexPath\cf0  *)indexPath\{\
+    \cf9 return\cf0  \cf4 UITableViewAutomaticDimension\cf0 ;\
+\}\cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2\b\fs44 \cf0 \CocoaLigature1 \'b1\'ed\'b8\'f1\'b5\'c4\'b7\'d6\'c0\'e0\'bc\'b0\'b4\'b4\'bd\'a8\'b7\'bd\'ca\'bd
+\f3\b0\fs36 \cf2 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f1\b \cf0 	1.
+\f2 \'be\'b2\'cc\'ac\'b1\'ed\'b8\'f1\'a3\'ba
+\f3\b0 \cf2 \
+ 	
+\f2 \'c3\'e8\'ca\'f6\'a3\'ba\'b1\'ed\'b8\'f1\'b5\'c4\'d0\'d0\'ca\'fd\'ca\'c7\'b9\'cc\'b6\'a8\'b5\'c4\'a3\'ac\'b5\'ab\'ca\'c7\'ca\'fd\'be\'dd\'ca\'c7\'bf\'c9\'b1\'e4\'b5\'c4\'a1\'a3
+\f3 \
+	
+\f2 \'c8\'e7\'ba\'ce\'ca\'b5\'cf\'d6\'a3\'ba\'b4\'bf\'b4\'fa\'c2\'eb\'b1\'e0\'d0\'b4\'a3\'ac\'bb\'e1\'d3\'d0\'ba\'dc\'b6\'e0\'b5\'c4\'d3\'b2\'b1\'e0\'c2\'eb\'a3\'ac\'bb\'e1\'b0\'fc\'ba\'ac\'b4\'f3\'c1\'bf\'b5\'c4
+\f3 if else
+\f2 \'c5\'d0\'b6\'cf
+\f3 \
+	
+\f2 \'b7\'bd\'ca\'bd\'d2\'bb\'a3\'ba\'b4\'bf\'b4\'fa\'c2\'eb
+\f3 \
+	
+\f2 \'b7\'bd\'ca\'bd\'b6\'fe\'a3\'ba
+\f3 xib\
+	
+\f2 \'a1\'b6
+\f3 Demo10-1_xib
+\f2 \'b4\'b4\'bd\'a8\'be\'b2\'cc\'ac\'b1\'ed\'b8\'f1\'a1\'b7
+\f3 \
+	
+\f2 \'c0\'ed\'c4\'ee\'a3\'ba\'cb\'f9\'d3\'d0\'cd\'cf\'d7\'a7\'b5\'bd
+\f3 xib
+\f2 \'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4\'ca\'d3\'cd\'bc\'a3\'ac\'b6\'bc\'bf\'c9\'d2\'d4\'d3\'c9\'cf\'b5\'cd\'b3\'d7\'d4\'b6\'af\'b4\'b4\'bd\'a8\'b3\'f6\'ca\'b5\'c0\'fd\'a3\'ac\'b5\'ab\'ca\'c7
+\f3 xib
+\f2 \'b4\'b4\'bd\'a8\'b5\'c4\'cb\'f9\'d3\'d0\'ca\'d3\'cd\'bc\'d6\'bb\'c4\'dc\'b7\'c3\'ce\'ca\'b5\'bd\'c6\'e4\'d6\'d0\'d2\'bb\'b8\'f6\'a3\'ac\'cb\'f9\'d2\'d4\'ce\'aa\'c1\'cb\'b7\'c3\'ce\'ca\'cd\'cf\'d7\'a7\'b5\'c4\'c6\'e4\'cb\'fb\'ca\'d3\'cd\'bc\'a3\'ac\'d4\'f2\'d0\'e8\'d2\'aa\'bd\'ab\'c6\'e4\'cb\'fb\'ca\'d3\'cd\'bc\'c1\'ac\'cf\'df\'ce\'aa\'ca\'f4\'d0\'d4\'a1\'a3
+\f3 \
+
+\f1\b \cf0 	2.
+\f2 \'b6\'af\'cc\'ac\'b1\'ed\'b8\'f1\'a3\'ba
+\f3\b0 \cf2 \
+ 	
+\f2 \'c3\'e8\'ca\'f6\'a3\'ba\'b1\'ed\'b8\'f1\'b5\'c4\'d0\'d0\'ca\'fd\'ca\'c7\'bf\'c9\'b1\'e4\'b5\'c4
+\f3 \
+	
+\f2 \'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd\'a3\'ba\'b4\'bf\'b4\'fa\'c2\'eb\'b1\'e0\'d0\'b4
+\f3 /xib
+\f2 \'a3\'ab\'b4\'fa\'c2\'eb\'bb\'ec\'ba\'cf
+\f3 \
+\
+\
+	1)
+\f2 \'b4\'bf\'b4\'fa\'c2\'eb\'b1\'e0\'d0\'b4\'ca\'b5\'cf\'d6\'b9\'fd\'b3\'cc\'a3\'ba
+\f3 \
+	
+\f2 \'b4\'b4\'bd\'a8\'c6\'d5\'cd\'a8\'b5\'c4
+\f3 viewController
+\f2 \'a3\'ac\'d4\'da
+\f3 viewDidLoad 
+\f2 \'ca\'b1\'a3\'ac\'d7\'d4\'bc\'ba\'b4\'b4\'bd\'a8
+\f3 UITableView
+\f2 \'b5\'c4\'ca\'b5\'c0\'fd\'a3\'ac\'c9\'e8\'b6\'a8\'ca\'b5\'c0\'fd\'b5\'c4
+\f3 dataSource
+\f2 \'ba\'cd
+\f3 delegate
+\f2 \'ce\'aa\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'d3\'d6\'c9\'e8\'d6\'c3\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'d7\'f1\'ca\'d8\'c1\'bd\'b8\'f6\'d0\'ad\'d2\'e9\'bb\'d8\'b4\'f0\'c8\'fd\'ce\'ca\'a1\'a3
+\f3 \
+	step1:
+\f2 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c6\'d5\'cd\'a8
+\f3 VC\
+	step2:
+\f2 \'b1\'ed\'b8\'f1\'ca\'b9\'d3\'c3\'b4\'fa\'c2\'eb\'b5\'c4\'b7\'bd\'ca\'bd\'c0\'b4\'b4\'b4\'bd\'a8
+\f3 (1.
+\f2 \'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd
+\f3  2.
+\f2 \'b0\'d1\'ca\'b5\'c0\'fd\'cc\'ed\'bc\'d3\'b5\'bd
+\f3 self.view
+\f2 \'d6\'d0
+\f3 )\
+	step3:
+\f2 \'c9\'e8\'b6\'a8\'ca\'b5\'c0\'fd\'b5\'c4
+\f3 dataSource
+\f2 \'ba\'cd
+\f3 delegate
+\f2 \'ce\'aa\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7
+\f3 \
+	step4:
+\f2 \'c9\'e8\'d6\'c3\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'d7\'f1\'ca\'d8\'c1\'bd\'b8\'f6\'d0\'ad\'d2\'e9
+\f3 \
+	step5:
+\f2 \'bb\'d8\'b4\'f0\'c8\'fd\'ce\'ca
+\f3 \
+\
+	2)xib
+\f2 \'b7\'bd\'ca\'bd\'ca\'b5\'cf\'d6\'b9\'fd\'b3\'cc\'a3\'ba
+\f3 \
+	
+\f2 \'b4\'b4\'bd\'a8\'c6\'d5\'cd\'a8\'b5\'c4
+\f3 viewController
+\f2 \'a3\'ac\'d4\'da
+\f3 xib
+\f2 \'d6\'d0\'cd\'cf\'d7\'a7\'d2\'bb\'b8\'f6
+\f3 tableView
+\f2 \'a3\'ac\'b0\'d1
+\f3 tableView
+\f2 \'c1\'ac\'cf\'df\'ce\'aa\'ca\'f4\'d0\'d4\'a3\'ac\'c9\'e8\'b6\'a8\'ca\'b5\'c0\'fd\'b5\'c4
+\f3 dataSource
+\f2 \'ba\'cd
+\f3 delegate
+\f2 \'ce\'aa\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'a3\'ac\'c9\'e8\'d6\'c3\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'d7\'f1\'ca\'d8\'c1\'bd\'b8\'f6\'d0\'ad\'d2\'e9\'bb\'d8\'b4\'f0\'c8\'fd\'ce\'ca\'a1\'a3
+\f3 \
+	step1:
+\f2 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c6\'d5\'cd\'a8
+\f3 VC\
+	step2:xib
+\f2 \'ce\'c4\'bc\'fe\'d6\'d0\'b4\'d3\'d7\'ca\'d4\'b4\'bf\'e2\'d6\'d0\'cd\'cf\'d7\'a7\'d2\'bb\'b8\'f6
+\f3 tableView\
+	step3:
+\f2 \'c9\'e8\'b6\'a8\'ca\'b5\'c0\'fd\'b5\'c4
+\f3 dataSource
+\f2 \'ba\'cd
+\f3 delegate
+\f2 \'ce\'aa\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7
+\f3 \
+	step4:
+\f2 \'c9\'e8\'d6\'c3\'b5\'b1\'c7\'b0\'bf\'d8\'d6\'c6\'c6\'f7\'d7\'f1\'ca\'d8\'c1\'bd\'b8\'f6\'d0\'ad\'d2\'e9
+\f3 \
+	step5:
+\f2 \'bb\'d8\'b4\'f0\'c8\'fd\'ce\'ca
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\f2 \cf2 \'b1\'b8\'d7\'a2
+\f3 :
+\f2 \'d4\'da
+\f3 xib
+\f2 \'d6\'d0\'cd\'cf\'d7\'a7
+\f3 tableView
+\f2 \'b5\'c4\'b7\'bd\'ca\'bd\'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd\'ca\'b1\'a3\'ac\'cf\'b5\'cd\'b3\'d2\'d1\'be\'ad\'cd\'ea\'b3\'c9\'c1\'cb\'c1\'bd\'bc\'fe\'ca\'c2\'a3\'ba
+\f3 1.
+\f2 \'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd
+\f3 2.
+\f2 \'b0\'d1\'ca\'b5\'c0\'fd\'cc\'ed\'bc\'d3\'b5\'bd
+\f3 self.view
+\f2 \'d6\'d0
+\f3 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf3 Example
+\f2 \'b6\'d4\'b1\'c8\cf0 \'a3\'ba
+\f3 \cf2 \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf7 	@property\cf0  (\cf7 weak\cf0 , \cf7 nonatomic\cf0 ) \cf7 IBOutlet\cf0  \cf4 UITableView\cf0  *xibTable;\
+\cf7 	@property\cf0  (\cf7 strong\cf0 , \cf7 nonatomic\cf0 ) \cf4 UITableView\cf0  *codeTable;\
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+\cf2 \
+
+\f1\b \cf0 \
+\
+
+\f3\b0 \cf2 \
+}

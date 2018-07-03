@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fnil\fcharset134 HannotateSC-W5;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red92\green38\blue153;\red170\green13\blue145;
+\red46\green13\blue110;\red196\green26\blue22;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c77000\c10200\c8600;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22080\viewh19100\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf0 NSScanner(
+\f1 \'b9\'fd\'c2\'cb\'d7\'d6\'b7\'fb\'b4\'ae
+\f0 )\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+\pard\tx989\pardeftab989\pardirnatural\partightenfactor0
+
+\f3\fs40 \cf2 \CocoaLigature0 + (\cf3 NSString\cf2  *)flattenHTML:(\cf3 NSString\cf2  *)html \{\
+    \
+    \cf3 NSScanner\cf2  *theScanner;\
+    \cf3 NSString\cf2  *text = \cf4 nil\cf2 ;\
+    \
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&nbsp;"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&nbsp"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&quot;"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&quot"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&gt;"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&gt"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&lt;"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&lt"\cf2  \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"&map"\cf2  \cf5 withString\cf2 :\cf6 @"&"\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"<replace>"\cf2  \cf5 withString\cf2 :\cf6 @"\\n"\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"<br/>"\cf2  \cf5 withString\cf2 :\cf6 @"\\n"\cf2 ];\
+    html=[html \cf5 stringByReplacingOccurrencesOfString\cf2 :\cf6 @"<br>"\cf2  \cf5 withString\cf2 :\cf6 @"\\n"\cf2 ];\
+    \
+    theScanner = [\cf3 NSScanner\cf2  \cf5 scannerWithString\cf2 :html];\
+    \cf4 while\cf2  ([theScanner \cf5 isAtEnd\cf2 ] == \cf4 NO\cf2 ) \{\
+        [theScanner \cf5 scanUpToString\cf2 :\cf6 @"<"\cf2  \cf5 intoString\cf2 :\cf4 NULL\cf2 ] ;\
+        [theScanner \cf5 scanUpToString\cf2 :\cf6 @">"\cf2  \cf5 intoString\cf2 :&text] ;\
+        \cf3 NSString\cf2  *targetStr = [\cf3 NSString\cf2  \cf5 stringWithFormat\cf2 :\cf6 @"%@>"\cf2 , text];\
+        html = [html \cf5 stringByReplacingOccurrencesOfString\cf2 :targetStr \cf5 withString\cf2 :\cf6 @""\cf2 ];\
+    \}\
+    \
+    \cf4 return\cf2  html;\
+\}\
+}

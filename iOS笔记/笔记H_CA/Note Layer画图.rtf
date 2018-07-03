@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red46\green13\blue110;\red92\green38\blue153;\red28\green0\blue207;
+\red100\green56\blue32;\red170\green13\blue145;\red63\green110\blue116;\red0\green116\blue0;\red196\green26\blue22;
+\red38\green71\blue75;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25800\viewh19880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs48 \cf0  \'ca\'b9\'d3\'c3Layer\'b2\'e3\'b5\'c4
+\f1\b0 \cf2 \CocoaLigature0 renderInContext
+\f0 \'b7\'bd\'b7\'a8
+\b \cf0 \CocoaLigature1 \
+\pard\tx963\pardeftab963\pardirnatural
+
+\f1\b0\fs40 \cf0 \CocoaLigature0 \
+- (\cf3 UIImage\cf0 *)getShareImage\{\
+    \cf3 CGFloat\cf0  logoSize = \cf4 86\cf0 ;\
+    \cf3 CGFloat\cf0  space = \cf4 30\cf0 ;\
+    \cf3 CGFloat\cf0  height = \cf5 IPHONE_WIDTH\cf0 *\cf6 self\cf0 .\cf7 imageScale\cf0 ;\
+\
+    \cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf3 frame\cf0  = \cf2 CGRectMake\cf0 (\cf4 0\cf0 , \cf4 0\cf0 , \cf5 IPHONE_WIDTH\cf0 , height+\cf4 10\cf0 +logoSize+\cf4 10\cf0 );\
+    \cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf3 backgroundColor\cf0  = [[\cf3 UIColor\cf0  \cf2 blackColor\cf0 ]\cf2 colorWithAlphaComponent\cf0 :\cf4 0.8\cf0 ];\
+\
+\pard\tx963\pardeftab963\pardirnatural
+\cf8 //    /*
+\f0 \'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac
+\f1 */\cf0 \
+\cf8 //    UIImageView *backImageView = [[UIImageView alloc]initWithFrame:shareNewView.bounds];\cf0 \
+\cf8 ////    backImageView.backgroundColor = [UIColor colorWithPatternImage:imageView.image];\cf0 \
+\cf8 //    backImageView.image = imageView.image;\cf0 \
+\cf8 //    [shareNewView addSubview:backImageView];\cf0 \
+\cf8 //    \cf0 \
+\cf8 //    /*
+\f0 \'c3\'ab\'b2\'a3\'c1\'a7
+\f1 */\cf0 \
+\cf8 //    UIVisualEffectView *backEffectView = [[UIVisualEffectView alloc]initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];\cf0 \
+\cf8 //    backEffectView.frame = self.window.bounds;\cf0 \
+\cf8 //    backEffectView.alpha = 1.0f;\cf0 \
+\cf8 //    [self.window addSubview:backEffectView];\cf0 \
+\cf8 //\cf0 \
+\cf8 //    /*
+\f0 \'d5\'da\'d5\'d6\'cd\'bc
+\f1 */\cf0 \
+\cf8 //    UIImageView *bgZheZhaoView = [[UIImageView alloc]initWithFrame:shareNewView.bounds];\cf0 \
+\cf8 //    bgZheZhaoView.image = [UIImage imageNamed:@"product_zhezhao"];\cf0 \
+\cf8 //    [shareNewView addSubview:bgZheZhaoView];\cf0 \
+\
+    \cf8 /*
+\f0 \'cd\'bc\'c6\'ac
+\f1 */\cf0 \
+    \cf3 UIImageView\cf0  *cImageView = [[\cf3 UIImageView\cf0  \cf2 alloc\cf0 ]\cf2 initWithFrame\cf0 :\cf2 CGRectMake\cf0 (\cf4 0\cf0 , \cf4 0\cf0 , \cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf7 width\cf0 , height)];\
+    cImageView.\cf3 image\cf0  = \cf6 self\cf0 .\cf7 imageView\cf0 .\cf3 image\cf0 ;\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0  \cf2 addSubview\cf0 :cImageView];\
+    \
+    \cf3 UIImageView\cf0  *logoImageView = [[\cf3 UIImageView\cf0  \cf2 alloc\cf0 ]\cf2 initWithFrame\cf0 :\cf2 CGRectMake\cf0 (space, cImageView.\cf7 bottom\cf0 +\cf4 10\cf0 , logoSize, logoSize)];\
+    logoImageView.\cf3 image\cf0  = [\cf3 UIImage\cf0  \cf2 imageNamed\cf0 :\cf9 @"logo_512"\cf0 ];\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0  \cf2 addSubview\cf0 :logoImageView];\
+    \
+    \cf3 UIImageView\cf0  *codeImageView = [[\cf3 UIImageView\cf0  \cf2 alloc\cf0 ]\cf2 initWithFrame\cf0 :\cf2 CGRectMake\cf0 (\cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf7 width\cf0 -logoSize-space, logoImageView.\cf7 top\cf0 , logoSize, logoSize)];\
+    codeImageView.\cf3 image\cf0  =\cf5 IMAGE\cf0 (\cf9 @"img_QR_Code"\cf0 );\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0  \cf2 addSubview\cf0 :codeImageView];\
+    \
+    \cf3 UILabel\cf0  *topLabel = [\cf7 Factory\cf0  \cf10 getLabel\cf0 :\cf2 CGRectMake\cf0 (logoImageView.\cf7 right\cf0 , logoImageView.\cf7 top\cf0 +\cf4 5\cf0 , \cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf7 width\cf0 -\cf4 2\cf0 *(logoSize+space), \cf4 15\cf0 ) \cf10 bgColor\cf0 :[\cf3 UIColor\cf0  \cf2 clearColor\cf0 ] \cf10 txt\cf0 :\cf9 @"
+\f0 \cf9 \'b3\'a4\'b0\'b4\'b6\'fe\'ce\'ac\'c2\'eb\'b2\'e9\'bf\'b4\'cd\'bc\'c6\'ac\'cf\'ea\'c7\'e9
+\f1 \cf9 "\cf0  \cf10 txtColor\cf0 :[\cf3 UIColor\cf0  \cf2 whiteColor\cf0 ] \cf10 txtFont\cf0 :\cf5 kFontStyle\cf0 (\cf5 kPingFang_ZhongHei\cf0 , \cf4 13\cf0 )];\
+    topLabel.\cf3 textAlignment\cf0  = \cf2 NSTextAlignmentCenter\cf0 ;\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0  \cf2 addSubview\cf0 :topLabel];\
+    \
+    \cf3 UILabel\cf0  *bottomLabel = [\cf7 Factory\cf0  \cf10 getLabel\cf0 :\cf2 CGRectMake\cf0 (topLabel.\cf7 left\cf0 , logoImageView.\cf7 bottom\cf0 -\cf4 15\cf0 -\cf4 5\cf0 , topLabel.\cf7 width\cf0 , \cf4 15\cf0 ) \cf10 bgColor\cf0 :[\cf3 UIColor\cf0  \cf2 clearColor\cf0 ] \cf10 txt\cf0 :\cf9 @"
+\f0 \cf9 \'b7\'d6\'cf\'ed\'d7\'d4
+\f1 \cf9 [
+\f0 \cf9 \'d3\'c0\'c0\'d6\'c6\'b1\'ce\'f1
+\f1 \cf9 ]APP"\cf0  \cf10 txtColor\cf0 :[\cf3 UIColor\cf0  \cf2 whiteColor\cf0 ] \cf10 txtFont\cf0 :\cf5 kFontStyle\cf0 (\cf5 kPingFang_ZhongHei\cf0 , \cf4 13\cf0 )];\
+    bottomLabel.\cf3 textAlignment\cf0  = \cf2 NSTextAlignmentCenter\cf0 ;\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0  \cf2 addSubview\cf0 :bottomLabel];\
+    \
+\cf8 //    CGSize size = CGSizeMake(IPHONE_WIDTH, IPHONE_HEIGHT);\cf0 \
+    \cf3 CGSize\cf0  size = \cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf7 size\cf0 ;\
+    \cf8 // 
+\f0 \'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'a3\'ac\'b5\'da\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd\'b1\'ed\'ca\'be\'c7\'f8\'d3\'f2\'b4\'f3\'d0\'a1\'a1\'a3\'b5\'da\'b6\'fe\'b8\'f6\'b2\'ce\'ca\'fd\'b1\'ed\'ca\'be\'ca\'c7\'b7\'f1\'ca\'c7\'b7\'c7\'cd\'b8\'c3\'f7\'b5\'c4\'a1\'a3\'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'cf\'d4\'ca\'be\'b0\'eb\'cd\'b8\'c3\'f7\'d0\'a7\'b9\'fb\'a3\'ac\'d0\'e8\'d2\'aa\'b4\'ab
+\f1 NO
+\f0 \'a3\'ac\'b7\'f1\'d4\'f2\'b4\'ab
+\f1 YES
+\f0 \'a1\'a3\'b5\'da\'c8\'fd\'b8\'f6\'b2\'ce\'ca\'fd\'be\'cd\'ca\'c7\'c6\'c1\'c4\'bb\'c3\'dc\'b6\'c8\'c1\'cb
+\f1 \cf0 \
+    \cf2 UIGraphicsBeginImageContextWithOptions\cf0 (size, \cf6 YES\cf0 , [\cf3 UIScreen\cf0  \cf2 mainScreen\cf0 ].\cf3 scale\cf0 );\
+    [\cf6 self\cf0 .\cf7 shareNewView\cf0 .\cf3 layer\cf0  \cf2 renderInContext\cf0 :\cf2 UIGraphicsGetCurrentContext\cf0 ()];\
+    \cf3 UIImage\cf0 *image = \cf2 UIGraphicsGetImageFromCurrentImageContext\cf0 ();\
+    \cf2 UIGraphicsEndImageContext\cf0 ();\
+    \
+    \cf6 return\cf0  image;\
+    \
+\}\
+\
+\
+\
+\
+\
+}
