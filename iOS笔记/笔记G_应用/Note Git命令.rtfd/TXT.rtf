@@ -10,7 +10,7 @@
 \csgenericrgb\c0\c0\c0;\csgenericrgb\c11000\c0\c81000;\cssrgb\c14510\c14510\c14510;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww20300\viewh14580\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww15960\viewh14580\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs36 \cf0 \
@@ -126,7 +126,12 @@ git push \'97-tags\
 \cf2 2.
 \f1 \'c9\'be\'b3\'fd
 \f0 tag\cf0 \
-git -d tag v1.0.0\
+git tag -d 0.3.1 
+\f1 \'a3\'a8\'b1\'be\'b5\'d8\'a3\'a9
+\f0 \
+git push origin --delete tag 0.3.1 
+\f1 \'a3\'a8\'d4\'b6\'b6\'cb\'a3\'a9
+\f0 \
 \cf2 3.
 \f1 \'c7\'d0\'bb\'bb\'b5\'bd\'d6\'b8\'b6\'a8
 \f0 tag\cf0 \
@@ -137,22 +142,26 @@ git checkout v1.0.0\
 
 \f1 \cf2 \'cb\'bd\'d3\'d0\'bf\'e2\'b4\'f2
 \f0 Tag\cf0 \
-1. git checkout master
-\f1 \'c7\'d0\'b5\'bd\'d6\'f7\'b7\'d6\'d6\'a7
-\f0 \
-2. vi SNAttendClass.podspec  
+1. vi SNAttendClass.podspec  
 \f1 \'d0\'de\'b8\'c4
 \f0 .podspec
 \f1 \'ce\'c4\'bc\'fe\'b5\'c4\'b0\'e6\'b1\'be\'ba\'c5
 \f0 \
-3. commit + push .podspec
-\f1 \'ce\'c4\'bc\'fe
+2. commit + push .podspec
+\f1 \'ce\'c4\'bc\'fe\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 3. merge
+\f1 \'b5\'bd\'d6\'f7\'b7\'d6\'d6\'a7
 \f0 \
-4. git pull origin master\
-5. git tag\
-6. git tag 0.2.9\
-7. git push -\'97tag\
-8. git tag\
+4. git checkout master 
+\f1 \'c7\'d0\'b5\'bd\'d6\'f7\'b7\'d6\'d6\'a7
+\f0 \
+5. git pull origin master\
+6. git tag\
+7. git tag 0.2.9\
+8. git push -\'97tag\
+9. git tag\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 \cf0 \
@@ -200,8 +209,8 @@ git checkout v1.0.0\
 
 \f1 \cf3 \cb4 \expnd0\expndtw0\kerning0
 \'cd\'a8\'b9\'fd
-\f0 \cf8 \cb4 git push origin master \'96force
-\f1 \cf3 \cb4 \'c7\'bf\'d6\'c6\'cc\'e1\'bd\'bb\'b5\'b1\'c7\'b0\'b0\'e6\'b1\'be\'ba\'c5\'a3\'ac\'d2\'d4\'b4\'ef\'b5\'bd\'b3\'b7\'cf\'fa\'b0\'e6\'b1\'be\'ba\'c5\'b5\'c4\'c4\'bf\'b5\'c4\'a3\'ba
+\f0 \cf8 git push origin master \'96force
+\f1 \cf3 \'c7\'bf\'d6\'c6\'cc\'e1\'bd\'bb\'b5\'b1\'c7\'b0\'b0\'e6\'b1\'be\'ba\'c5\'a3\'ac\'d2\'d4\'b4\'ef\'b5\'bd\'b3\'b7\'cf\'fa\'b0\'e6\'b1\'be\'ba\'c5\'b5\'c4\'c4\'bf\'b5\'c4\'a3\'ba
 \f0 \
 
 \f1 \'b1\'d8\'d0\'eb\'cc\'ed\'bc\'d3\'b2\'ce\'ca\'fd
@@ -256,6 +265,7 @@ git config \'97global http.proxy\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \
+\pard\pardeftab720\partightenfactor0
 
 \f1 \cf2 \'d6\'b4\'d0\'d0\'b4\'f2\'b0\'fc\'bd\'c5\'b1\'be
 \f0 \cf0 \
@@ -292,7 +302,7 @@ git config \'97global http.proxy\
 5. 
 \f1 \'b2\'e2\'ca\'d4\'b0\'fc\'b8\'f8\'b2\'e2\'ca\'d4
 \f0 \
-6. appstoreconnect
+6. appstore connect
 \f1 \'d6\'d0\'cc\'ed\'bc\'d3\'b0\'e6\'b1\'be
 \f0  
 \f1 \'b4\'b4\'bd\'a8

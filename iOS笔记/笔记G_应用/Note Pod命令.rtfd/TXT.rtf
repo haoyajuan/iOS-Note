@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red251\green2\blue7;\red0\green0\blue0;
+\red0\green0\blue0;\red28\green0\blue207;\red28\green28\blue28;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c14913\c0;\csgray\c0\c0;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c11000\c0\c81000;\cssrgb\c14510\c14510\c14510;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20300\viewh14580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf2 \'b8\'fc\'d0\'c2\'c4\'b3\'d2\'bb\'b8\'f6\'bf\'e2
+\f0 \cf0 \
+pod update SNAttendClass\
+
+\f1 \cf2 \'b8\'fc\'d0\'c2\'c4\'b3\'d2\'bb\'b8\'f6\'bf\'e2\'b5\'c4\'c4\'da\'c8\'dd
+\f0 \cf0 \
+pod update SNAttendClass --no-repo-update\
+
+\f1 \cf2 \'c9\'be\'b3\'fd\'c4\'b3\'d2\'bb\'b8\'f6\'bf\'e2\'b5\'c4\'bb\'ba\'b4\'e6
+\f0  
+\f1 \'ca\'b9\'d3\'c3
+\f0 tag
+\f1 \'ca\'b1\'bb\'e1\'d3\'d0\'bb\'ba\'b4\'e6
+\f0 \cf0 \
+pod cache clean SNAttendClass --all\
+\
+\
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf3 \cb4 Profile
+\f1 \'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'d0\'de\'b8\'c4\'ce\'aa\'d6\'b1\'bd\'d3\'b8\'fc\'d0\'c2\'b7\'d6\'d6\'a7\'c9\'cf\'b5\'c4\'b4\'fa\'c2\'eb
+\f0 \
+\cf5 pod \cf6 'SNAttendClass'\cf5 , :git => \cf6 'git@vcs.51talk.com:ios_third/SNAttendClass.git'\cf5 , :branch => \cf6 'dev-hyj'\cf0 \cb1 \
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf2 \cb4 Profile
+\f1 \'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'d0\'de\'b8\'c4\'ce\'aa\'ca\'b9\'d3\'c3
+\f0 tag
+\f1 \'c9\'cf\'b5\'c4\'b4\'fa\'c2\'eb
+\f0 \
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf5 \cb4 pod \cf6 'SNAttendClass'\cf5 , :git => \cf6 'git@vcs.51talk.com:ios_third/SNAttendClass.git'\cf5 , :tag => \cf6 '0.3.1'\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 \
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+
+\f1 \cf5 \cb4 \'b2\'e2\'ca\'d4\'cd\'a8\'b9\'fd\'ba\'f3\'a3\'ac\'ca\'b9\'d3\'c3
+\f0 pod
+\f1 \'bd\'f8\'d0\'d0
+\f0 lint
+\f1 \'bc\'b0
+\f0 push\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 pod lib lint --sources=http://vcs.51talk.com/ios_third/fospecs,https://github.com/CocoaPods/Specs.git --allow-warnings  --use-libraries --verbose\
+# pod repo push fospecs SNAttendClass.podspec --sources=http://vcs.51talk.com/ios_third/fospecs,https://github.com/CocoaPods/Specs.git --allow-warnings  --use-libraries --verbose\
+\
+\
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb8 \expnd0\expndtw0\kerning0
+pod\'a0repo\'a0push\'a051talk-ios_third-fospecs\'a0SNAttendClass.podspec\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+}
